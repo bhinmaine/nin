@@ -4,7 +4,7 @@
 import { kv } from '@vercel/kv';
 
 const SONGS_KEY = 'nin:songs';
-const RANKINGS_KEY = 'nin:rankings';
+const RANKINGS_KEY = 'nin:ranked';
 
 export const config = {
   runtime: 'edge',
@@ -14,7 +14,7 @@ export default async function handler(req: Request) {
   const { searchParams } = new URL(req.url);
   const method = req.method;
 
-  // GET /api/songs - Public: fetch ranked songs only
+  // GET /api/rankings - Public: fetch ranked songs only
   if (method === 'GET' && req.url.includes('/api/rankings')) {
     try {
       const rankings = await kv.get(RANKINGS_KEY);
