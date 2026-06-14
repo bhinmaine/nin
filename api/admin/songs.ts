@@ -1,6 +1,6 @@
 // api/admin/songs.ts - GET and POST endpoints for admin interface
 
-import { kv } from '@vercel/kv';
+import { sql } from '@vercel/postgres';
 
 export const config = {
   runtime: 'edge',
@@ -20,13 +20,25 @@ export default async function handler(request: Request) {
 
   try {
     if (request.method === 'GET') {
-      const unranked = await kv.get('nin:songs');
-      const ranked = await kv.get('nin:ranked');
+      // Fetch unranked songs
+      const unrankedResult = await sql`
+        SELECT * FROM songs
+        WHERE id NOT IN (SELECT song_id FROM ranked_songs)
+        ORDER BY RANDOM()
+      `;
+
+      // Fetch ranked songs
+      const rankedResult = await sql`
+        SELECT s.*, r.rank, r.episode_number, r.timestamp
+        FROM ranked_songs r
+        JOIN songs s ON r.song_id = s.id
+        ORDER BY r.rank ASC
+      `;
       
       return new Response(
         JSON.stringify({
-          unranked: unranked || [],
-          ranked: ranked || [],
+          unranked: unrankedResult.rows || [],
+          ranked: rankedResult.rows || [],
         }),
         { 
           status: 200,
@@ -54,8 +66,25 @@ export default async function handler(request: Request) {
         );
       }
 
-      await kv.set('nin:ranked', data.ranked);
-      await kv.set('nin:songs', data.unranked);
+      // Clear existing rankings
+      await sql`DELETE FROM ranked_songs`;
+
+      // Insert new rankings
+      for (const song of data.ranked) {
+        await sql`
+          INSERT INTO ranked_songs (song_id, rank, episode_number, timestamp)
+          VALUES (${song.id}, ${song.rank}, ${song.episodeNumber}, ${song.timestamp})
+        `;
+      }
+
+      // Ensure all unranked songs exist (upsert)
+      for (const song of data.unranked) {
+        await sql`
+          INSERT INTO songs (id, name, album, release_year, halo_number)
+          VALUES (${song.id}, ${song.name}, ${song.album}, ${song.releaseYear}, ${song.haloNumber})
+          ON CONFLICT(id) DO NOTHING
+        `;
+      }
       
       return new Response(
         JSON.stringify({ success: true }),
@@ -82,10 +111,11 @@ export default async function handler(request: Request) {
   } catch (error) {
     const errorMsg = error instanceof Error ? error.message : 'Unknown error';
     
-    // If KV isn't configured yet, return empty state (graceful degradation)
-    if (errorMsg.includes('Missing required environment variables') || 
-        errorMsg.includes('KV_REST_API')) {
-      console.warn('[KV Not Configured] Returning empty songs state');
+    // If DB not set up yet, return empty state
+    if (errorMsg.includes('POSTGRES_URLPROVIDERS') || 
+        errorMsg.includes('relation') || 
+        errorMsg.includes('does not exist')) {
+      console.warn('[DB Not Ready] Returning empty songs state');
       return new Response(
         JSON.stringify({
           unranked: [],
@@ -101,7 +131,6 @@ export default async function handler(request: Request) {
       );
     }
     
-    // Other errors
     console.error('[API Error]', errorMsg);
     
     return new Response(

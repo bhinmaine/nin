@@ -1,6 +1,6 @@
 // api/rankings.ts - GET endpoint for public rankings
 
-import { kv } from '@vercel/kv';
+import { sql } from '@vercel/postgres';
 
 export const config = {
   runtime: 'edge',
@@ -19,9 +19,13 @@ export default async function handler(request: Request) {
   }
 
   try {
-    const rankings = await kv.get('nin:ranked');
+    // Query ranked songs from database, ordered by rank
+    const result = await sql`
+      SELECT * FROM ranked_songs
+      ORDER BY rank ASC
+    `;
     
-    return new Response(JSON.stringify(rankings || []), {
+    return new Response(JSON.stringify(result.rows || []), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
@@ -29,13 +33,13 @@ export default async function handler(request: Request) {
       },
     });
   } catch (error) {
-    // If KV isn't configured yet, return empty array (graceful degradation)
     const errorMsg = error instanceof Error ? error.message : 'Unknown error';
     
-    if (errorMsg.includes('Missing required environment variables') || 
-        errorMsg.includes('KV_REST_API')) {
-      // KV not configured yet - return empty but valid response
-      console.warn('[KV Not Configured] Returning empty rankings');
+    // If DB not set up yet, return empty array (graceful degradation)
+    if (errorMsg.includes('POSTGRES_URLPROVIDERS') || 
+        errorMsg.includes('relation') || 
+        errorMsg.includes('does not exist')) {
+      console.warn('[DB Not Ready] Returning empty rankings');
       return new Response(JSON.stringify([]), {
         status: 200,
         headers: {
@@ -45,7 +49,6 @@ export default async function handler(request: Request) {
       });
     }
     
-    // Other errors - return 500
     console.error('[API Error]', errorMsg);
     return new Response(
       JSON.stringify({ 
