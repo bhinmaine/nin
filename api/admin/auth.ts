@@ -32,11 +32,22 @@ export default async function handler(request: Request) {
   try {
     const { password } = await request.json();
 
-    // Get admin password from environment
-    const adminPassword = process.env.ADMIN_PASSWORD;
+    // Try multiple possible environment variable names for the admin password
+    const adminPassword = 
+      process.env.ADMIN_PASSWORD ||
+      process.env.ADMINPW ||
+      process.env.adminpw ||
+      process.env.ADMIN_PW;
+
+    console.log('[AUTH] Checking password. Env vars available:', {
+      hasADMIN_PASSWORD: !!process.env.ADMIN_PASSWORD,
+      hasADMINPW: !!process.env.ADMINPW,
+      hasadminpw: !!process.env.adminpw,
+      hasADMIN_PW: !!process.env.ADMIN_PW,
+    });
 
     if (!adminPassword) {
-      console.error('[AUTH] ADMIN_PASSWORD not configured');
+      console.error('[AUTH] No password configured in environment');
       return new Response(
         JSON.stringify({ error: 'Server not configured' }),
         { 
@@ -51,6 +62,7 @@ export default async function handler(request: Request) {
 
     // Check password
     if (password === adminPassword) {
+      console.log('[AUTH] Password correct');
       return new Response(
         JSON.stringify({ success: true }),
         { 
@@ -62,6 +74,7 @@ export default async function handler(request: Request) {
         }
       );
     } else {
+      console.log('[AUTH] Password incorrect');
       // Don't reveal if password is wrong or not configured
       return new Response(
         JSON.stringify({ error: 'Invalid password' }),
