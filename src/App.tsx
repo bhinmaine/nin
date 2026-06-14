@@ -1,22 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import { PublicRankings } from './components/PublicRankings';
-import { AdminInterface } from './components/AdminInterface';
 import './index.css';
 
-const queryClient = new QueryClient();
-
-export function App() {
+export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<PublicRankings />} />
-          <Route path="/admin" element={<AdminInterface />} />
-        </Routes>
-      </Router>
-    </QueryClientProvider>
+    <div className="min-h-screen bg-black text-white p-8">
+      <h1 className="text-5xl font-bold">NIN Album Rankings</h1>
+      <p className="text-gray-400">Test - is this rendering?</p>
+    </div>
   );
 }
-
-export default App;
