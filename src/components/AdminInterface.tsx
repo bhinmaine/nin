@@ -1,18 +1,44 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useRankingStore } from '../store/rankingStore';
-import { ChevronRight, Shuffle } from 'lucide-react';
+import { ChevronRight, Shuffle, Lock } from 'lucide-react';
 import type { Song } from '../types';
 
 export function AdminInterface() {
   const [episodeNumber, setEpisodeNumber] = useState(1);
   const [selectedUnrankedId, setSelectedUnrankedId] = useState<string | null>(null);
+  const [password, setPassword] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const store = useRankingStore();
+
+  // Check if password is correct (via API)
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+      
+      if (res.ok) {
+        setIsAuthenticated(true);
+        setPassword('');
+      } else {
+        alert('Incorrect password');
+      }
+    } catch (error) {
+      console.error('Auth error:', error);
+      alert('Authentication failed');
+    }
+  };
 
   // Load initial data
   useQuery({
     queryKey: ['admin-songs'],
+    enabled: isAuthenticated,
     queryFn: async () => {
       const res = await fetch('/api/admin/songs');
       if (!res.ok) throw new Error('Failed to fetch songs');
@@ -22,6 +48,40 @@ export function AdminInterface() {
       return data;
     },
   });
+
+  // Show login screen if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-950 to-black text-white flex items-center justify-center p-4">
+        <div className="w-full max-w-md">
+          <div className="bg-gray-900 border border-gray-700 rounded-lg p-8">
+            <div className="flex items-center justify-center mb-6">
+              <Lock size={32} className="text-red-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-center mb-2">Admin Access</h1>
+            <p className="text-gray-400 text-center mb-6">Enter password to manage rankings</p>
+            
+            <form onSubmit={handleLogin} className="space-y-4">
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter admin password"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600"
+                autoFocus
+              />
+              <button
+                type="submit"
+                className="w-full px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg font-semibold transition"
+              >
+                Unlock
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const handleRankSong = (song: Song, position: number) => {
     store.rankSong(song, position, episodeNumber);
@@ -33,12 +93,6 @@ export function AdminInterface() {
     store.unrankSong(songId);
     saveSongs();
   };
-
-  // const handleReorderRanked = (songId: string, newPosition: number) => {
-  //   store.reorderRanked(songId, newPosition);
-  //   saveSongs();
-  // };
-  // Future feature: drag-to-reorder ranked songs
 
   const saveSongs = async () => {
     await fetch('/api/admin/songs', {
@@ -54,7 +108,15 @@ export function AdminInterface() {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Admin: NIN Rankings</h1>
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-4xl font-bold">Admin: NIN Rankings</h1>
+          <button
+            onClick={() => setIsAuthenticated(false)}
+            className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition"
+          >
+            Logout
+          </button>
+        </div>
 
         <div className="mb-6 flex gap-4 items-center">
           <label className="font-semibold">
