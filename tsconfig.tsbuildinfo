@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/api/songs.ts","./src/components/AdminInterface.tsx","./src/components/PublicRankings.tsx","./src/store/rankingStore.ts","./src/types/index.ts"],"version":"5.9.3"}

@@ -34,10 +34,11 @@ export function AdminInterface() {
     saveSongs();
   };
 
-  const handleReorderRanked = (songId: string, newPosition: number) => {
-    store.reorderRanked(songId, newPosition);
-    saveSongs();
-  };
+  // const handleReorderRanked = (songId: string, newPosition: number) => {
+  //   store.reorderRanked(songId, newPosition);
+  //   saveSongs();
+  // };
+  // Future feature: drag-to-reorder ranked songs
 
   const saveSongs = async () => {
     await fetch('/api/admin/songs', {
@@ -102,7 +103,7 @@ export function AdminInterface() {
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-700">
             <h2 className="text-2xl font-bold mb-4">Ranked ({store.ranked.length})</h2>
             <div className="space-y-2 max-h-[calc(100vh-300px)] overflow-y-auto">
-              {store.ranked.map((song, index) => (
+              {store.ranked.map((song) => (
                 <div
                   key={song.id}
                   className="flex items-center gap-3 p-3 bg-gray-800 rounded hover:bg-gray-700 transition group"
@@ -139,17 +140,17 @@ export function AdminInterface() {
                     Insert at #1
                   </button>
 
-                  {store.ranked.map((_, index) => (
+                  {store.ranked.map((_, idx) => (
                     <button
-                      key={`insert-${index}`}
+                      key={`insert-${idx}`}
                       onClick={() => {
                         const song = store.unranked.find(s => s.id === selectedUnrankedId);
-                        if (song) handleRankSong(song, index + 1);
+                        if (song) handleRankSong(song, idx + 1);
                       }}
                       className="w-full py-2 text-center text-sm bg-green-700 hover:bg-green-600 rounded transition font-semibold"
                     >
                       <ChevronRight className="inline mr-2" size={16} />
-                      Insert after #{index + 1}
+                      Insert after #{idx + 1}
                     </button>
                   ))}
                 </>
