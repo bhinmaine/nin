@@ -80,9 +80,30 @@ export default async function handler(request: Request) {
       }
     );
   } catch (error) {
-    console.error('[API Error]', error);
-    
     const errorMsg = error instanceof Error ? error.message : 'Unknown error';
+    
+    // If KV isn't configured yet, return empty state (graceful degradation)
+    if (errorMsg.includes('Missing required environment variables') || 
+        errorMsg.includes('KV_REST_API')) {
+      console.warn('[KV Not Configured] Returning empty songs state');
+      return new Response(
+        JSON.stringify({
+          unranked: [],
+          ranked: [],
+        }),
+        { 
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+    }
+    
+    // Other errors
+    console.error('[API Error]', errorMsg);
+    
     return new Response(
       JSON.stringify({ 
         error: 'Internal server error',

@@ -29,9 +29,24 @@ export default async function handler(request: Request) {
       },
     });
   } catch (error) {
-    console.error('[API Error]', error);
-    
+    // If KV isn't configured yet, return empty array (graceful degradation)
     const errorMsg = error instanceof Error ? error.message : 'Unknown error';
+    
+    if (errorMsg.includes('Missing required environment variables') || 
+        errorMsg.includes('KV_REST_API')) {
+      // KV not configured yet - return empty but valid response
+      console.warn('[KV Not Configured] Returning empty rankings');
+      return new Response(JSON.stringify([]), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
+    }
+    
+    // Other errors - return 500
+    console.error('[API Error]', errorMsg);
     return new Response(
       JSON.stringify({ 
         error: 'Failed to fetch rankings',
