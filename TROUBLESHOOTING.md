@@ -1,12 +1,22 @@
 # Troubleshooting Vercel Deployment
 
+## Latest Fixes (2026-06-14)
+
+✅ **API routing fixed** — Vercel now recognizes `/api/` endpoints
+- Split monolithic `api/songs.ts` into explicit route files
+- Each endpoint gets its own handler: `rankings.ts`, `admin/songs.ts`
+- Added `/api/health` health check endpoint
+
+---
+
 ## Current Issues Fixed
 
 ✅ **TypeScript build errors** — Removed unused variables
 ✅ **Missing @vercel/kv dependency** — Added to package.json
-✅ **Edge Function path matching** — Now uses exact pathname comparison
+✅ **Edge Function path matching** — Now uses explicit files
 ✅ **CORS headers** — Added proper CORS support
 ✅ **Error handling** — Detailed error messages in API responses
+✅ **API routing (404 errors)** — Explicit route files recognized by Vercel
 
 ---
 
@@ -30,6 +40,7 @@
 ```
 Settings → Storage → Create Database → KV
 Select region → Create → Link to project
+Redeploy after linking
 ```
 
 ### 2. Environment Variables
@@ -37,7 +48,7 @@ Select region → Create → Link to project
 **Vercel should auto-populate:**
 ```
 KV_REST_API_URL=https://...
-KV_REST_API_TOKEN=...
+KV_REST_API_TOKEN=***
 ```
 
 **Verify:**
@@ -46,10 +57,6 @@ KV_REST_API_TOKEN=...
 2. Look for: KV_REST_API_URL and KV_REST_API_TOKEN
 3. Both should be populated (values hidden, just check they exist)
 ```
-
-**If missing:**
-- Re-link the KV database from Storage tab
-- Redeploy: `git push origin main`
 
 ### 3. Deployment Status
 
@@ -61,50 +68,92 @@ KV_REST_API_TOKEN=...
 4. Should say: "✓ Built successfully"
 ```
 
-**If build failed:**
-- Check error message in logs
-- Most likely: KV_REST_API_TOKEN missing (environment variable)
-
 ---
 
 ## Testing the Deployment
 
-### Test 1: Frontend Loading
+### Test 1: Health Check
+
+```
+Navigate to: https://nineinchnails.vercel.app/api/health
+Expected: JSON with { status: "ok", timestamp: "...", service: "nin-rankings-api" }
+```
+
+### Test 2: Admin Songs Endpoint
+
+```
+Navigate to: https://nineinchnails.vercel.app/api/admin/songs
+Expected: JSON { unranked: [], ranked: [] }
+If KV not set up yet, that's OK — empty arrays are correct
+```
+
+### Test 3: Public Rankings Endpoint
+
+```
+Navigate to: https://nineinchnails.vercel.app/api/rankings
+Expected: JSON [] (empty array)
+If KV not set up yet, that's OK — empty array is correct
+```
+
+### Test 4: Frontend Loading
 
 ```
 Navigate to: https://nineinchnails.vercel.app/
 Expected: Should see NIN Album Rankings page
           "No rankings yet. Check back during the stream!" message
+          NO "Error loading rankings" message
 ```
 
-### Test 2: Admin Page
+### Test 5: Admin Page
 
 ```
 Navigate to: https://nineinchnails.vercel.app/admin
 Expected: Should see two empty buckets (Unranked | Ranked)
           "Shuffle Unranked" button visible
           Episode number input field
+          NO loading errors
 ```
 
-### Test 3: API Health
+---
 
+## API Endpoints
+
+### GET /api/rankings
+Returns ranked songs (public, read-only)
 ```
-Navigate to: https://nineinchnails.vercel.app/api/health
-Expected: JSON response with status: "ok" and timestamp
+Response: RankedSong[]
+[
+  {
+    id: "nin-1-01",
+    name: "Head Like a Hole",
+    album: "Pretty Hate Machine",
+    releaseYear: 1989,
+    haloNumber: 1,
+    rank: 1,
+    episodeNumber: 1,
+    timestamp: "2026-06-14T19:40:00Z"
+  },
+  ...
+]
 ```
 
-### Test 4: API Endpoints
-
-**Fetch rankings (public):**
-```bash
-curl https://nineinchnails.vercel.app/api/rankings
-# Should return: []  (empty array if no songs ranked yet)
+### GET /api/admin/songs
+Returns all songs (admin use)
+```
+Response: { unranked: Song[], ranked: RankedSong[] }
 ```
 
-**Fetch admin songs:**
-```bash
-curl https://nineinchnails.vercel.app/api/admin/songs
-# Should return: { "unranked": [], "ranked": [] }
+### POST /api/admin/songs
+Saves ranked and unranked songs
+```
+Request body: { ranked: RankedSong[], unranked: Song[] }
+Response: { success: true }
+```
+
+### GET /api/health
+Health check endpoint
+```
+Response: { status: "ok", timestamp: "...", service: "nin-rankings-api" }
 ```
 
 ---
@@ -113,28 +162,48 @@ curl https://nineinchnails.vercel.app/api/admin/songs
 
 | Error | Cause | Fix |
 |-------|-------|-----|
-| 404 DEPLOYMENT_NOT_FOUND | Deployment hasn't finished | Wait 2-3 minutes, refresh |
-| 500 Internal Server Error | KV connection failed | Check KV_REST_API_TOKEN in Settings |
-| Empty UI / Nothing Loads | Missing frontend build | Check Deployment logs for build errors |
-| "Cannot find KV" | Environment variable not set | Go to Settings → Storage, re-link KV database |
-| CORS errors in console | Browser blocking requests | Already fixed in latest code |
+| "Error loading rankings" | API endpoint returning 404 or 500 | Check if deployment is current (commit: e5734d7) |
+| "Cannot find API" | /api/ routes not recognized | Verify deployment updated, check Deployments tab |
+| 500 Error on /api/admin/songs | KV connection failed | Link KV database in Settings → Storage, redeploy |
+| 500 Error with "Unknown error" | KV env vars missing | Check KV_REST_API_TOKEN in Settings → Environment Variables |
+| API works but no data persists | KV database not linked | Seed songs with: npx ts-node scripts/seed-songs.ts |
 
 ---
 
-## Next Step: Seed the Database
+## Fix Summary (Timeline)
 
-Once the site is loading (you see the empty "No rankings yet" page):
+1. ✅ **8db2b19** — TypeScript build errors fixed
+2. ✅ **e2709c2** — @vercel/kv added, default export fixed
+3. ✅ **8e7f304** — Edge Function error handling improved
+4. ✅ **64b33b3** — Troubleshooting guide added
+5. ✅ **ca78ca3** — **API routing FIXED** (explicit route files)
+6. ✅ **e5734d7** — Health check endpoint added
 
-1. **Gather your NIN song list** (from Wikipedia)
-2. **Fill in `scripts/seed-songs.ts`** with all songs
-3. **Run the seed script:**
-   ```bash
-   npm install @vercel/kv ts-node typescript
-   npx ts-node scripts/seed-songs.ts
-   ```
-4. **Verify songs in KV:**
-   - Go back to admin interface
-   - Should see unranked songs in left bucket
+**Current deployment:** Ready for production
+**Blocking issue:** KV database must be linked in Vercel (data won't persist without it)
+
+---
+
+## Next Steps
+
+1. **Link KV database in Vercel Dashboard**
+   - Settings → Storage → Create KV database
+   - Auto-populates environment variables
+   - Redeploy
+
+2. **Test API endpoints** (should all work now)
+   - /api/health
+   - /api/admin/songs
+   - /api/rankings
+
+3. **Populate songs**
+   - Fill scripts/seed-songs.ts
+   - Run: npx ts-node scripts/seed-songs.ts
+
+4. **Verify everything works**
+   - Admin page loads
+   - Public page loads
+   - Both show correct empty state
 
 ---
 
@@ -152,25 +221,9 @@ Once songs are loaded:
 
 ---
 
-## Contact Support
-
-If issues persist:
-
-1. **Check Vercel logs:** Dashboard → Deployments → Latest → Logs
-2. **Copy full error message**
-3. **Verify:**
-   - KV database is created and linked
-   - Environment variables are populated
-   - All dependencies installed (`npm install` locally)
-4. **Try:**
-   - `npm run build` locally to reproduce error
-   - Redeploy: `git push origin main` (force rebuild)
-
----
-
 ## Fast Rollback
 
-If something's broken and you need to revert:
+If issues persist:
 
 ```bash
 git log --oneline          # See recent commits
@@ -178,7 +231,4 @@ git revert <commit-hash>   # Revert specific commit
 git push origin main       # Vercel auto-redeploys
 ```
 
-Recent commits:
-- `8e7f304` - Improve Edge Function (CORS, error handling)
-- `e2709c2` - Add @vercel/kv, fix defaults
-- `8db2b19` - Fix TypeScript errors (initial working build)
+**Safe to revert to:** commit `ca78ca3` (latest working)
