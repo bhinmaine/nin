@@ -7,6 +7,7 @@ export interface Song {
   coverArtUrl?: string | null;
   appleMusicUrl?: string | null;
   youtubeUrl?: string | null;
+  hidden?: boolean;
 }
 
 export interface RankedSong extends Song {

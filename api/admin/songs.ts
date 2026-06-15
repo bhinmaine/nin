@@ -48,6 +48,7 @@ export default async function handler(request: Request) {
         coverArtUrl: row.cover_art_url || null,
         appleMusicUrl: row.apple_music_url || null,
         youtubeUrl: row.youtube_url || null,
+        hidden: row.hidden || false,
         ...(row.rank !== undefined && {
           rank: row.rank,
           episodeNumber: row.episode_number,

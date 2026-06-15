@@ -325,6 +325,8 @@ export function AdminInterface() {
                       ? 'opacity-40'
                       : selectedUnrankedId === song.id
                       ? 'bg-blue-700'
+                      : song.hidden
+                      ? 'bg-gray-800/50 opacity-40 hover:opacity-70'
                       : 'bg-gray-800 hover:bg-gray-700'
                   }`}
                 >
@@ -335,7 +337,10 @@ export function AdminInterface() {
                     <div className="w-10 h-10 rounded bg-gray-700 flex-shrink-0" />
                   )}
                   <div className="min-w-0">
-                    <div className="font-semibold text-sm md:text-base truncate">{song.name}</div>
+                    <div className="font-semibold text-sm md:text-base truncate">
+                      {song.name}
+                      {song.hidden && <span className="ml-2 text-xs text-gray-500 font-normal">(hidden)</span>}
+                    </div>
                     <div className="text-xs md:text-sm text-gray-400 truncate flex items-center gap-1.5">
                       <span className="text-red-500 font-mono flex-shrink-0">halo {song.haloNumber}</span>
                       <span>·</span>

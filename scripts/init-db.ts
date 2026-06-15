@@ -15,6 +15,7 @@ async function initializeDatabase() {
         album VARCHAR(255) NOT NULL,
         release_year INTEGER NOT NULL,
         halo_number INTEGER NOT NULL,
+        hidden BOOLEAN DEFAULT FALSE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `;
