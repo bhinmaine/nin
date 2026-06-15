@@ -34,7 +34,7 @@ const COVER_ART: Record<number, string> = {
   26: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',  // The Slip
   27: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg', // Survivalism
   28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg',// Hesitation Marks
-  29: 'http://coverartarchive.org/release/232bf12d-15e5-3696-a5d8-a892e58a6a12/10150803828.jpg',      // Capital G
+  29: 'https://coverartarchive.org/release/a5d8e64d-2d1e-4249-8ff9-380674754609/41318947853-250.jpg', // Not the Actual Events
   30: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg', // Ghosts I-IV
   31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg',// Add Violence
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
