@@ -23,9 +23,12 @@ export default async function handler(request: Request) {
     const result = await sql`
       SELECT s.id, s.name, s.album, s.release_year, s.halo_number,
              s.cover_art_url, s.apple_music_url, s.youtube_url,
-             r.rank, r.episode_number, r.timestamp
+             r.rank, r.episode_number, r.timestamp,
+             e.youtube_url AS episode_youtube_url,
+             e.twitch_url  AS episode_twitch_url
       FROM ranked_songs r
       JOIN songs s ON r.song_id = s.id
+      LEFT JOIN episodes e ON r.episode_number = e.episode_number
       ORDER BY r.rank ASC
     `;
 
@@ -41,6 +44,8 @@ export default async function handler(request: Request) {
       rank: row.rank,
       episodeNumber: row.episode_number,
       timestamp: row.timestamp,
+      episodeYoutubeUrl: row.episode_youtube_url || null,
+      episodeTwitchUrl: row.episode_twitch_url || null,
     }));
 
     return new Response(JSON.stringify(mapped), {

@@ -19,10 +19,18 @@ export interface Song {
   talkingPoints?: TalkingPoints | null;
 }
 
+export interface Episode {
+  episodeNumber: number;
+  youtubeUrl: string;
+  twitchUrl: string;
+}
+
 export interface RankedSong extends Song {
   rank: number;
   episodeNumber: number;
   timestamp: string; // ISO 8601
+  episodeYoutubeUrl?: string | null;
+  episodeTwitchUrl?: string | null;
 }
 
 export interface AdminState {

@@ -1,0 +1,814 @@
+[
+  {
+    "id": "nin-20-01",
+    "name": "Only",
+    "album": "Only",
+    "releaseYear": 2005,
+    "haloNumber": 20
+  },
+  {
+    "id": "nin-20-02",
+    "name": "The Hand That Feeds - DFA Remix",
+    "album": "Only",
+    "releaseYear": 2005,
+    "haloNumber": 20
+  },
+  {
+    "id": "nin-20-03",
+    "name": "Love Is Not Enough - Live",
+    "album": "Only",
+    "releaseYear": 2005,
+    "haloNumber": 20
+  },
+  {
+    "id": "nin-21-01",
+    "name": "Every Day Is Exactly the Same",
+    "album": "Every Day Is Exactly the Same",
+    "releaseYear": 2006,
+    "haloNumber": 21
+  },
+  {
+    "id": "nin-21-02",
+    "name": "The Hand That Feeds - DFA Remix",
+    "album": "Every Day Is Exactly the Same",
+    "releaseYear": 2006,
+    "haloNumber": 21
+  },
+  {
+    "id": "nin-21-03",
+    "name": "The Hand That Feeds - Photek Straight Remix",
+    "album": "Every Day Is Exactly the Same",
+    "releaseYear": 2006,
+    "haloNumber": 21
+  },
+  {
+    "id": "nin-21-04",
+    "name": "On",
+    "album": "Every Day Is Exactly the Same",
+    "releaseYear": 2006,
+    "haloNumber": 21
+  },
+  {
+    "id": "nin-22-01",
+    "name": "All the Love in the World",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-02",
+    "name": "You Know What You Are?",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-03",
+    "name": "The Line Begins to Blur",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-04",
+    "name": "Gave Up",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-05",
+    "name": "Getting Smaller",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-06",
+    "name": "The Hand That Feeds",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-07",
+    "name": "Head Like a Hole",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-08",
+    "name": "The Frail",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-09",
+    "name": "The Wretched",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-10",
+    "name": "Only",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-11",
+    "name": "Beside You in Time",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-12",
+    "name": "Right Where It Belongs",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-22-13",
+    "name": "Hurt",
+    "album": "Beside You in Time",
+    "releaseYear": 2007,
+    "haloNumber": 22
+  },
+  {
+    "id": "nin-23-01",
+    "name": "Survivalism",
+    "album": "Survivalism",
+    "releaseYear": 2007,
+    "haloNumber": 23
+  },
+  {
+    "id": "nin-23-02",
+    "name": "Survivalism_Tardusted",
+    "album": "Survivalism",
+    "releaseYear": 2007,
+    "haloNumber": 23
+  },
+  {
+    "id": "nin-24-01",
+    "name": "Hyperpower!",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-02",
+    "name": "The Beginning of the End",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-03",
+    "name": "Survivalism",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-04",
+    "name": "The Good Soldier",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-05",
+    "name": "Vessel",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-06",
+    "name": "Me, I'm Not",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-07",
+    "name": "Capital G",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-08",
+    "name": "My Violent Heart",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-09",
+    "name": "The Warning",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-10",
+    "name": "God Given",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-11",
+    "name": "Meet Your Master",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-12",
+    "name": "The Greater Good",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-13",
+    "name": "The Great Destroyer",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-14",
+    "name": "Another Version of the Truth",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-15",
+    "name": "In This Twilight",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-24-16",
+    "name": "Zero Sum",
+    "album": "Year Zero",
+    "releaseYear": 2007,
+    "haloNumber": 24
+  },
+  {
+    "id": "nin-25-01",
+    "name": "Gunshots By Computer (Saul Williams)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-02",
+    "name": "The Great Destroyer (Modwheelmood)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-03",
+    "name": "My Violent Heart (Pirate Robot Midget)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-04",
+    "name": "The Beginning of the End (Ladytron)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-05",
+    "name": "Survivalism (Saul Williams)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-06",
+    "name": "Capital G (Paul Epworth Phones 666 Revolutions Mix)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-07",
+    "name": "Vessel (Bill Laswell)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-08",
+    "name": "The Warning (feat. Doudou N'diaye Rose) [Stefan Goodchild]",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-09",
+    "name": "Meet Your Master (The Faint)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-10",
+    "name": "God Given (Stephen Morris and Gillian Gilbert)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-12",
+    "name": "Another Version of the Truth (Kronos and Enrique Gonzalez Muller)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-13",
+    "name": "In This Twilight (Fennesz)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-25-14",
+    "name": "Zero Sum (Stephen Morris and Gillian Gilbert)",
+    "album": "Year Zero Remixed",
+    "releaseYear": 2007,
+    "haloNumber": 25
+  },
+  {
+    "id": "nin-26-01",
+    "name": "1 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-02",
+    "name": "2 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-03",
+    "name": "3 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-04",
+    "name": "4 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-05",
+    "name": "5 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-06",
+    "name": "6 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-07",
+    "name": "7 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-08",
+    "name": "8 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-09",
+    "name": "9 Ghosts I",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-10",
+    "name": "10 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-11",
+    "name": "11 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-12",
+    "name": "12 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-13",
+    "name": "13 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-14",
+    "name": "14 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-15",
+    "name": "15 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-16",
+    "name": "16 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-17",
+    "name": "17 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-18",
+    "name": "18 Ghosts II",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-19",
+    "name": "19 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-20",
+    "name": "20 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-21",
+    "name": "21 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-22",
+    "name": "22 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-23",
+    "name": "23 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-24",
+    "name": "24 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-25",
+    "name": "25 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-26",
+    "name": "26 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-27",
+    "name": "27 Ghosts III",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-28",
+    "name": "28 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-29",
+    "name": "29 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-30",
+    "name": "30 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-31",
+    "name": "31 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-32",
+    "name": "32 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-33",
+    "name": "33 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-34",
+    "name": "34 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-35",
+    "name": "35 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-26-36",
+    "name": "36 Ghosts IV",
+    "album": "Ghosts I-IV",
+    "releaseYear": 2008,
+    "haloNumber": 26
+  },
+  {
+    "id": "nin-27-01",
+    "name": "999,999",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-02",
+    "name": "1,000,000",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-03",
+    "name": "Letting You",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-04",
+    "name": "Discipline",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-05",
+    "name": "Echoplex",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-06",
+    "name": "Head Down",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-07",
+    "name": "Lights in the Sky",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-08",
+    "name": "Corona Radiata",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-09",
+    "name": "The Four of Us Are Dying",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-27-10",
+    "name": "Demon Seed",
+    "album": "The Slip",
+    "releaseYear": 2008,
+    "haloNumber": 27
+  },
+  {
+    "id": "nin-28-01",
+    "name": "The Eater of Dreams",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-02",
+    "name": "Copy of A",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-03",
+    "name": "Came Back Haunted",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-04",
+    "name": "Find My Way",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-05",
+    "name": "All Time Low",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-06",
+    "name": "Disappointed",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-07",
+    "name": "Everything",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-08",
+    "name": "Satellite",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-09",
+    "name": "Various Methods of Escape",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-10",
+    "name": "Running",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-11",
+    "name": "I Would for You",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-12",
+    "name": "In Two",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-13",
+    "name": "While I'm Still Here",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-28-14",
+    "name": "Black Noise",
+    "album": "Hesitation Marks",
+    "releaseYear": 2013,
+    "haloNumber": 28
+  },
+  {
+    "id": "nin-29-01",
+    "name": "Branches / Bones",
+    "album": "Not the Actual Events",
+    "releaseYear": 2016,
+    "haloNumber": 29
+  },
+  {
+    "id": "nin-29-02",
+    "name": "Dear World,",
+    "album": "Not the Actual Events",
+    "releaseYear": 2016,
+    "haloNumber": 29
+  },
+  {
+    "id": "nin-29-03",
+    "name": "She's Gone Away",
+    "album": "Not the Actual Events",
+    "releaseYear": 2016,
+    "haloNumber": 29
+  },
+  {
+    "id": "nin-29-04",
+    "name": "The Idea of You",
+    "album": "Not the Actual Events",
+    "releaseYear": 2016,
+    "haloNumber": 29
+  },
+  {
+    "id": "nin-29-05",
+    "name": "Burning Bright (Field on Fire)",
+    "album": "Not the Actual Events",
+    "releaseYear": 2016,
+    "haloNumber": 29
+  }
+]

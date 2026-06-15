@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useRankingStore } from '../store/rankingStore';
-import { Shuffle, Lock, GripVertical, StickyNote } from 'lucide-react';
+import { Shuffle, Lock, GripVertical, StickyNote, ChevronDown } from 'lucide-react';
 import { TalkingPointsModal } from './TalkingPointsModal';
+import { EpisodeManager } from './EpisodeManager';
 import type { Song } from '../types';
 
 // What's being dragged and from where
@@ -43,6 +44,7 @@ export function AdminInterface() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
   const [talkingPointsSong, setTalkingPointsSong] = useState<Song | null>(null);
+  const [showEpisodeManager, setShowEpisodeManager] = useState(false);
 
   // Drag state
   const dragSource = useRef<DragSource | null>(null);
@@ -252,13 +254,28 @@ export function AdminInterface() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-8">
           <h1 className="text-2xl md:text-4xl font-bold">Admin: NIN Rankings</h1>
-          <button
-            onClick={handleLogout}
-            className="px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition flex-shrink-0 ml-4"
-          >
-            Logout
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setShowEpisodeManager(v => !v)}
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-zinc-700 hover:bg-zinc-600 rounded text-sm transition flex-shrink-0 flex items-center gap-1.5"
+            >
+              Episode Links <ChevronDown size={14} className={`transition-transform ${showEpisodeManager ? 'rotate-180' : ''}`} />
+            </button>
+            <button
+              onClick={handleLogout}
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition flex-shrink-0 ml-4"
+            >
+              Logout
+            </button>
+          </div>
         </div>
+
+        {/* Episode Manager Panel */}
+        {showEpisodeManager && (
+          <div className="mb-6 bg-zinc-900 border border-zinc-700 rounded-lg p-4 md:p-6">
+            <EpisodeManager adminPassword={password} />
+          </div>
+        )}
 
         <div className="mb-4 md:mb-6 flex flex-wrap gap-3 items-center">
           <label className="font-semibold flex items-center gap-2">
