@@ -79,7 +79,7 @@ export function PublicRankings() {
                   </div>
                   <h2 className="text-lg md:text-2xl font-semibold truncate">{song.name}</h2>
                   <p className="text-gray-400 text-sm md:text-base truncate">
-                    <span className="text-red-500 font-mono">H{song.haloNumber}</span> · {song.album} ({song.releaseYear})
+                    <span className="text-red-500 font-mono">halo {song.haloNumber}</span> · {song.album} ({song.releaseYear})
                   </p>
                   <div className="flex items-center gap-3 mt-2">
                     {song.appleMusicUrl && (
