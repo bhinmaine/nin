@@ -40,7 +40,7 @@ const COVER_ART: Record<number, string> = {
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
   33: 'https://coverartarchive.org/release/193ecb2e-a1e8-49d3-ba0e-6e95f489bdf0/25770597240-250.jpg',// Ghosts V: Together
   34: 'https://coverartarchive.org/release/7cd6e3d1-5372-4de4-8e8f-a1966b081eda/25812118263-250.jpg',// Ghosts VI: Locusts
-  38: 'http://coverartarchive.org/release/88743951-b8e5-44cd-b7c2-68e740f567ea/29022074599-250.jpg', // Ghosts V-VI
+  38: 'https://coverartarchive.org/release/e2c55de3-27a5-4f34-bdf9-668496571630/44850397430-250.jpg', // Nine Inch Noize: Live @ Coachella 2026
 };
 
 // COMPLETE NIN DISCOGRAPHY - All Halo-Designated Releases
