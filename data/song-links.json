@@ -109,7 +109,7 @@
     "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114"
   },
   "nin-9-02": {
-    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1440934840?i=1440934941"
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952474"
   },
   "nin-12-02": {
     "appleMusicUrl": "https://music.apple.com/us/album/closure/1440934870"
@@ -333,10 +333,10 @@
     "appleMusicUrl": "https://music.apple.com/us/album/a-warm-place/1440837096?i=1440837844&uo=4"
   },
   "nin-9-04": {
-    "appleMusicUrl": "https://music.apple.com/us/album/heresy-blind/1446952455?i=1446952476&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952476"
   },
   "nin-9-05": {
-    "appleMusicUrl": "https://music.apple.com/us/album/memorabilia/1446952455?i=1446952572&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952572"
   },
   "nin-10-01": {
     "appleMusicUrl": "https://music.apple.com/us/album/piggy-nothing-can-stop-me-now/1545212135?i=1545212288&uo=4"
@@ -1008,5 +1008,23 @@
   },
   "nin-18-03": {
     "youtubeUrl": "https://www.youtube.com/watch?v=Knv6qSiP46g"
+  },
+  "nin-9-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952469"
+  },
+  "nin-9-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952475"
+  },
+  "nin-9-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952574"
+  },
+  "nin-9-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952577"
+  },
+  "nin-9-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952578"
+  },
+  "nin-9-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952580"
   }
 }
