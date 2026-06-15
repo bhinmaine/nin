@@ -352,16 +352,26 @@ export function AdminInterface() {
           {/* RANKED BUCKET */}
           <div className="bg-gray-900 rounded-lg p-4 md:p-6 border border-gray-700">
             <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Ranked ({store.ranked.length})</h2>
-            <div className="max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
+            <div
+              className={`max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto rounded transition ${
+                store.ranked.length === 0 && dragOverRankedIdx === 0
+                  ? 'bg-green-500/10 border-2 border-green-400 border-dashed'
+                  : ''
+              }`}
+              onDragOver={store.ranked.length === 0 ? (e) => onDragOverRanked(e, 0) : undefined}
+              onDragLeave={store.ranked.length === 0 ? () => setDragOverRankedIdx(null) : undefined}
+              onDrop={store.ranked.length === 0 ? (e) => onDropOnRanked(e, 0) : undefined}
+            >
 
-              {/* Drop zone before #1 */}
-              <DropZone
-                active={dragOverRankedIdx === 0}
-                onDragOver={(e) => onDragOverRanked(e, 0)}
-                onDragLeave={() => setDragOverRankedIdx(null)}
-                onDrop={(e) => onDropOnRanked(e, 0)}
-              />
-
+              {/* Drop zone before #1 — always present */}
+              {store.ranked.length > 0 && (
+                <DropZone
+                  active={dragOverRankedIdx === 0}
+                  onDragOver={(e) => onDragOverRanked(e, 0)}
+                  onDragLeave={() => setDragOverRankedIdx(null)}
+                  onDrop={(e) => onDropOnRanked(e, 0)}
+                />
+              )}
               {store.ranked.map((song, idx) => (
                 <div key={song.id}>
                   <div
@@ -411,8 +421,8 @@ export function AdminInterface() {
 
               {/* Empty state prompt */}
               {store.ranked.length === 0 && (
-                <div className="text-center text-gray-500 py-8 text-sm">
-                  Drag a song here or click to select then drop
+                <div className="text-center text-gray-500 py-12 text-sm pointer-events-none">
+                  {dragOverRankedIdx === 0 ? '📍 Drop here' : 'Drag a song here to start ranking'}
                 </div>
               )}
             </div>
