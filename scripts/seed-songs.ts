@@ -311,11 +311,20 @@ const NIN_SONGS = [
   { id: 'nin-24-16', name: 'Zero Sum', album: 'Year Zero', releaseYear: 2007, haloNumber: 24 },
 
   // HALO 25: Year Zero Remixed (2007)
-  { id: 'nin-25-01', name: 'Survivalism - Autechre Remix', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
-  { id: 'nin-25-02', name: 'The Good Soldier - Danger Mouse Remix', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
-  { id: 'nin-25-03', name: 'Vessel - Ladytron Remix', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
-  { id: 'nin-25-04', name: 'Me, I\'m Not - Trent Reznor Remix', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
-  { id: 'nin-25-05', name: 'Capital G - Jello Biafra Remix', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-01', name: 'Gunshots By Computer (Saul Williams)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-02', name: 'The Great Destroyer (Modwheelmood)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-03', name: 'My Violent Heart (Pirate Robot Midget)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-04', name: 'The Beginning of the End (Ladytron)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-05', name: 'Survivalism (Saul Williams)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-06', name: 'Capital G (Paul Epworth Phones 666 Revolutions Mix)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-07', name: 'Vessel (Bill Laswell)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-08', name: 'The Warning (feat. Doudou N\'diaye Rose) [Stefan Goodchild]', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-09', name: 'Meet Your Master (The Faint)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-10', name: 'God Given (Stephen Morris and Gillian Gilbert)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-11', name: "Me, I'm Not (Olof Dreijer)", album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-12', name: 'Another Version of the Truth (Kronos and Enrique Gonzalez Muller)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-13', name: 'In This Twilight (Fennesz)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
+  { id: 'nin-25-14', name: 'Zero Sum (Stephen Morris and Gillian Gilbert)', album: 'Year Zero Remixed', releaseYear: 2007, haloNumber: 25 },
 
   // HALO 26: Ghosts I-IV (2008)
   { id: 'nin-26-01', name: 'Ghosts I-1', album: 'Ghosts I-IV', releaseYear: 2008, haloNumber: 26 },
