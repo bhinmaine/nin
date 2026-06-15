@@ -20,7 +20,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">NIN Album Rankings</h1>
+          <h1 className="text-3xl font-bold mb-4">NIN Song Rankings</h1>
           <p className="text-red-500">Error loading rankings: {error instanceof Error ? error.message : 'Unknown error'}</p>
           <p className="text-gray-400 mt-4">Please try refreshing the page</p>
         </div>
@@ -32,7 +32,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">NIN Album Rankings</h1>
+          <h1 className="text-3xl font-bold mb-4">NIN Song Rankings</h1>
           <p className="text-gray-400">Loading rankings...</p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-5xl font-bold mb-2">NIN Album Rankings</h1>
+          <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
           <p className="text-gray-400 mb-8">Live from the Twitch stream</p>
           <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
         </div>
@@ -54,7 +54,7 @@ export function PublicRankings() {
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold mb-2">NIN Album Rankings</h1>
+        <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
         <p className="text-gray-400 mb-8">Live from the Twitch stream</p>
 
         <div className="space-y-4">

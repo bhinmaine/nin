@@ -1,4 +1,4 @@
-# NIN Album Rankings
+# NIN Song Rankings
 
 A real-time ranking application for Nine Inch Nails albums during a Twitch stream.
 

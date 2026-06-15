@@ -99,7 +99,7 @@ If KV not set up yet, that's OK — empty array is correct
 
 ```
 Navigate to: https://nineinchnails.vercel.app/
-Expected: Should see NIN Album Rankings page
+Expected: Should see NIN Song Rankings page
           "No rankings yet. Check back during the stream!" message
           NO "Error loading rankings" message
 ```
