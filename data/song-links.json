@@ -220,7 +220,7 @@
   },
   "nin-23-02": {
     "youtubeUrl": "https://www.youtube.com/watch?v=qSsRt_1l740",
-    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262"
+    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1443785009?i=1443785015"
   },
   "nin-24-05": {
     "youtubeUrl": "https://www.youtube.com/watch?v=sVAJKirLg-c",
@@ -268,7 +268,7 @@
   },
   "nin-38-12": {
     "youtubeUrl": "https://www.youtube.com/watch?v=SnMyroAH0rg",
-    "appleMusicUrl": "https://music.apple.com/us/album/as-alive-as-you-need-me-to-be/1847482888"
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/1893171321?i=1893171397"
   },
   "nin-2-05": {
     "appleMusicUrl": "https://music.apple.com/us/album/something-i-can-never-have/990375204?i=990375209&uo=4",
@@ -494,10 +494,10 @@
     "appleMusicUrl": "https://music.apple.com/us/album/right-where-it-belongs/1440851583?i=1440852585&uo=4"
   },
   "nin-20-02": {
-    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1440851583?i=1440852198&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1455129856?i=1455129864&uo=4"
   },
   "nin-21-02": {
-    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds-photek-straight-mix/1445319674?i=1445319681&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1455129856?i=1455129864&uo=4"
   },
   "nin-21-03": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds-photek-straight-mix/1445319674?i=1445319681&uo=4"
@@ -700,7 +700,7 @@
     "appleMusicUrl": "https://music.apple.com/us/album/vessel-nine-inch-noize-version/1893171321?i=1893171323&uo=4"
   },
   "nin-38-03": {
-    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/1893171321?i=1893171324"
   },
   "nin-38-04": {
     "appleMusicUrl": "https://music.apple.com/us/album/heresy-nine-inch-noize-version/1893171321?i=1893171325&uo=4"
@@ -712,10 +712,10 @@
     "appleMusicUrl": "https://music.apple.com/us/album/copy-of-a-nine-inch-noize-version/1893171321?i=1893171328&uo=4"
   },
   "nin-38-07": {
-    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/1893171321?i=1893171329"
   },
   "nin-38-08": {
-    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/1893171321?i=1893171330"
   },
   "nin-38-09": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-warning-nine-inch-noize-version/1893171321?i=1893171332&uo=4"
@@ -1121,5 +1121,143 @@
   },
   "nin-30-37": {
     "youtubeUrl": "https://www.youtube.com/watch?v=Hhul5iKH-W8"
+  },
+  "nin-35-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/as-alive-as-you-need-me-to-be/1847482888?i=1847482889"
+  },
+  "nin-35-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/as-alive-as-you-need-me-to-be/1847482888?i=1847482891"
+  },
+  "nin-36-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198223"
+  },
+  "nin-36-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198224"
+  },
+  "nin-36-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198226"
+  },
+  "nin-36-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198680"
+  },
+  "nin-36-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198681"
+  },
+  "nin-36-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198682"
+  },
+  "nin-36-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198683"
+  },
+  "nin-36-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198686"
+  },
+  "nin-36-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198689"
+  },
+  "nin-36-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198690"
+  },
+  "nin-36-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198691"
+  },
+  "nin-36-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198692"
+  },
+  "nin-36-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198693"
+  },
+  "nin-36-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198694"
+  },
+  "nin-36-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198695"
+  },
+  "nin-36-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198696"
+  },
+  "nin-36-17": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198697"
+  },
+  "nin-36-18": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198701"
+  },
+  "nin-36-19": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198702"
+  },
+  "nin-36-20": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198742"
+  },
+  "nin-36-21": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198743"
+  },
+  "nin-36-22": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198744"
+  },
+  "nin-36-23": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198746"
+  },
+  "nin-36-24": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-original-motion-picture-soundtrack/1826198222?i=1826198748"
+  },
+  "nin-37-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537173"
+  },
+  "nin-37-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537174"
+  },
+  "nin-37-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537175"
+  },
+  "nin-37-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537180"
+  },
+  "nin-37-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537245"
+  },
+  "nin-37-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537246"
+  },
+  "nin-37-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537247"
+  },
+  "nin-37-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537248"
+  },
+  "nin-37-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537249"
+  },
+  "nin-37-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537250"
+  },
+  "nin-37-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537254"
+  },
+  "nin-37-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537255"
+  },
+  "nin-37-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537256"
+  },
+  "nin-37-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537266"
+  },
+  "nin-37-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537333"
+  },
+  "nin-37-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537335"
+  },
+  "nin-37-17": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537336"
+  },
+  "nin-37-18": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537337"
+  },
+  "nin-37-19": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537339"
+  },
+  "nin-37-20": {
+    "appleMusicUrl": "https://music.apple.com/us/album/tron-ares-divergence/1880537172?i=1880537340"
   }
 }

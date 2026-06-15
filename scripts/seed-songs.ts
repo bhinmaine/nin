@@ -40,6 +40,9 @@ const COVER_ART: Record<number, string> = {
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
   33: 'https://coverartarchive.org/release/0e48daf3-1406-42e8-9301-59f4cf8e6e25/45131993030-500.jpg', // Ghosts V: Together
   34: 'https://coverartarchive.org/release/cac60a3c-b1fe-4653-8a5b-937198111133/45130474998-500.jpg', // Ghosts VI: Locusts
+  35: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/79/21/767921a2-c9d0-9618-32a3-ebe8fcb9c723/25UMGIM93266.rgb.jpg/600x600bb.jpg', // As Alive as You Need Me to Be
+  36: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/79/21/767921a2-c9d0-9618-32a3-ebe8fcb9c723/25UMGIM93266.rgb.jpg/600x600bb.jpg', // Tron: Ares OST
+  37: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f9/87/52/f9875213-5546-6e41-6bf8-e6585cca4122/26UMGIM14960.rgb.jpg/600x600bb.jpg', // Tron Ares: Divergence
   38: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftinnitist.com%2Fwp-content%2Fuploads%2F2026%2F04%2FNine-Inch-Nails-Boys-Noize-Nine-Inch-Noize-640x640.jpeg&f=1&nofb=1&ipt=29c6b6a7dc936f445cefedca7026cd22a1ebb73ee53b83944f622b772eced4fb', // Nine Inch Noize album art
 };
 
@@ -479,6 +482,59 @@ const NIN_SONGS = [
   { id: 'nin-34-14', name: 'So Tired', album: 'Ghosts VI: Locusts', releaseYear: 2020, haloNumber: 34 },
   { id: 'nin-34-15', name: 'Almost Dawn', album: 'Ghosts VI: Locusts', releaseYear: 2020, haloNumber: 34 },
 
+  // HALO 35: As Alive as You Need Me to Be (2025) - Single
+  { id: 'nin-35-01', name: 'As Alive as You Need Me to Be', album: 'As Alive as You Need Me to Be', releaseYear: 2025, haloNumber: 35 },
+  { id: 'nin-35-02', name: 'Empathetic Response', album: 'As Alive as You Need Me to Be', releaseYear: 2025, haloNumber: 35 },
+  { id: 'nin-35-03', name: 'Building Better Worlds', album: 'As Alive as You Need Me to Be', releaseYear: 2025, haloNumber: 35 },
+
+  // HALO 36: Tron: Ares (Original Motion Picture Soundtrack) (2025)
+  { id: 'nin-36-01', name: 'Init', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-02', name: 'Forked Reality', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-03', name: 'As Alive As You Need Me To Be', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-04', name: 'Echoes', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-05', name: 'This Changes Everything', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-06', name: 'In The Image Of', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-07', name: 'I Know You Can Feel It', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-08', name: 'Permanence', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-09', name: 'Infiltrator', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-10', name: '100% Expendable', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-11', name: 'Still Remains', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-12', name: 'Who Wants To Live Forever? (feat. Judeline)', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-13', name: 'Building Better Worlds', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-14', name: 'Target Identified', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-15', name: 'Daemonize', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-16', name: 'Empathetic Response', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-17', name: 'What Have You Done?', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-18', name: 'A Question Of Trust', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-19', name: 'Ghost In The Machine', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-20', name: 'No Going Back', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-21', name: 'Nemesis', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-22', name: 'New Directive', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-23', name: 'Out In The World', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+  { id: 'nin-36-24', name: 'Shadow Over Me', album: 'Tron: Ares (Original Motion Picture Soundtrack)', releaseYear: 2025, haloNumber: 36 },
+
+  // HALO 37: Tron Ares: Divergence (2026)
+  { id: 'nin-37-01', name: 'Converge', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-02', name: 'I Know You Can Feel It (Mark Pritchard Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-03', name: 'Godmode', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-04', name: 'A Question Of Trust (Boys Noize Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-05', name: 'Operand', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-06', name: 'Zero State', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-07', name: 'Empathetic Response (Lanark Artefax Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-08', name: '100% Expendable (Chilly Gonzales Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-09', name: 'Who Wants To Live Forever? (feat. Judeline) [Danny L Harle Remix]', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-10', name: 'Infiltrator (Jack Dangers Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-11', name: 'A Framework', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-12', name: 'Ghost In The Machine (Boys Noize Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-13', name: 'What Have You Done? (Boys Noize Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-14', name: 'As Alive As You Need Me To Be (Pixel Grip Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-15', name: 'The First Betrayal', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-16', name: 'I Know You Can Feel It (Working Men\'s Club Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-17', name: 'Shadow Over Me (The Dare Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-18', name: 'Terminal', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-19', name: 'Forked Reality (Schwefelgelb Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+  { id: 'nin-37-20', name: 'As Alive As You Need Me To Be (Arca Remix)', album: 'Tron Ares: Divergence', releaseYear: 2026, haloNumber: 37 },
+
   // HALO 38: Nine Inch Noize (2026)
   { id: 'nin-38-01', name: 'Intro (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-02', name: 'Vessel (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
@@ -486,7 +542,7 @@ const NIN_SONGS = [
   { id: 'nin-38-04', name: 'Heresy (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-05', name: 'Parasite (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-06', name: 'Copy Of A (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
-  { id: 'nin-38-07', name: 'Me I\'m Not (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
+  { id: 'nin-38-07', name: "Me, I'm Not (Nine Inch Noize Version)", album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-08', name: 'Closer (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-09', name: 'The Warning (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
   { id: 'nin-38-10', name: 'Memorabilia (Nine Inch Noize Version)', album: 'Nine Inch Noize', releaseYear: 2026, haloNumber: 38 },
