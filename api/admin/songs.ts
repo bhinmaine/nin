@@ -35,10 +35,23 @@ export default async function handler(request: Request) {
         ORDER BY r.rank ASC
       `;
       
+      const mapSong = (row: any) => ({
+        id: row.id,
+        name: row.name,
+        album: row.album,
+        releaseYear: row.release_year,
+        haloNumber: row.halo_number,
+        ...(row.rank !== undefined && {
+          rank: row.rank,
+          episodeNumber: row.episode_number,
+          timestamp: row.timestamp,
+        }),
+      });
+
       return new Response(
         JSON.stringify({
-          unranked: unrankedResult.rows || [],
-          ranked: rankedResult.rows || [],
+          unranked: (unrankedResult.rows || []).map(mapSong),
+          ranked: (rankedResult.rows || []).map(mapSong),
         }),
         { 
           status: 200,

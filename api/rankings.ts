@@ -21,11 +21,25 @@ export default async function handler(request: Request) {
   try {
     // Query ranked songs from database, ordered by rank
     const result = await sql`
-      SELECT * FROM ranked_songs
-      ORDER BY rank ASC
+      SELECT s.id, s.name, s.album, s.release_year, s.halo_number,
+             r.rank, r.episode_number, r.timestamp
+      FROM ranked_songs r
+      JOIN songs s ON r.song_id = s.id
+      ORDER BY r.rank ASC
     `;
-    
-    return new Response(JSON.stringify(result.rows || []), {
+
+    const mapped = (result.rows || []).map((row: any) => ({
+      id: row.id,
+      name: row.name,
+      album: row.album,
+      releaseYear: row.release_year,
+      haloNumber: row.halo_number,
+      rank: row.rank,
+      episodeNumber: row.episode_number,
+      timestamp: row.timestamp,
+    }));
+
+    return new Response(JSON.stringify(mapped), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
