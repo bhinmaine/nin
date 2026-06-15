@@ -43,7 +43,7 @@ const COVER_ART: Record<number, string> = {
   35: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/79/21/767921a2-c9d0-9618-32a3-ebe8fcb9c723/25UMGIM93266.rgb.jpg/600x600bb.jpg', // As Alive as You Need Me to Be
   36: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/79/21/767921a2-c9d0-9618-32a3-ebe8fcb9c723/25UMGIM93266.rgb.jpg/600x600bb.jpg', // Tron: Ares OST
   37: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f9/87/52/f9875213-5546-6e41-6bf8-e6585cca4122/26UMGIM14960.rgb.jpg/600x600bb.jpg', // Tron Ares: Divergence
-  38: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftinnitist.com%2Fwp-content%2Fuploads%2F2026%2F04%2FNine-Inch-Nails-Boys-Noize-Nine-Inch-Noize-640x640.jpeg&f=1&nofb=1&ipt=29c6b6a7dc936f445cefedca7026cd22a1ebb73ee53b83944f622b772eced4fb', // Nine Inch Noize album art
+  38: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/66/1a/90661ad8-b2e7-45c5-99cd-0f43f49bf179/26UMGIM42560.rgb.jpg/600x600bb.jpg', // Nine Inch Noize album art
 };
 
 // COMPLETE NIN DISCOGRAPHY - All Halo-Designated Releases
