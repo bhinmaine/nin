@@ -608,10 +608,12 @@
     "appleMusicUrl": "https://music.apple.com/us/album/the-idea-of-you/1847482288?i=1847482294&uo=4"
   },
   "nin-30-04": {
-    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350&uo=4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=J_eq4nrKc60"
   },
   "nin-30-05": {
-    "appleMusicUrl": "https://music.apple.com/us/album/the-fragile/1440836334?i=1440836562&uo=4"
+    "appleMusicUrl": "https://music.apple.com/us/album/the-fragile/1440836334?i=1440836562&uo=4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=h9D39DgQeVg"
   },
   "nin-31-02": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-lovers/1847481807?i=1847481809&uo=4"
@@ -1026,5 +1028,98 @@
   },
   "nin-9-09": {
     "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1446952455?i=1446952580"
+  },
+  "nin-30-01": {},
+  "nin-30-02": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=_r3ArjXUMrI"
+  },
+  "nin-30-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=Ro6BPl78Ex8"
+  },
+  "nin-30-06": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=CuTBAXDmBfc"
+  },
+  "nin-30-07": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=V6gY5-CKQ8o"
+  },
+  "nin-30-08": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=jzFcFf_6Wpw"
+  },
+  "nin-30-09": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=XD76iFRIJ78"
+  },
+  "nin-30-10": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=jakpmJnmKfc"
+  },
+  "nin-30-11": {},
+  "nin-30-12": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=fX81Ejkkgas"
+  },
+  "nin-30-13": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=KQjGtWp_N1g"
+  },
+  "nin-30-14": {},
+  "nin-30-15": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=vbjBRoizGgY"
+  },
+  "nin-30-16": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=loujfRp6sWg"
+  },
+  "nin-30-17": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=nc596eI4BqI"
+  },
+  "nin-30-18": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=lvhzHblMPS8"
+  },
+  "nin-30-19": {},
+  "nin-30-20": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=ciRP3WN6pkM"
+  },
+  "nin-30-21": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=lfWBDQ6MqRs"
+  },
+  "nin-30-22": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=PBcnm6a7I_k"
+  },
+  "nin-30-23": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=4qT8xP95xjY"
+  },
+  "nin-30-24": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=8Y5mDJdTXUw"
+  },
+  "nin-30-25": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=qK7muRm0f1o"
+  },
+  "nin-30-26": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=1nBhFNONTzM"
+  },
+  "nin-30-27": {},
+  "nin-30-28": {},
+  "nin-30-29": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=tBO-wOzcSLE"
+  },
+  "nin-30-30": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=P2-JqooVjfs"
+  },
+  "nin-30-31": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=UqbiBJWUe7M"
+  },
+  "nin-30-32": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=rssgoxLFNRc"
+  },
+  "nin-30-33": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=lraIakqFaAI"
+  },
+  "nin-30-34": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=H9WyfJ3SSr0"
+  },
+  "nin-30-35": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=K8VW-Ru0MHw"
+  },
+  "nin-30-36": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=RWom2RPpAdM"
+  },
+  "nin-30-37": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=Hhul5iKH-W8"
   }
 }
