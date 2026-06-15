@@ -5,6 +5,8 @@ export interface Song {
   releaseYear: number;
   haloNumber: number;
   coverArtUrl?: string | null;
+  appleMusicUrl?: string | null;
+  youtubeUrl?: string | null;
 }
 
 export interface RankedSong extends Song {

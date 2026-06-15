@@ -190,8 +190,12 @@ export function AdminInterface() {
                   )}
                   <div className="min-w-0">
                     <div className="font-semibold text-sm md:text-base truncate">{song.name}</div>
-                    <div className="text-xs md:text-sm text-gray-400 truncate">
-                      {song.album} • {song.releaseYear}
+                    <div className="text-xs md:text-sm text-gray-400 truncate flex items-center gap-1.5">
+                      <span className="text-red-500 font-mono flex-shrink-0">H{song.haloNumber}</span>
+                      <span>·</span>
+                      <span className="truncate">{song.album} · {song.releaseYear}</span>
+                      {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
+                      {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
                     </div>
                   </div>
                 </div>
@@ -218,8 +222,12 @@ export function AdminInterface() {
                   )}
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-sm md:text-base truncate">{song.name}</div>
-                    <div className="text-xs text-gray-400 truncate">
-                      {song.album} • {song.releaseYear}
+                    <div className="text-xs text-gray-400 truncate flex items-center gap-1.5">
+                      <span className="text-red-500 font-mono flex-shrink-0">H{song.haloNumber}</span>
+                      <span>·</span>
+                      <span className="truncate">{song.album} · {song.releaseYear}</span>
+                      {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
+                      {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
                     </div>
                   </div>
                   <button
