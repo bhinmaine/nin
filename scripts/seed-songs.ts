@@ -27,9 +27,9 @@ const COVER_ART: Record<number, string> = {
   19: 'http://coverartarchive.org/release/9446e4c4-69a1-37c8-a0e2-ffc76d65e3fe/10446876561.jpg',      // With Teeth
   20: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg', // Only
   21: 'http://coverartarchive.org/release/2254ffd1-a821-496d-a324-64b02b84e3c9/33021796950-250.jpg', // Every Day Is Exactly the Same
-  22: 'http://coverartarchive.org/release/68ee78b0-248c-3221-b585-2f314678415c/7160339859.jpg',       // Beside You in Time (Live)
+  22: 'https://i.discogs.com/Uehb2lvvlgsi-3eBDWbUa6CXZ1kXQCJBAB8iR6F8fMM/rs:fit/g:sm/q:90/h:600/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkxNzc4/NS0xMTcyODkwMTg5/LmpwZWc.jpeg',  // Beside You in Time
   23: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg',  // Survivalism
-  24: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg',  // Year Zero
+  24: 'https://i.discogs.com/F27qwum8SbhrmRcDjn6Fh8hV7vi1SqS-XeNBKOtgusw/rs:fit/g:sm/q:90/h:540/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Njc3/MDgtMTQ2MjA0Njg2/Mi02NjE5LmpwZWc.jpeg',  // Year Zero
   25: 'https://coverartarchive.org/release/b9578007-c191-45b7-b69c-c5ff0c880a9c/34331710858-250.jpg', // Year Zero Remixed
   26: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg',  // Ghosts I-IV
   27: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',   // The Slip
