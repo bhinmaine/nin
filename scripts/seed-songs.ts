@@ -16,7 +16,7 @@ const COVER_ART: Record<number, string> = {
   8:  'http://coverartarchive.org/release/2d410836-5add-3661-b0b0-168ba1696611/2546761764-250.jpg',   // The Downward Spiral
   9:  'http://coverartarchive.org/release/6f4e2d84-d4af-3930-adb8-ea906db4e0e0/10149859243.jpg',      // Closer to God
   10: 'http://coverartarchive.org/release/099d50c3-3a61-3bc1-88d5-1c8bc327eacd/17883237578-250.jpg', // Further Down the Spiral
-  11: 'https://coverartarchive.org/release/dde63df5-4f21-49f0-a79e-3abb7ee1ce2e/43839425759-250.jpg',// The Perfect Drug Versions
+  11: 'http://coverartarchive.org/release/a4db9744-347f-47f5-a4bd-394fde23831c/17883283798-250.jpg', // The Perfect Drug Versions
   12: 'http://coverartarchive.org/release/ceef7b5c-ae41-4065-b2da-cdcd997f4c5a/15573774421.jpg',      // Closure
   13: 'http://coverartarchive.org/release/da0ac25e-6e75-3e63-b8b4-e2ff206b60db/10150650258.jpg',      // The Day the World Went Away
   14: 'http://coverartarchive.org/release/d790bcd2-f30b-37d6-aaef-37563a661212/2226772480.jpg',       // The Fragile
