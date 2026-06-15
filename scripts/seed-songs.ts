@@ -30,7 +30,7 @@ const COVER_ART: Record<number, string> = {
   22: 'https://i.discogs.com/Uehb2lvvlgsi-3eBDWbUa6CXZ1kXQCJBAB8iR6F8fMM/rs:fit/g:sm/q:90/h:600/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkxNzc4/NS0xMTcyODkwMTg5/LmpwZWc.jpeg',  // Beside You in Time
   23: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg',  // Survivalism
   24: 'https://i.discogs.com/F27qwum8SbhrmRcDjn6Fh8hV7vi1SqS-XeNBKOtgusw/rs:fit/g:sm/q:90/h:540/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Njc3/MDgtMTQ2MjA0Njg2/Mi02NjE5LmpwZWc.jpeg',  // Year Zero
-  25: 'https://coverartarchive.org/release/b9578007-c191-45b7-b69c-c5ff0c880a9c/34331710858-250.jpg', // Year Zero Remixed
+  25: 'https://i.discogs.com/Tt2_G8uWA3YHAp1At3UJO3uiARFu8DT_iwx--XKGK1E/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDU1/NjQtMTQwMjU5MDQ3/OC01OTU1LmpwZWc.jpeg', // Year Zero Remixed
   26: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg',  // Ghosts I-IV
   27: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',   // The Slip
   28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg',// Hesitation Marks
