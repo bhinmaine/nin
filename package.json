@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.25.0",
-    "@vercel/postgres": "^0.5.1",
+    "@vercel/postgres": "^0.10.0",
     "lucide-react": "^0.292.0",
     "pg": "^8.21.0",
     "react": "^18.2.0",
