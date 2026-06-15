@@ -23,19 +23,19 @@ const COVER_ART: Record<number, string> = {
   15: 'http://coverartarchive.org/release/b3013c93-0600-4571-a52b-4b015f4c1a85/17883665349-250.jpg', // We're in This Together
   16: 'http://coverartarchive.org/release/a5be5d2b-9864-3a06-91d6-85b1826bb497/9363751085.jpg',       // Things Falling Apart
   17: 'http://coverartarchive.org/release/b5db5d98-a0de-4656-b8a8-e8988179cc1a/34090268716-250.jpg', // And All That Could Have Been
-  18: 'http://coverartarchive.org/release/24c05c85-1405-4e71-b68f-485b0e40ced3/33515376658-250.jpg', // Still
-  19: 'https://coverartarchive.org/release/2b8f2c53-5530-4fd8-bcc9-9b185ab02824/38688177255-250.jpg',// Into the Void
-  20: 'http://coverartarchive.org/release/9446e4c4-69a1-37c8-a0e2-ffc76d65e3fe/10446876561.jpg',     // With Teeth
+  18: 'http://coverartarchive.org/release/762d5900-44b2-421d-a3ee-15c1a299f379/15665471427.jpg',      // The Hand That Feeds
+  19: 'http://coverartarchive.org/release/9446e4c4-69a1-37c8-a0e2-ffc76d65e3fe/10446876561.jpg',      // With Teeth
+  20: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg', // Only
   21: 'http://coverartarchive.org/release/2254ffd1-a821-496d-a324-64b02b84e3c9/33021796950-250.jpg', // Every Day Is Exactly the Same
-  22: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg', // Year Zero
-  23: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg',// Only
-  24: 'http://coverartarchive.org/release/762d5900-44b2-421d-a3ee-15c1a299f379/15665471427.jpg',      // The Hand That Feeds
-  25: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg',// Only (same as 23)
-  26: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',  // The Slip
-  27: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg', // Survivalism
+  22: 'http://coverartarchive.org/release/68ee78b0-248c-3221-b585-2f314678415c/7160339859.jpg',       // Beside You in Time (Live)
+  23: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg',  // Survivalism
+  24: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg',  // Year Zero
+  25: 'https://coverartarchive.org/release/b9578007-c191-45b7-b69c-c5ff0c880a9c/34331710858-250.jpg', // Year Zero Remixed
+  26: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg',  // Ghosts I-IV
+  27: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',   // The Slip
   28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg',// Hesitation Marks
   29: 'https://coverartarchive.org/release/a5d8e64d-2d1e-4249-8ff9-380674754609/41318947853-250.jpg', // Not the Actual Events
-  30: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg', // Ghosts I-IV
+  30: 'http://coverartarchive.org/release/0934c776-6dde-4e22-baab-37e32719c7b0/35807253035-250.jpg',  // The Fragile: Deviations 1
   31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg',// Add Violence
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
   33: 'https://coverartarchive.org/release/193ecb2e-a1e8-49d3-ba0e-6e95f489bdf0/25770597240-250.jpg',// Ghosts V: Together
