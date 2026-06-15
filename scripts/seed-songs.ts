@@ -17,7 +17,7 @@ const COVER_ART: Record<number, string> = {
   9:  'http://coverartarchive.org/release/6f4e2d84-d4af-3930-adb8-ea906db4e0e0/10149859243.jpg',      // Closer to God
   10: 'http://coverartarchive.org/release/099d50c3-3a61-3bc1-88d5-1c8bc327eacd/17883237578-250.jpg', // Further Down the Spiral
   11: 'http://coverartarchive.org/release/a4db9744-347f-47f5-a4bd-394fde23831c/17883283798-250.jpg', // The Perfect Drug Versions
-  12: 'http://coverartarchive.org/release/ceef7b5c-ae41-4065-b2da-cdcd997f4c5a/15573774421.jpg',      // Closure
+  12: 'https://i.discogs.com/Em9MG9su5Y-MYrOr5oer6pt6VcEZJNEVRf-zK4DC1q4/rs:fit/g:sm/q:90/h:600/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1NzM3/NS0xNTc2NjIyNDg5/LTQ0NDEuanBlZw.jpeg',      // Closure (VHS sleeve)
   13: 'http://coverartarchive.org/release/da0ac25e-6e75-3e63-b8b4-e2ff206b60db/10150650258.jpg',      // The Day the World Went Away
   14: 'http://coverartarchive.org/release/d790bcd2-f30b-37d6-aaef-37563a661212/2226772480.jpg',       // The Fragile
   15: 'http://coverartarchive.org/release/b3013c93-0600-4571-a52b-4b015f4c1a85/17883665349-250.jpg', // We're in This Together
@@ -28,7 +28,7 @@ const COVER_ART: Record<number, string> = {
   20: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg', // Only
   21: 'http://coverartarchive.org/release/2254ffd1-a821-496d-a324-64b02b84e3c9/33021796950-250.jpg', // Every Day Is Exactly the Same
   22: 'https://i.discogs.com/Uehb2lvvlgsi-3eBDWbUa6CXZ1kXQCJBAB8iR6F8fMM/rs:fit/g:sm/q:90/h:600/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkxNzc4/NS0xMTcyODkwMTg5/LmpwZWc.jpeg',  // Beside You in Time
-  23: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg',  // Survivalism
+  23: 'http://coverartarchive.org/release/07f0e2f1-61a1-412a-a587-9febec58724f/3893878332.jpg',      // Survivalism
   24: 'https://i.discogs.com/F27qwum8SbhrmRcDjn6Fh8hV7vi1SqS-XeNBKOtgusw/rs:fit/g:sm/q:90/h:540/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Njc3/MDgtMTQ2MjA0Njg2/Mi02NjE5LmpwZWc.jpeg',  // Year Zero
   25: 'https://i.discogs.com/Tt2_G8uWA3YHAp1At3UJO3uiARFu8DT_iwx--XKGK1E/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDU1/NjQtMTQwMjU5MDQ3/OC01OTU1LmpwZWc.jpeg', // Year Zero Remixed
   26: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg',  // Ghosts I-IV
@@ -38,8 +38,8 @@ const COVER_ART: Record<number, string> = {
   30: 'http://coverartarchive.org/release/0934c776-6dde-4e22-baab-37e32719c7b0/35807253035-250.jpg',  // The Fragile: Deviations 1
   31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg',// Add Violence
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
-  33: 'https://coverartarchive.org/release/193ecb2e-a1e8-49d3-ba0e-6e95f489bdf0/25770597240-250.jpg',// Ghosts V: Together
-  34: 'https://coverartarchive.org/release/7cd6e3d1-5372-4de4-8e8f-a1966b081eda/25812118263-250.jpg',// Ghosts VI: Locusts
+  33: 'https://coverartarchive.org/release/0e48daf3-1406-42e8-9301-59f4cf8e6e25/45131993030-500.jpg', // Ghosts V: Together
+  34: 'https://coverartarchive.org/release/cac60a3c-b1fe-4653-8a5b-937198111133/45130474998-500.jpg', // Ghosts VI: Locusts
   38: 'https://coverartarchive.org/release/e2c55de3-27a5-4f34-bdf9-668496571630/44850397430-250.jpg', // Nine Inch Noize: Live @ Coachella 2026
 };
 
