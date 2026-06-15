@@ -268,16 +268,34 @@ export function AdminInterface() {
               className="w-20 px-3 py-1 bg-gray-800 border border-gray-600 rounded text-white"
             />
           </label>
-          <button
-            onClick={() => {
-              const shuffled = [...store.unranked].sort(() => Math.random() - 0.5);
-              store.setUnranked(shuffled);
-              saveSongs(shuffled, store.ranked);
-            }}
-            className="ml-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded flex items-center gap-2 text-sm md:text-base"
-          >
-            <Shuffle size={16} /> Shuffle Unranked
-          </button>
+          <div className="ml-auto flex gap-2">
+            <button
+              onClick={() => {
+                const sorted = [...store.unranked].sort((a, b) =>
+                  a.releaseYear !== b.releaseYear
+                    ? a.releaseYear - b.releaseYear
+                    : a.haloNumber !== b.haloNumber
+                    ? a.haloNumber - b.haloNumber
+                    : a.id.localeCompare(b.id)
+                );
+                store.setUnranked(sorted);
+                saveSongs(sorted, store.ranked);
+              }}
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded flex items-center gap-2 text-sm md:text-base"
+            >
+              ⏱ Release Order
+            </button>
+            <button
+              onClick={() => {
+                const shuffled = [...store.unranked].sort(() => Math.random() - 0.5);
+                store.setUnranked(shuffled);
+                saveSongs(shuffled, store.ranked);
+              }}
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded flex items-center gap-2 text-sm md:text-base"
+            >
+              <Shuffle size={16} /> Shuffle
+            </button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
