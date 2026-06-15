@@ -25,7 +25,7 @@ const COVER_ART: Record<number, string> = {
   17: 'http://coverartarchive.org/release/b5db5d98-a0de-4656-b8a8-e8988179cc1a/34090268716-250.jpg', // And All That Could Have Been
   18: 'http://coverartarchive.org/release/24c05c85-1405-4e71-b68f-485b0e40ced3/33515376658-250.jpg', // Still
   19: 'https://coverartarchive.org/release/2b8f2c53-5530-4fd8-bcc9-9b185ab02824/38688177255-250.jpg',// Into the Void
-  20: 'http://coverartarchive.org/release/44cbff72-9db6-4ad0-b4c8-b14986afc93a/10150118074.jpg',     // With Teeth
+  20: 'http://coverartarchive.org/release/9446e4c4-69a1-37c8-a0e2-ffc76d65e3fe/10446876561.jpg',     // With Teeth
   21: 'http://coverartarchive.org/release/2254ffd1-a821-496d-a324-64b02b84e3c9/33021796950-250.jpg', // Every Day Is Exactly the Same
   22: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg', // Year Zero
   23: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg',// Only
