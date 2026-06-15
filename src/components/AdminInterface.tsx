@@ -66,22 +66,30 @@ export function AdminInterface() {
   const handleRankSong = (song: Song, position: number) => {
     store.rankSong(song, position, episodeNumber);
     setSelectedUnrankedId(null);
-    saveSongs();
+    // Use updated state directly to avoid stale closure
+    const newUnranked = store.unranked.filter(s => s.id !== song.id);
+    const newRanked = [...store.ranked];
+    const rankedSong = { ...song, rank: position + 1, episodeNumber, timestamp: new Date().toISOString() };
+    newRanked.splice(position, 0, rankedSong);
+    newRanked.forEach((s, i) => { s.rank = i + 1; });
+    saveSongs(newUnranked, newRanked);
   };
 
   const handleUnrankSong = (songId: string) => {
     store.unrankSong(songId);
-    saveSongs();
+    const song = store.ranked.find(s => s.id === songId);
+    if (!song) return;
+    const newRanked = store.ranked.filter(s => s.id !== songId);
+    newRanked.forEach((s, i) => { s.rank = i + 1; });
+    const { rank, episodeNumber: ep, timestamp, ...songData } = song;
+    saveSongs([...store.unranked, songData as Song], newRanked);
   };
 
-  const saveSongs = async () => {
+  const saveSongs = async (unranked = store.unranked, ranked = store.ranked) => {
     await fetch('/api/admin/songs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        unranked: store.unranked,
-        ranked: store.ranked,
-      }),
+      body: JSON.stringify({ unranked, ranked }),
     });
   };
 
@@ -149,7 +157,11 @@ export function AdminInterface() {
             />
           </label>
           <button
-            onClick={() => store.shuffleUnranked()}
+            onClick={() => {
+              const shuffled = [...store.unranked].sort(() => Math.random() - 0.5);
+              store.setUnranked(shuffled);
+              saveSongs(shuffled, store.ranked);
+            }}
             className="ml-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded flex items-center gap-2 text-sm md:text-base"
           >
             <Shuffle size={16} /> Shuffle Unranked

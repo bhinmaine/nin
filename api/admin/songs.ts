@@ -34,7 +34,11 @@ export default async function handler(request: Request) {
         JOIN songs s ON r.song_id = s.id
         ORDER BY r.rank ASC
       `;
-      
+
+      // Fetch stored unranked order
+      const orderResult = await sql`SELECT song_ids FROM unranked_order WHERE id = 1`;
+      const storedOrder: string[] | null = orderResult.rows[0]?.song_ids ?? null;
+
       const mapSong = (row: any) => ({
         id: row.id,
         name: row.name,
@@ -49,9 +53,21 @@ export default async function handler(request: Request) {
         }),
       });
 
+      const unrankedSongs = (unrankedResult.rows || []).map(mapSong);
+
+      // Apply stored order if available
+      let orderedUnranked = unrankedSongs;
+      if (storedOrder && storedOrder.length > 0) {
+        const map = new Map(unrankedSongs.map((s: any) => [s.id, s]));
+        const ordered = storedOrder.flatMap((id: string) => map.has(id) ? [map.get(id)] : []);
+        const inOrder = new Set(storedOrder);
+        const remainder = unrankedSongs.filter((s: any) => !inOrder.has(s.id));
+        orderedUnranked = [...ordered, ...remainder] as any[];
+      }
+
       return new Response(
         JSON.stringify({
-          unranked: (unrankedResult.rows || []).map(mapSong),
+          unranked: orderedUnranked,
           ranked: (rankedResult.rows || []).map(mapSong),
         }),
         { 
@@ -90,6 +106,14 @@ export default async function handler(request: Request) {
           VALUES (${song.id}, ${song.rank}, ${song.episodeNumber}, ${song.timestamp})
         `;
       }
+
+      // Persist unranked order
+      const unrankedIds = JSON.stringify(data.unranked.map((s: any) => s.id));
+      await sql`
+        INSERT INTO unranked_order (id, song_ids, updated_at)
+        VALUES (1, ${unrankedIds}::jsonb, CURRENT_TIMESTAMP)
+        ON CONFLICT (id) DO UPDATE SET song_ids = ${unrankedIds}::jsonb, updated_at = CURRENT_TIMESTAMP
+      `;
 
       // Ensure all unranked songs exist (upsert)
       for (const song of data.unranked) {

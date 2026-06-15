@@ -1,32 +1,6 @@
 import { create } from 'zustand';
 import type { Song, RankedSong } from '../types';
 
-const STORAGE_KEY = 'nin-unranked-order';
-
-function saveUnrankedOrder(songs: Song[]) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(songs.map(s => s.id)));
-  } catch {}
-}
-
-function loadUnrankedOrder(): string[] | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch { return null; }
-}
-
-function applyStoredOrder(songs: Song[]): Song[] {
-  const order = loadUnrankedOrder();
-  if (!order) return songs;
-  const map = new Map(songs.map(s => [s.id, s]));
-  const ordered = order.flatMap(id => map.has(id) ? [map.get(id)!] : []);
-  // Append any songs not in the stored order (newly unranked, etc.)
-  const inOrder = new Set(order);
-  const remainder = songs.filter(s => !inOrder.has(s.id));
-  return [...ordered, ...remainder];
-}
-
 interface RankingStore {
   unranked: Song[];
   ranked: RankedSong[];
@@ -58,11 +32,7 @@ export const useRankingStore = create<RankingStore>((set) => ({
   loading: false,
   error: null,
   
-  setUnranked: (songs) => {
-    const ordered = applyStoredOrder(songs);
-    saveUnrankedOrder(ordered);
-    set({ unranked: ordered });
-  },
+  setUnranked: (songs) => set({ unranked: songs }),
   setRanked: (songs) => set({ ranked: songs }),
   setLoading: (loading) => set({ loading }),
   setError: (error) => set({ error }),
@@ -79,7 +49,6 @@ export const useRankingStore = create<RankingStore>((set) => ({
     };
     
     newRanked.splice(position, 0, rankedSong);
-    // Re-index ranks after insertion
     newRanked.forEach((s, i) => { s.rank = i + 1; });
     
     return { unranked: newUnranked, ranked: newRanked };
@@ -93,11 +62,9 @@ export const useRankingStore = create<RankingStore>((set) => ({
     newRanked.forEach((s, i) => { s.rank = i + 1; });
     
     const { rank, episodeNumber, timestamp, ...songData } = song;
-    const newUnranked = [...state.unranked, songData as Song];
-    saveUnrankedOrder(newUnranked);
     return {
       ranked: newRanked,
-      unranked: newUnranked,
+      unranked: [...state.unranked, songData as Song],
     };
   }),
   
@@ -108,16 +75,12 @@ export const useRankingStore = create<RankingStore>((set) => ({
     const newRanked = [...state.ranked];
     const [song] = newRanked.splice(songIndex, 1);
     newRanked.splice(newPosition, 0, song);
-    
-    // Re-index ranks
     newRanked.forEach((s, i) => { s.rank = i + 1; });
     
     return { ranked: newRanked };
   }),
   
-  shuffleUnranked: () => set((state) => {
-    const shuffled = [...state.unranked].sort(() => Math.random() - 0.5);
-    saveUnrankedOrder(shuffled);
-    return { unranked: shuffled };
-  }),
+  shuffleUnranked: () => set((state) => ({
+    unranked: [...state.unranked].sort(() => Math.random() - 0.5),
+  })),
 }));
