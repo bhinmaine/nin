@@ -1,154 +1,25 @@
 {
   "nin-1-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=5aDZp0bKnrU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QrrEo3hZABU",
     "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
   },
   "nin-1-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=5aDZp0bKnrU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=48UBhxzVOQ0",
     "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
   },
   "nin-1-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=5aDZp0bKnrU",
     "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
   },
   "nin-2-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=id_lh7IDPhY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
     "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
-  },
-  "nin-2-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=5aDZp0bKnrU",
-    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
-  },
-  "nin-2-07": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=JR9shZDVsS4",
-    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
-  },
-  "nin-3-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=id_lh7IDPhY",
-    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
-  },
-  "nin-3-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=id_lh7IDPhY",
-    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
-  },
-  "nin-3-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=id_lh7IDPhY",
-    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
-  },
-  "nin-4-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=JR9shZDVsS4",
-    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
-  },
-  "nin-4-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=JR9shZDVsS4",
-    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
-  },
-  "nin-7-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=lR3XLhPYYS8"
-  },
-  "nin-8-04": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=lR3XLhPYYS8"
-  },
-  "nin-8-05": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=QrrEo3hZABU"
-  },
-  "nin-8-14": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=OzElpNnkBiE",
-    "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114"
-  },
-  "nin-9-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=QrrEo3hZABU"
-  },
-  "nin-12-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=JR9shZDVsS4",
-    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
-  },
-  "nin-12-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=lR3XLhPYYS8"
-  },
-  "nin-12-04": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=QrrEo3hZABU"
-  },
-  "nin-12-07": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=OzElpNnkBiE",
-    "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114"
-  },
-  "nin-13-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=VosCzRFWFHw",
-    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away/1440836334?i=1440836343"
-  },
-  "nin-14-05": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
-    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350"
-  },
-  "nin-14-14": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=pHFpGzSQpRY",
-    "appleMusicUrl": "https://music.apple.com/us/album/into-the-void/1440836334?i=1440836578"
-  },
-  "nin-15-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
-    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350"
-  },
-  "nin-17-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=JR9shZDVsS4"
-  },
-  "nin-17-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=lR3XLhPYYS8"
-  },
-  "nin-17-12": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=OzElpNnkBiE",
-    "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114"
-  },
-  "nin-18-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=xwhBRJStz7w"
-  },
-  "nin-19-06": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
-    "appleMusicUrl": "https://music.apple.com/us/album/every-day-is-exactly-the-same/1440851583?i=1440852255"
-  },
-  "nin-19-08": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=wwvLlEtxX3o"
-  },
-  "nin-20-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=wwvLlEtxX3o"
-  },
-  "nin-21-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
-    "appleMusicUrl": "https://music.apple.com/us/album/every-day-is-exactly-the-same/1440851583?i=1440852255"
-  },
-  "nin-23-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=V8IKGpIJpi4",
-    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262"
-  },
-  "nin-23-02": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=V8IKGpIJpi4",
-    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262"
-  },
-  "nin-24-05": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=sVAJKirLg-c",
-    "appleMusicUrl": "https://music.apple.com/us/album/vessel/1440826538?i=1440827288"
-  },
-  "nin-24-07": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=pAQnrMCfaPs"
-  },
-  "nin-29-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=rKiS6aBX5p8"
-  },
-  "nin-29-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=1NZf50s6_xE",
-    "appleMusicUrl": "https://music.apple.com/us/album/shes-gone-away/1847482288?i=1847482293"
-  },
-  "nin-31-01": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=rKiS6aBX5p8"
-  },
-  "nin-31-03": {
-    "youtubeUrl": "https://www.youtube.com/watch?v=qLjNHnC1VGg"
-  },
-  "nin-32-04": {
-    "appleMusicUrl": "https://music.apple.com/us/album/god-break-down-the-door/1847482590?i=1847482596"
   },
   "nin-2-02": {
     "appleMusicUrl": "https://music.apple.com/us/album/terrible-lie/1440934840?i=1440934938"
+  },
+  "nin-2-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=QrrEo3hZABU",
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
   },
   "nin-2-04": {
     "appleMusicUrl": "https://music.apple.com/us/album/sanctified/1440940694?i=1440941072"
@@ -156,11 +27,31 @@
   "nin-2-06": {
     "appleMusicUrl": "https://music.apple.com/us/album/kinda-i-want-to/1440940694?i=1440941354"
   },
+  "nin-2-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
+  },
   "nin-2-08": {
     "appleMusicUrl": "https://music.apple.com/us/album/thats-what-i-get/1440940694?i=1440941370"
   },
   "nin-2-10": {
     "appleMusicUrl": "https://music.apple.com/us/album/ringfinger/1440934840?i=1440934954"
+  },
+  "nin-3-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
+  },
+  "nin-3-02": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
+  },
+  "nin-3-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1440934840?i=1440934933"
+  },
+  "nin-4-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
+  },
+  "nin-4-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
   },
   "nin-4-03": {
     "appleMusicUrl": "https://music.apple.com/us/album/get-down-make-love/1444212495?i=1444212771"
@@ -177,6 +68,10 @@
   "nin-5-05": {
     "appleMusicUrl": "https://music.apple.com/us/album/happiness-in-slavery/1440743805?i=1440743821"
   },
+  "nin-7-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+    "appleMusicUrl": "https://music.apple.com/us/album/march-of-the-pigs/1440837096?i=1440837281"
+  },
   "nin-7-02": {
     "appleMusicUrl": "https://music.apple.com/us/album/a-violet-fluid/1418210351?i=1418211382"
   },
@@ -192,17 +87,53 @@
   "nin-8-03": {
     "appleMusicUrl": "https://music.apple.com/us/album/heresy/1440837096?i=1440837531"
   },
+  "nin-8-04": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+    "appleMusicUrl": "https://music.apple.com/us/album/march-of-the-pigs/1440837096?i=1440837281"
+  },
+  "nin-8-05": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=o8F_KaILW6g",
+    "appleMusicUrl": "https://music.apple.com/us/album/closer/1440837096?i=1440837533"
+  },
   "nin-8-11": {
     "appleMusicUrl": "https://music.apple.com/us/album/erased-over-out/1545212135?i=1545212330"
   },
   "nin-8-12": {
     "appleMusicUrl": "https://music.apple.com/us/album/reptile/1440837096?i=1440837993"
   },
+  "nin-8-14": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=PbHz9p7Z4OU",
+    "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114"
+  },
+  "nin-9-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closer-to-god/1440934840?i=1440934941"
+  },
+  "nin-12-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closure/1440934870"
+  },
+  "nin-12-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closure/1440934870"
+  },
+  "nin-12-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/closure/1440934870"
+  },
+  "nin-12-07": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=OzElpNnkBiE",
+    "appleMusicUrl": "https://music.apple.com/us/album/closure/1440934870"
+  },
+  "nin-13-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=VosCzRFWFHw",
+    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away/1440836334?i=1440836343"
+  },
   "nin-13-04": {
     "appleMusicUrl": "https://music.apple.com/us/album/where-is-everybody/1440836334?i=1440836581"
   },
   "nin-14-03": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-frail/1440836334?i=1440836347"
+  },
+  "nin-14-05": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
+    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350"
   },
   "nin-14-06": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-fragile/1440836334?i=1440836562"
@@ -219,23 +150,78 @@
   "nin-14-10": {
     "appleMusicUrl": "https://music.apple.com/us/album/no-you-dont/1440836334?i=1440836568"
   },
+  "nin-14-14": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=pHFpGzSQpRY",
+    "appleMusicUrl": "https://music.apple.com/us/album/into-the-void/1440836334?i=1440836578"
+  },
   "nin-14-17": {
     "appleMusicUrl": "https://music.apple.com/us/album/please/1440836334?i=1440836688"
   },
   "nin-14-23": {
     "appleMusicUrl": "https://music.apple.com/us/album/ripe-with-decay/1440836334?i=1440836704"
   },
+  "nin-15-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
+    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350"
+  },
+  "nin-17-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sin/1440934840?i=1440934948"
+  },
+  "nin-17-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+    "appleMusicUrl": "https://music.apple.com/us/album/march-of-the-pigs/1440837096?i=1440837281"
+  },
+  "nin-17-12": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=o8F_KaILW6g",
+    "appleMusicUrl": "https://music.apple.com/us/album/closer/1440837096?i=1440837533"
+  },
+  "nin-18-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=xwhBRJStz7w",
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1440851583?i=1440851989"
+  },
   "nin-19-03": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-collector/1440851583?i=1440852038"
   },
+  "nin-19-06": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
+    "appleMusicUrl": "https://music.apple.com/us/album/every-day-is-exactly-the-same/1440851583?i=1440852052"
+  },
   "nin-19-07": {
     "appleMusicUrl": "https://music.apple.com/us/album/with-teeth/1440851583?i=1440852261"
+  },
+  "nin-19-08": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=wwvLlEtxX3o",
+    "appleMusicUrl": "https://music.apple.com/us/album/only/1440851583?i=1440852264"
   },
   "nin-19-11": {
     "appleMusicUrl": "https://music.apple.com/us/album/the-line-begins-to-blur/1440851583?i=1440852470"
   },
   "nin-19-12": {
     "appleMusicUrl": "https://music.apple.com/us/album/beside-you-in-time/1440851583?i=1440852476"
+  },
+  "nin-20-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=wwvLlEtxX3o",
+    "appleMusicUrl": "https://music.apple.com/us/album/only/1440851583?i=1440852264"
+  },
+  "nin-21-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
+    "appleMusicUrl": "https://music.apple.com/us/album/every-day-is-exactly-the-same/1440851583?i=1440852052"
+  },
+  "nin-23-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=qSsRt_1l740",
+    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262"
+  },
+  "nin-23-02": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=qSsRt_1l740",
+    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262"
+  },
+  "nin-24-05": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=sVAJKirLg-c",
+    "appleMusicUrl": "https://music.apple.com/us/album/vessel/1440826538?i=1440827288"
+  },
+  "nin-24-07": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=pAQnrMCfaPs",
+    "appleMusicUrl": "https://music.apple.com/us/album/capital-g/1440826538?i=1440827506"
   },
   "nin-24-08": {
     "appleMusicUrl": "https://music.apple.com/us/album/my-violent-heart/1440826538?i=1440827508"
@@ -248,5 +234,32 @@
   },
   "nin-27-10": {
     "appleMusicUrl": "https://music.apple.com/us/album/demon-seed/285284658?i=285284785"
+  },
+  "nin-28-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=W6S1qmCVKyY",
+    "appleMusicUrl": "https://music.apple.com/us/album/came-back-haunted/673721498?i=673721535"
+  },
+  "nin-29-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=rKiS6aBX5p8",
+    "appleMusicUrl": "https://music.apple.com/us/album/branches-bones/1847482288?i=1847482289"
+  },
+  "nin-29-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=1NZf50s6_xE",
+    "appleMusicUrl": "https://music.apple.com/us/album/shes-gone-away/1847482288?i=1847482293"
+  },
+  "nin-31-01": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=gDV-dOvqKzQ",
+    "appleMusicUrl": "https://music.apple.com/us/album/less-than/1254862386?i=1254862387"
+  },
+  "nin-31-03": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=_g8nAqDu3gI",
+    "appleMusicUrl": "https://music.apple.com/us/album/this-isnt-the-place/1254862386?i=1254862389"
+  },
+  "nin-32-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/god-break-down-the-door/1847482590?i=1847482596"
+  },
+  "nin-38-12": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=SnMyroAH0rg",
+    "appleMusicUrl": "https://music.apple.com/us/album/as-alive-as-you-need-me-to-be/1847482888"
   }
 }
