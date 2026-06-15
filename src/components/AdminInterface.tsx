@@ -125,42 +125,42 @@ export function AdminInterface() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 p-8">
+    <div className="min-h-screen bg-gray-950 text-gray-100 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold">Admin: NIN Rankings</h1>
+        <div className="flex items-center justify-between mb-4 md:mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold">Admin: NIN Rankings</h1>
           <button
             onClick={handleLogout}
-            className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition"
+            className="px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition flex-shrink-0 ml-4"
           >
             Logout
           </button>
         </div>
 
-        <div className="mb-6 flex gap-4 items-center">
-          <label className="font-semibold">
+        <div className="mb-4 md:mb-6 flex flex-wrap gap-3 items-center">
+          <label className="font-semibold flex items-center gap-2">
             Episode Number:
             <input
               type="number"
               min="1"
               value={episodeNumber}
               onChange={(e) => setEpisodeNumber(parseInt(e.target.value))}
-              className="ml-2 px-3 py-1 bg-gray-800 border border-gray-600 rounded text-white"
+              className="w-20 px-3 py-1 bg-gray-800 border border-gray-600 rounded text-white"
             />
           </label>
           <button
             onClick={() => store.shuffleUnranked()}
-            className="ml-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded flex items-center gap-2"
+            className="ml-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded flex items-center gap-2 text-sm md:text-base"
           >
-            <Shuffle size={18} /> Shuffle Unranked
+            <Shuffle size={16} /> Shuffle Unranked
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* UNRANKED BUCKET */}
-          <div className="bg-gray-900 rounded-lg p-6 border border-gray-700">
-            <h2 className="text-2xl font-bold mb-4">Unranked ({store.unranked.length})</h2>
-            <div className="space-y-2 max-h-[calc(100vh-300px)] overflow-y-auto">
+          <div className="bg-gray-900 rounded-lg p-4 md:p-6 border border-gray-700">
+            <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Unranked ({store.unranked.length})</h2>
+            <div className="space-y-2 max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
               {store.unranked.map((song) => (
                 <div
                   key={song.id}
@@ -171,8 +171,8 @@ export function AdminInterface() {
                       : 'bg-gray-800 hover:bg-gray-700'
                   }`}
                 >
-                  <div className="font-semibold">{song.name}</div>
-                  <div className="text-sm text-gray-400">
+                  <div className="font-semibold text-sm md:text-base">{song.name}</div>
+                  <div className="text-xs md:text-sm text-gray-400">
                     {song.album} • {song.releaseYear}
                   </div>
                 </div>
@@ -181,9 +181,9 @@ export function AdminInterface() {
           </div>
 
           {/* RANKED BUCKET */}
-          <div className="bg-gray-900 rounded-lg p-6 border border-gray-700">
-            <h2 className="text-2xl font-bold mb-4">Ranked ({store.ranked.length})</h2>
-            <div className="space-y-2 max-h-[calc(100vh-300px)] overflow-y-auto">
+          <div className="bg-gray-900 rounded-lg p-4 md:p-6 border border-gray-700">
+            <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Ranked ({store.ranked.length})</h2>
+            <div className="space-y-2 max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
               {store.ranked.map((song) => (
                 <div
                   key={song.id}
@@ -193,7 +193,7 @@ export function AdminInterface() {
                     #{song.rank}
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold">{song.name}</div>
+                    <div className="font-semibold text-sm md:text-base">{song.name}</div>
                     <div className="text-xs text-gray-400">
                       {song.album} • {song.releaseYear}
                     </div>
