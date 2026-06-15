@@ -5,10 +5,10 @@
   },
   "nin-1-02": {
     "youtubeUrl": "https://www.youtube.com/watch?v=48UBhxzVOQ0",
-    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it-shred/1443644320?i=1443644758&uo=4"
   },
   "nin-1-03": {
-    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it/1440934840?i=1440934939"
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it-singe/1443644320?i=1443644836&uo=4"
   },
   "nin-2-01": {
     "youtubeUrl": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
@@ -261,5 +261,677 @@
   "nin-38-12": {
     "youtubeUrl": "https://www.youtube.com/watch?v=SnMyroAH0rg",
     "appleMusicUrl": "https://music.apple.com/us/album/as-alive-as-you-need-me-to-be/1847482888"
+  },
+  "nin-2-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/something-i-can-never-have/990375204?i=990375209&uo=4"
+  },
+  "nin-2-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-only-time/990375204?i=990375213&uo=4"
+  },
+  "nin-3-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1627771482?i=1627771484&uo=4"
+  },
+  "nin-3-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/you-know-who-you-are/1443892991?i=1443893003&uo=4"
+  },
+  "nin-3-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole/1627771482?i=1627771484&uo=4"
+  },
+  "nin-3-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/terrible-lie-sympathetic-mix/1443892991?i=1443892998&uo=4"
+  },
+  "nin-3-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it-shred/1443644320?i=1443644758&uo=4"
+  },
+  "nin-3-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it-singe/1443644320?i=1443644836&uo=4"
+  },
+  "nin-3-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/down-in-it-shred/1443892991?i=1443893016&uo=4"
+  },
+  "nin-4-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sin-long/1444212495?i=1444212514&uo=4"
+  },
+  "nin-5-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/gave-up/1440743805?i=1440743823&uo=4"
+  },
+  "nin-5-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/suck/1440743805?i=1440743827&uo=4"
+  },
+  "nin-6-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/gave-up-remix/1443590507?i=1443590523&uo=4"
+  },
+  "nin-6-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/happiness-in-slavery-remix/1443590507?i=1443590750&uo=4"
+  },
+  "nin-6-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/throw-this-away/1443590507?i=1443590761&uo=4"
+  },
+  "nin-6-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/screaming-slave/1443590507?i=1443590971&uo=4"
+  },
+  "nin-7-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/a-violet-fluid/1445153831?i=1445153994&uo=4"
+  },
+  "nin-7-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/underneath-the-skin/1445153831?i=1445154032&uo=4"
+  },
+  "nin-8-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-becoming/1440837096?i=1440837634&uo=4"
+  },
+  "nin-8-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/a-warm-place/1440837096?i=1440837844&uo=4"
+  },
+  "nin-9-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/heresy-blind/1446952455?i=1446952476&uo=4"
+  },
+  "nin-9-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/memorabilia/1446952455?i=1446952572&uo=4"
+  },
+  "nin-10-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/piggy-nothing-can-stop-me-now/1545212135?i=1545212288&uo=4"
+  },
+  "nin-10-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-art-of-self-destruction-part-one/1545212135?i=1545212293&uo=4"
+  },
+  "nin-10-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/self-destruction-part-two/1545212135?i=1545212294&uo=4"
+  },
+  "nin-10-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/eraser-denial-realization/1545212135?i=1545212301&uo=4"
+  },
+  "nin-10-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/at-the-heart-of-it-all/1545212135?i=1545212303&uo=4"
+  },
+  "nin-10-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/eraser-denial-realization/1545212135?i=1545212301&uo=4"
+  },
+  "nin-10-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/self-destruction-final/1545212135?i=1545212323&uo=4"
+  },
+  "nin-10-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-beauty-of-being-numb/1545212135?i=1545212327&uo=4"
+  },
+  "nin-10-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/erased-over-out/1545212135?i=1545212330&uo=4"
+  },
+  "nin-11-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug-meat-beat-manifesto-remix-jack/1445164553?i=1445164561&uo=4"
+  },
+  "nin-11-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug-plug-remix-luke-vibert-version/1445164553?i=1445164753&uo=4"
+  },
+  "nin-11-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug-nine-inch-nails-remix-trent-reznor/1445164553?i=1445164755&uo=4"
+  },
+  "nin-11-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug-spacetime-continuum-recreation-jonah/1445164553?i=1445164760&uo=4"
+  },
+  "nin-11-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug-the-orb-remix-the-orb-version/1445164553?i=1445164766&uo=4"
+  },
+  "nin-12-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/terrible-lie/1440940694?i=1440941063&uo=4"
+  },
+  "nin-13-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away/1440836334?i=1440836343&uo=4"
+  },
+  "nin-14-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away/1440836334?i=1440836343&uo=4"
+  },
+  "nin-14-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/la-mer/1440836334?i=1440836572&uo=4"
+  },
+  "nin-14-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-great-below/1440836334?i=1440836574&uo=4"
+  },
+  "nin-14-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-way-out-is-through/1440836334?i=1440836576&uo=4"
+  },
+  "nin-14-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/where-is-everybody/1440836334?i=1440836581&uo=4"
+  },
+  "nin-14-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-mark-has-been-made/1440836334?i=1440836686&uo=4"
+  },
+  "nin-14-19": {
+    "appleMusicUrl": "https://music.apple.com/us/album/complication/1440836334?i=1440836693&uo=4"
+  },
+  "nin-14-20": {
+    "appleMusicUrl": "https://music.apple.com/us/album/im-looking-forward-to-joining-you-finally/1440836334?i=1440836696&uo=4"
+  },
+  "nin-14-22": {
+    "appleMusicUrl": "https://music.apple.com/us/album/underneath-it-all/1440836334?i=1440836700&uo=4"
+  },
+  "nin-15-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1660456962?i=1660456963&uo=4"
+  },
+  "nin-16-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/slipping-away-remix/1443503086?i=1443503339&uo=4"
+  },
+  "nin-16-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-great-collapse-remix/1443503086?i=1443503468&uo=4"
+  },
+  "nin-16-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-frail-remix/1443503086?i=1443503619&uo=4"
+  },
+  "nin-16-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/where-is-everybody-remix/1443503086?i=1443503886&uo=4"
+  },
+  "nin-16-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/metal-remix/1443503086?i=1443504019&uo=4"
+  },
+  "nin-16-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/10-miles-high-remix/1443503086?i=1443504026&uo=4"
+  },
+  "nin-17-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/terrible-lie-live/1440844763?i=1440844764&uo=4"
+  },
+  "nin-17-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/piggy-live/1440844763?i=1440844780&uo=4"
+  },
+  "nin-17-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-frail-live/1440844763?i=1440845204&uo=4"
+  },
+  "nin-17-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/gave-up-live/1440844763?i=1440845208&uo=4"
+  },
+  "nin-17-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-great-below-live/1440844763?i=1440845211&uo=4"
+  },
+  "nin-17-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/suck-live/1440844763?i=1440845223&uo=4"
+  },
+  "nin-17-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/head-like-a-hole-live/1440844763?i=1440845228&uo=4"
+  },
+  "nin-17-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away-live/1440844763?i=1440845351&uo=4"
+  },
+  "nin-17b-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/adrift-at-peace/1455396285?i=1455396288&uo=4"
+  },
+  "nin-17b-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-fragile/1455396285?i=1455396289&uo=4"
+  },
+  "nin-17b-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/gone-still/1455396285?i=1455396291&uo=4"
+  },
+  "nin-17b-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-day-the-world-went-away/1455396285?i=1455396292&uo=4"
+  },
+  "nin-17b-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/and-all-that-could-have-been/1455396285?i=1455396295&uo=4"
+  },
+  "nin-17b-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-persistence-of-loss/1455396285?i=1455396446&uo=4"
+  },
+  "nin-17b-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/leaving-hope/1455396285?i=1455396447&uo=4"
+  },
+  "nin-18-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1455129856?i=1455129864&uo=4"
+  },
+  "nin-19-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/all-the-love-in-the-world/1440851583?i=1440852016&uo=4"
+  },
+  "nin-19-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1440851583?i=1440852198&uo=4"
+  },
+  "nin-19-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/right-where-it-belongs/1440851583?i=1440852585&uo=4"
+  },
+  "nin-20-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds/1440851583?i=1440852198&uo=4"
+  },
+  "nin-21-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds-photek-straight-mix/1445319674?i=1445319681&uo=4"
+  },
+  "nin-21-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-hand-that-feeds-photek-straight-mix/1445319674?i=1445319681&uo=4"
+  },
+  "nin-21-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/every-day-is-exactly-the-same-in-the-style-of/643051639?i=643051646&uo=4"
+  },
+  "nin-24-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/hyperpower/1440826538?i=1440826864&uo=4"
+  },
+  "nin-24-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-beginning-of-the-end/1440826538?i=1440827076&uo=4"
+  },
+  "nin-24-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/survivalism/1440826538?i=1440827262&uo=4"
+  },
+  "nin-24-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-good-soldier/1440826538?i=1440827280&uo=4"
+  },
+  "nin-24-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/me-im-not/1440826538?i=1440827416&uo=4"
+  },
+  "nin-24-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-warning/1440826538?i=1440827519&uo=4"
+  },
+  "nin-24-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/god-given/1440826538?i=1440827530&uo=4"
+  },
+  "nin-24-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/meet-your-master/1440826538?i=1440827688&uo=4"
+  },
+  "nin-24-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-greater-good/1440826538?i=1440827696&uo=4"
+  },
+  "nin-24-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-great-destroyer/1440826538?i=1440827701&uo=4"
+  },
+  "nin-24-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/in-this-twilight/1440826538?i=1440827953&uo=4"
+  },
+  "nin-24-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/zero-sum/1440826538?i=1440827955&uo=4"
+  },
+  "nin-27-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/999-999/285284658?i=285284671&uo=4"
+  },
+  "nin-27-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/1-000-000/1862007907?i=1862007911&uo=4"
+  },
+  "nin-27-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/letting-you/285284658?i=285284691&uo=4"
+  },
+  "nin-27-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/discipline/285284658?i=285284715&uo=4"
+  },
+  "nin-27-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/echoplex/285284658?i=285284720&uo=4"
+  },
+  "nin-27-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/head-down/285284658?i=285284727&uo=4"
+  },
+  "nin-27-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/corona-radiata/285284658?i=285284735&uo=4"
+  },
+  "nin-27-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-four-of-us-are-dying/285284658?i=285284769&uo=4"
+  },
+  "nin-28-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-eater-of-dreams/655150306?i=655150860&uo=4"
+  },
+  "nin-28-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/copy-of-a/655150306?i=655150864&uo=4"
+  },
+  "nin-28-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/find-my-way/655150306?i=655150994&uo=4"
+  },
+  "nin-28-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/disappointed/655150306?i=655150998&uo=4"
+  },
+  "nin-28-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/everything/655150306?i=655151101&uo=4"
+  },
+  "nin-28-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/satellite/655150306?i=655151105&uo=4"
+  },
+  "nin-28-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/various-methods-of-escape/655150306?i=655151237&uo=4"
+  },
+  "nin-28-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/running/655150306?i=655151354&uo=4"
+  },
+  "nin-28-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/i-would-for-you/655150306?i=655151355&uo=4"
+  },
+  "nin-28-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/in-two/655150306?i=655151356&uo=4"
+  },
+  "nin-28-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/while-im-still-here/655150306?i=655151358&uo=4"
+  },
+  "nin-28-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/black-noise/655150306?i=655151483&uo=4"
+  },
+  "nin-29-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/dear-world/1847482288?i=1847482292&uo=4"
+  },
+  "nin-29-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-idea-of-you/1847482288?i=1847482294&uo=4"
+  },
+  "nin-30-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/were-in-this-together/1440836334?i=1440836350&uo=4"
+  },
+  "nin-30-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-fragile/1440836334?i=1440836562&uo=4"
+  },
+  "nin-31-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-lovers/1847481807?i=1847481809&uo=4"
+  },
+  "nin-31-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/not-anymore/1847481807?i=1847481814&uo=4"
+  },
+  "nin-31-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-background-world/1847481807?i=1847481815&uo=4"
+  },
+  "nin-33-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/letting-go-while-holding-on/1862005282?i=1862005283&uo=4"
+  },
+  "nin-33-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/together/1862005282?i=1862005284&uo=4"
+  },
+  "nin-33-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/out-in-the-open/1862005282?i=1862005285&uo=4"
+  },
+  "nin-33-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/with-faith/1862005282?i=1862005646&uo=4"
+  },
+  "nin-33-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/apart/1862005282?i=1862005647&uo=4"
+  },
+  "nin-33-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/your-touch/1862005282?i=1862005648&uo=4"
+  },
+  "nin-33-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/hope-we-can-again/1862005282?i=1862005649&uo=4"
+  },
+  "nin-33-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/still-right-here/1862005282?i=1862005650&uo=4"
+  },
+  "nin-34-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-cursed-clock/1862006068?i=1862006078&uo=4"
+  },
+  "nin-34-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/around-every-corner/1862006068?i=1862006082&uo=4"
+  },
+  "nin-34-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-worriment-waltz/1862006068?i=1862006083&uo=4"
+  },
+  "nin-34-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/run-like-hell/1862006068?i=1862006238&uo=4"
+  },
+  "nin-34-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/when-it-happens-dont-mind-me/1862006068?i=1862006239&uo=4"
+  },
+  "nin-34-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/another-crashed-car/1862006068?i=1862006243&uo=4"
+  },
+  "nin-34-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/temp-fix/1862006068?i=1862006246&uo=4"
+  },
+  "nin-34-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/trust-fades/1862006068?i=1862006247&uo=4"
+  },
+  "nin-34-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/a-really-bad-night/1862006068?i=1862006258&uo=4"
+  },
+  "nin-34-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/your-new-normal/1862006068?i=1862006266&uo=4"
+  },
+  "nin-34-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/just-breathe/1862006068?i=1862006328&uo=4"
+  },
+  "nin-34-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/right-behind-you/1862006068?i=1862006331&uo=4"
+  },
+  "nin-34-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/turn-this-off-please/1862006068?i=1862006332&uo=4"
+  },
+  "nin-34-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/so-tired/1862006068?i=1862006333&uo=4"
+  },
+  "nin-34-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/almost-dawn/1862006068?i=1862006334&uo=4"
+  },
+  "nin-38-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/intro-nine-inch-noize-version/1893171321?i=1893171322&uo=4"
+  },
+  "nin-38-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/vessel-nine-inch-noize-version/1893171321?i=1893171323&uo=4"
+  },
+  "nin-38-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+  },
+  "nin-38-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/heresy-nine-inch-noize-version/1893171321?i=1893171325&uo=4"
+  },
+  "nin-38-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/parasite-nine-inch-noize-version/1893171321?i=1893171327&uo=4"
+  },
+  "nin-38-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/copy-of-a-nine-inch-noize-version/1893171321?i=1893171328&uo=4"
+  },
+  "nin-38-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+  },
+  "nin-38-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/nine-inch-noize/6776529162?i=6776529163&uo=4"
+  },
+  "nin-38-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-warning-nine-inch-noize-version/1893171321?i=1893171332&uo=4"
+  },
+  "nin-38-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/memorabilia-nine-inch-noize-version/1893171321?i=1893171334&uo=4"
+  },
+  "nin-38-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/came-back-haunted-nine-inch-noize-version/1893171321?i=1893171396&uo=4"
+  },
+  "nin-26-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/01-ghosts-i/451466034?i=451466036&uo=4"
+  },
+  "nin-26-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/02-ghosts-i/451466034?i=451466037&uo=4"
+  },
+  "nin-26-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/03-ghosts-i/451466034?i=451466038&uo=4"
+  },
+  "nin-26-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/04-ghosts-i/451466034?i=451466040&uo=4"
+  },
+  "nin-26-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/05-ghosts-i/451466034?i=451466042&uo=4"
+  },
+  "nin-26-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/06-ghosts-i/451466034?i=451466043&uo=4"
+  },
+  "nin-26-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/07-ghosts-i/451466034?i=451466045&uo=4"
+  },
+  "nin-26-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/08-ghosts-i/451466034?i=451466046&uo=4"
+  },
+  "nin-26-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/09-ghosts-i/451466034?i=451466050&uo=4"
+  },
+  "nin-26-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/10-ghosts-ii/451466034?i=451466055&uo=4"
+  },
+  "nin-26-11": {
+    "appleMusicUrl": "https://music.apple.com/us/album/11-ghosts-ii/451466034?i=451466057&uo=4"
+  },
+  "nin-26-12": {
+    "appleMusicUrl": "https://music.apple.com/us/album/12-ghosts-ii/451466034?i=451466060&uo=4"
+  },
+  "nin-26-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/13-ghosts-ii/451466034?i=451466062&uo=4"
+  },
+  "nin-26-14": {
+    "appleMusicUrl": "https://music.apple.com/us/album/14-ghosts-ii/451466034?i=451466063&uo=4"
+  },
+  "nin-26-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/15-ghosts-ii/451466034?i=451466066&uo=4"
+  },
+  "nin-26-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/16-ghosts-ii/451466034?i=451466110&uo=4"
+  },
+  "nin-26-17": {
+    "appleMusicUrl": "https://music.apple.com/us/album/17-ghosts-ii/451466034?i=451466112&uo=4"
+  },
+  "nin-26-18": {
+    "appleMusicUrl": "https://music.apple.com/us/album/18-ghosts-ii/451466034?i=451466113&uo=4"
+  },
+  "nin-26-19": {
+    "appleMusicUrl": "https://music.apple.com/us/album/19-ghosts-iii/451466034?i=451466115&uo=4"
+  },
+  "nin-26-20": {
+    "appleMusicUrl": "https://music.apple.com/us/album/20-ghosts-iii/451466034?i=451466117&uo=4"
+  },
+  "nin-26-21": {
+    "appleMusicUrl": "https://music.apple.com/us/album/21-ghosts-iii/451466034?i=451466119&uo=4"
+  },
+  "nin-26-22": {
+    "appleMusicUrl": "https://music.apple.com/us/album/22-ghosts-iii/451466034?i=451466122&uo=4"
+  },
+  "nin-26-23": {
+    "appleMusicUrl": "https://music.apple.com/us/album/23-ghosts-iii/451466034?i=451466123&uo=4"
+  },
+  "nin-26-24": {
+    "appleMusicUrl": "https://music.apple.com/us/album/24-ghosts-iii/451466034?i=451466125&uo=4"
+  },
+  "nin-26-25": {
+    "appleMusicUrl": "https://music.apple.com/us/album/25-ghosts-iii/451466034?i=451466127&uo=4"
+  },
+  "nin-26-26": {
+    "appleMusicUrl": "https://music.apple.com/us/album/26-ghosts-iii/451466034?i=451466129&uo=4"
+  },
+  "nin-26-27": {
+    "appleMusicUrl": "https://music.apple.com/us/album/27-ghosts-iii/451466034?i=451466131&uo=4"
+  },
+  "nin-26-28": {
+    "appleMusicUrl": "https://music.apple.com/us/album/28-ghosts-iv/451466034?i=451466132&uo=4"
+  },
+  "nin-26-29": {
+    "appleMusicUrl": "https://music.apple.com/us/album/29-ghosts-iv/451466034?i=451466135&uo=4"
+  },
+  "nin-26-30": {
+    "appleMusicUrl": "https://music.apple.com/us/album/30-ghosts-iv/451466034?i=451466136&uo=4"
+  },
+  "nin-26-31": {
+    "appleMusicUrl": "https://music.apple.com/us/album/31-ghosts-iv/451466034?i=451466138&uo=4"
+  },
+  "nin-26-32": {
+    "appleMusicUrl": "https://music.apple.com/us/album/32-ghosts-iv/451466034?i=451466142&uo=4"
+  },
+  "nin-26-33": {
+    "appleMusicUrl": "https://music.apple.com/us/album/33-ghosts-iv/451466034?i=451466147&uo=4"
+  },
+  "nin-26-34": {
+    "appleMusicUrl": "https://music.apple.com/us/album/34-ghosts-iv/451466034?i=451466150&uo=4"
+  },
+  "nin-26-35": {
+    "appleMusicUrl": "https://music.apple.com/us/album/35-ghosts-iv/451466034?i=451466152&uo=4"
+  },
+  "nin-26-36": {
+    "appleMusicUrl": "https://music.apple.com/us/album/36-ghosts-iv/451466034?i=451466154&uo=4"
+  },
+  "nin-32-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/shit-mirror/1847482590?i=1847482593&uo=4"
+  },
+  "nin-32-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/ahead-of-ourselves/1847482590?i=1847482594&uo=4"
+  },
+  "nin-32-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/play-the-goddamned-part/1847482590?i=1847482595&uo=4"
+  },
+  "nin-32-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/im-not-from-this-world/1847482590?i=1847482599&uo=4"
+  },
+  "nin-32-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/over-and-out/1847482590?i=1847482600&uo=4"
+  },
+  "nin-15-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/10-miles-high-remix/1443503086?i=1443504026&uo=4"
+  },
+  "nin-15-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-perfect-drug/1434900331?i=1434900919&uo=4"
+  },
+  "nin-17-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-mark-has-been-made/1440836334?i=1440836686&uo=4"
+  },
+  "nin-17-16": {
+    "appleMusicUrl": "https://music.apple.com/us/album/hurt/1440837096?i=1440838114&uo=4"
+  },
+  "nin-5-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/wish/1440743805?i=1440743815&uo=4"
+  },
+  "nin-5-07": {
+    "appleMusicUrl": "https://music.apple.com/us/album/physical-youre-so/1440743805?i=1440743825&uo=4"
+  },
+  "nin-6-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/wish/1440743805?i=1440743815&uo=4"
+  },
+  "nin-8-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/ruiner/1440837096?i=1440837626&uo=4"
+  },
+  "nin-8-08": {
+    "appleMusicUrl": "https://music.apple.com/us/album/i-do-not-want-this/1440837096?i=1440837822&uo=4"
+  },
+  "nin-8-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/big-man-with-a-gun/1440837096?i=1440837836&uo=4"
+  },
+  "nin-8-13": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-downward-spiral/1440837096?i=1440838104&uo=4"
+  },
+  "nin-10-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-downward-spiral-the-bottom/1545212135?i=1545212296&uo=4"
+  },
+  "nin-10-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/hurt-quiet/1545212135?i=1545212298&uo=4"
+  },
+  "nin-14-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/somewhat-damaged/1440836334?i=1440836339&uo=4"
+  },
+  "nin-14-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-wretched/1440836334?i=1440836348&uo=4"
+  },
+  "nin-14-21": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-big-come-down/1440836334?i=1440836698&uo=4"
+  },
+  "nin-17-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-wretched/1440836334?i=1440836348&uo=4"
+  },
+  "nin-19-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/you-know-what-you-are/1440851583?i=1440852030&uo=4"
+  },
+  "nin-19-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/love-is-not-enough/1440851583?i=1440852217&uo=4"
+  },
+  "nin-19-09": {
+    "appleMusicUrl": "https://music.apple.com/us/album/getting-smaller/1440851583?i=1440852272&uo=4"
+  },
+  "nin-19-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/sunspots/1440851583?i=1440852461&uo=4"
+  },
+  "nin-17b-01": {
+    "appleMusicUrl": "https://music.apple.com/us/album/something-i-can-never-have/1455396285?i=1455396287"
+  },
+  "nin-17b-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-becoming/1455396285?i=1455396290"
+  },
+  "nin-17-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/wish-live/1440844763?i=1440845221"
+  },
+  "nin-17-15": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc-live/1440844763?i=1440845355"
+  },
+  "nin-16-03": {
+    "appleMusicUrl": "https://music.apple.com/us/album/the-wretched-remix/1443503086?i=1443503598"
+  },
+  "nin-16-04": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc-remix-version-as/1443503086?i=1443503605"
+  },
+  "nin-16-06": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc-remix-version-do/1443503086?i=1443503874"
+  },
+  "nin-16-10": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc-remix-version-cc/1443503086?i=1443504039"
+  },
+  "nin-14-18": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc/1440836334?i=1440836690"
+  },
+  "nin-29-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/burning-bright-field-on-fire/1847482288?i=1847482295"
+  },
+  "nin-28-05": {
+    "appleMusicUrl": "https://music.apple.com/us/album/all-time-low/673721498?i=673721536"
+  },
+  "nin-13-02": {
+    "appleMusicUrl": "https://music.apple.com/us/album/s-s-inc/1440836334?i=1440836690"
   }
 }
