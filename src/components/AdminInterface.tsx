@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useRankingStore } from '../store/rankingStore';
-import { Shuffle, Lock, GripVertical } from 'lucide-react';
+import { Shuffle, Lock, GripVertical, StickyNote } from 'lucide-react';
+import { TalkingPointsModal } from './TalkingPointsModal';
 import type { Song } from '../types';
 
 // What's being dragged and from where
@@ -41,6 +42,7 @@ export function AdminInterface() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
+  const [talkingPointsSong, setTalkingPointsSong] = useState<Song | null>(null);
 
   // Drag state
   const dragSource = useRef<DragSource | null>(null);
@@ -245,6 +247,7 @@ export function AdminInterface() {
   }
 
   return (
+    <>
     <div className="min-h-screen bg-gray-950 text-gray-100 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-8">
@@ -347,6 +350,17 @@ export function AdminInterface() {
                       <span className="truncate">{song.album} · {song.releaseYear}</span>
                       {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
                       {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
+                      <button
+                        onClick={e => { e.stopPropagation(); setTalkingPointsSong(song); }}
+                        title="Talking points"
+                        className={`flex-shrink-0 transition-colors ${
+                          song.talkingPoints && Object.values(song.talkingPoints).some(v => v?.trim())
+                            ? 'text-amber-400 hover:text-amber-300'
+                            : 'text-zinc-600 hover:text-zinc-400'
+                        }`}
+                      >
+                        <StickyNote size={13} />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -406,6 +420,17 @@ export function AdminInterface() {
                         <span className="truncate">{song.album} · {song.releaseYear}</span>
                         {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
                         {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
+                        <button
+                          onClick={e => { e.stopPropagation(); setTalkingPointsSong(song); }}
+                          title="Talking points"
+                          className={`flex-shrink-0 transition-colors ${
+                            song.talkingPoints && Object.values(song.talkingPoints).some(v => v?.trim())
+                              ? 'text-amber-400 hover:text-amber-300'
+                              : 'text-zinc-600 hover:text-zinc-400'
+                          }`}
+                        >
+                          <StickyNote size={13} />
+                        </button>
                       </div>
                     </div>
                     <button
@@ -435,5 +460,15 @@ export function AdminInterface() {
         </div>
       </div>
     </div>
+
+    {/* Talking Points Modal */}
+    {talkingPointsSong && (
+      <TalkingPointsModal
+        song={talkingPointsSong}
+        onClose={() => setTalkingPointsSong(null)}
+        adminPassword={password}
+      />
+    )}
+    </>
   );
 }

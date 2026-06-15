@@ -22,14 +22,18 @@ export default async function handler(request: Request) {
     if (request.method === 'GET') {
       // Fetch unranked songs
       const unrankedResult = await sql`
-        SELECT * FROM songs
+        SELECT id, name, album, release_year, halo_number, cover_art_url,
+               apple_music_url, youtube_url, hidden, talking_points
+        FROM songs
         WHERE id NOT IN (SELECT song_id FROM ranked_songs)
         ORDER BY id ASC
       `;
 
       // Fetch ranked songs
       const rankedResult = await sql`
-        SELECT s.*, r.rank, r.episode_number, r.timestamp
+        SELECT s.id, s.name, s.album, s.release_year, s.halo_number, s.cover_art_url,
+               s.apple_music_url, s.youtube_url, s.hidden, s.talking_points,
+               r.rank, r.episode_number, r.timestamp
         FROM ranked_songs r
         JOIN songs s ON r.song_id = s.id
         ORDER BY r.rank ASC
@@ -49,6 +53,7 @@ export default async function handler(request: Request) {
         appleMusicUrl: row.apple_music_url || null,
         youtubeUrl: row.youtube_url || null,
         hidden: row.hidden || false,
+        talkingPoints: row.talking_points || null,
         ...(row.rank !== undefined && {
           rank: row.rank,
           episodeNumber: row.episode_number,

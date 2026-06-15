@@ -1,3 +1,11 @@
+export interface TalkingPoints {
+  production: string;
+  lyrics: string;
+  live: string;
+  cultural: string;
+  personal: string;
+}
+
 export interface Song {
   id: string;
   name: string;
@@ -8,6 +16,7 @@ export interface Song {
   appleMusicUrl?: string | null;
   youtubeUrl?: string | null;
   hidden?: boolean;
+  talkingPoints?: TalkingPoints | null;
 }
 
 export interface RankedSong extends Song {

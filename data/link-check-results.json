@@ -1,0 +1,679 @@
+{
+  "broken": [],
+  "suspicious": [
+    {
+      "id": "nin-2-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dl3iM87iIbnQ&q=EgRGbZToGJnUvdEGIjANtbmbts7S2NZ-EHtCaWzd62c0Lhglr4KATb0-_szNdnF-R7rhmIpIaVaqO3aHga0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-1-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=QrrEo3hZABU",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DQrrEo3hZABU&q=EgRGbZToGJnUvdEGIjDSnOBwldNxLcZ3l_RdOAcxg1cBxqeqonAS7CXLgAdjS1NDs3ViIsrsVgsJY7dBg-kyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-1-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=48UBhxzVOQ0",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D48UBhxzVOQ0&q=EgRGbZToGJnUvdEGIjALlqVcmUf5_sL6dHb4ATs-IJdhvV2YLBAk9QoeRcmc3EK9DSJDWGaa7rHVL8S7proyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-2-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=sTrVmqrf_1k",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DsTrVmqrf_1k&q=EgRGbZToGJnUvdEGIjBnLgV3Q9Mu-F9GnMBPwhycTi8Gxd2DGDatSyqOih3y4QWGUtvDg-hed7rRoNlSzqcyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-2-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=QrrEo3hZABU",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DQrrEo3hZABU&q=EgRGbZToGJnUvdEGIjDSnOBwldNxLcZ3l_RdOAcxg1cBxqeqonAS7CXLgAdjS1NDs3ViIsrsVgsJY7dBg-kyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-3-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dl3iM87iIbnQ&q=EgRGbZToGJnUvdEGIjANtbmbts7S2NZ-EHtCaWzd62c0Lhglr4KATb0-_szNdnF-R7rhmIpIaVaqO3aHga0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-3-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=l3iM87iIbnQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dl3iM87iIbnQ&q=EgRGbZToGJnUvdEGIjANtbmbts7S2NZ-EHtCaWzd62c0Lhglr4KATb0-_szNdnF-R7rhmIpIaVaqO3aHga0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-5-04",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=I1776gm_FeI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DI1776gm_FeI&q=EgRGbZToGJnUvdEGIjCSslI5cYLDHV00TAeFtiCV4EiTeFIYqG2B7o9zpEL_HE3rC7C5dSx4WnAkg7oJC1IyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-7-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DGHPkJkBS1vE&q=EgRGbZToGJrUvdEGIjBd_n3HzRnJFu-ZkFPHEGVjV_cUJ-OTH3JTyo5LrTeI8krX_qmrAtwJcncQzCn8eoIyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-8-05",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=o8F_KaILW6g",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Do8F_KaILW6g&q=EgRGbZToGJrUvdEGIjDpK14eaq_bK5Lh9GSbxgqytQLr94TxSDApt-dFqj7YgXl_PhvYtNW3mN3vE1_az54yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-8-11",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=A7LvTRuZD2M",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DA7LvTRuZD2M&q=EgRGbZToGJrUvdEGIjCTdQzCkeyOY5yNTYJPqnYQhDRZjyUswaflIWVm2F9CX8vlsTABDZSnFaKs18mze4YyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-8-04",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DGHPkJkBS1vE&q=EgRGbZToGJrUvdEGIjBd_n3HzRnJFu-ZkFPHEGVjV_cUJ-OTH3JTyo5LrTeI8krX_qmrAtwJcncQzCn8eoIyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-8-14",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=PbHz9p7Z4OU",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DPbHz9p7Z4OU&q=EgRGbZToGJrUvdEGIjDU4vpwI08BrsdEtGd1HhxGY3qUg1HF27fQp5R-EmXBmhWrzFzRIP5ChjhDcM1ItBkyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-12-07",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=OzElpNnkBiE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DOzElpNnkBiE&q=EgRGbZToGJrUvdEGIjCuLasKCXrHB5DosXR6V77kcSuorsa_u2E9wML80bAY7T3RHYfez7vjfQ1KjkWC_8cyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-13-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=VosCzRFWFHw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DVosCzRFWFHw&q=EgRGbZToGJrUvdEGIjBq6zpMuDH5TZeM3m5d6MVHtuEfVCYdP4huwQaLR-1IGu0QyGu1nU-dDMNmQATtJ98yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-14-05",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DP9BfvPjsXXw&q=EgRGbZToGJrUvdEGIjBSGAZCFZFaAGn2mQFHeY7YeHPFRSbmTFjAHlXhdmovVvt7dDCRflvmUTpYbn7U1_wyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-14-14",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=pHFpGzSQpRY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DpHFpGzSQpRY&q=EgRGbZToGJvUvdEGIjAlxn6G6O5V9aYibjjZoqYnc5Po63HP4v4aFn2Zl3bknuCbk5lokzx2FpqBsd3WNWYyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-15-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=P9BfvPjsXXw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DP9BfvPjsXXw&q=EgRGbZToGJvUvdEGIjCvU086COevKHi-Irc8tSWwYCeZ3dHaKkVK-75PkAbydY3NpDEv7TpkynPLANDntjwyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-17-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=GHPkJkBS1vE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DGHPkJkBS1vE&q=EgRGbZToGJvUvdEGIjBb6HwFPDBi1mUpOK4FgrqryAgc3WlQ9ftGfkHixp1I9Cu-wKJkNlKCB0mcEHn7T7wyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-14-23",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=qpLNRNO72X4",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DqpLNRNO72X4&q=EgRGbZToGJvUvdEGIjDhXcVKuVDYMWkB_1gmwscPS37nD_h9xvFGOpvQ0VhcEp5vdnEiXtXue_3w4sDhVXQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-17-12",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=o8F_KaILW6g",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Do8F_KaILW6g&q=EgRGbZToGJvUvdEGIjBhBWqoR9RMgDtmIIW4sGFPezL1QSGvRnUj3lCeTBKUK5P3gkMMN9QXrkrq0SmOmc8yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-18-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=xwhBRJStz7w",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DxwhBRJStz7w&q=EgRGbZToGJvUvdEGIjA31JhDVLm0ZwUu3WgsLRwqDkHj8X8oEdNfJX1C98dDOC_PSZVHxrzcoLd6f6d22ZMyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-08",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=wwvLlEtxX3o",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwwvLlEtxX3o&q=EgRGbZToGJvUvdEGIjB-TzxokxmYriEyjoEKVQ1XI9PAI9zQf4y4NQsY_4hu1gygA_CfvY48PeNmQ5diPrUyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-06",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DNTBwSvcKHCY&q=EgRGbZToGJvUvdEGIjDpk1sMGEEMCb28sra2MA1lgFTkNi6x1bHQca1FHtGJXd7tWEugROhM6b2wW7Nq9QwyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-07",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=7k4Od7gUhWI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D7k4Od7gUhWI&q=EgRGbZToGJvUvdEGIjC6IkhsCE__FNuHdsu6lybAVI8S22A5gs1t6TFBbOx7F8lVBgMAGZoe8os4zfBy5rAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-11",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=MMliD9d_lHg",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DMMliD9d_lHg&q=EgRGbZToGJvUvdEGIjDfCgz1Ux4JHANfOv56HcD6X-xUcCBDUn87mD6S0WNQprLYQO-GnqoWOOFHJmV4El0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-20-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=wwvLlEtxX3o",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwwvLlEtxX3o&q=EgRGbZToGJvUvdEGIjB-TzxokxmYriEyjoEKVQ1XI9PAI9zQf4y4NQsY_4hu1gygA_CfvY48PeNmQ5diPrUyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-21-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=NTBwSvcKHCY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DNTBwSvcKHCY&q=EgRGbZToGJvUvdEGIjDpk1sMGEEMCb28sra2MA1lgFTkNi6x1bHQca1FHtGJXd7tWEugROhM6b2wW7Nq9QwyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-12",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=n_VARyyTa_k",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dn_VARyyTa_k&q=EgRGbZToGJvUvdEGIjBNiCpY3IdhyIGxA2KaJSIPp7pBGriAXRbQIZsNxfwZZmmbh9WE6ElqJ2bc-1qRw2AyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-23-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=qSsRt_1l740",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DqSsRt_1l740&q=EgRGbZToGJvUvdEGIjCv7kDiBW6nWGjzvvzLk_7yt9rXfEdFCzm7RdaW_IplRrmXylAxg6gAIBjtpeICXnQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-24-07",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=pAQnrMCfaPs",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DpAQnrMCfaPs&q=EgRGbZToGJzUvdEGIjACbPXQ5F3v-BfTR1XBLuEc9gI_BvCDiQxaaB9uOeF2EO3qEbtgfTcU5fUZpBKdedAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-23-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=qSsRt_1l740",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DqSsRt_1l740&q=EgRGbZToGJvUvdEGIjCv7kDiBW6nWGjzvvzLk_7yt9rXfEdFCzm7RdaW_IplRrmXylAxg6gAIBjtpeICXnQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-24-05",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=sVAJKirLg-c",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DsVAJKirLg-c&q=EgRGbZToGJzUvdEGIjCgi0hBDimEP9AlR8-B43ApovZ43D8JARq6q_LspXQhIfOVwXQ6D23o3kOhuwJGddoyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-28-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=W6S1qmCVKyY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DW6S1qmCVKyY&q=EgRGbZToGJzUvdEGIjDd7PuwtEeW7nc4C8RpEeLDBvu0bIBe-3RCsZKJYvrzXtpAHT1vCMHDytx12AlhXkEyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-29-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=rKiS6aBX5p8",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrKiS6aBX5p8&q=EgRGbZToGJzUvdEGIjCPRVVAARrxzF5w-uxCrD6OX4V2seGqCSJIw_-wF4AjHJxm_eSA9fS79unIQLTGtNoyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-29-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=1NZf50s6_xE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D1NZf50s6_xE&q=EgRGbZToGJzUvdEGIjDGnGOTJLQAeGmwXSzXcLXkS2GtsaV-UNhtNduL_VdKIEWIAolTRqU6QwkKIbRx9yAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-32-04",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=QQ7sj9pQfOY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DQQ7sj9pQfOY&q=EgRGbZToGJzUvdEGIjD9NIHbfd9ooff0rsyYh1XoidU-NwwYmzEl7O_SpvDu5KdnDik_IB3liFF6UI273ZgyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-38-12",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=SnMyroAH0rg",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DSnMyroAH0rg&q=EgRGbZToGJzUvdEGIjADf_meM5JKcCiT_AHr2Abl-KXWnIUX6cq0o-qsjbM8rVwI8RL9EBMXPcQXoYt-ZUsyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-2-05",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=mOz3_cPe2pQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DmOz3_cPe2pQ&q=EgRGbZToGJzUvdEGIjBKwq8TqjX4nhpr7bmHIxS1kJbWRY0djKg3OGSLLF_wJ4Y286HTEiXQfk0R3CdPHGkyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-31-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=gDV-dOvqKzQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DgDV-dOvqKzQ&q=EgRGbZToGJzUvdEGIjB91iNZ3PbBJ_7cYI8Nb25LQvedan-L-Ag6fpO6OV9nRj90FvzUve2-X6vcyfv49BQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-31-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=_g8nAqDu3gI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D_g8nAqDu3gI&q=EgRGbZToGJzUvdEGIjA16Ea-i_mF9_RfpE8NuudDDoQvkxAAKdjTldrASLIAfHGPwJ9WWINxJoeFhOhrc8QyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-5-06",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=YQXYAV7xC1Q",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DYQXYAV7xC1Q&q=EgRGbZToGJ3UvdEGIjAgfMLEduU8hCZN3J5OzdZ6riUY5I_MfDtsro0lb4OMBHrR-by6HlDuV8G17EYzhVEyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-17-07",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=YQXYAV7xC1Q",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DYQXYAV7xC1Q&q=EgRGbZToGJ7UvdEGIjDILjAqGBTlG3-C1XqRjR9vKcpr8LROh1-GsHPdcDL3p5TFKw4m6L7QaIJZGJ9trPgyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-19-04",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=CDhUvkzLsmQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DCDhUvkzLsmQ&q=EgRGbZToGJ7UvdEGIjCxv2O3HhXP-830vu9x0Wqz3O4jC5F0QJllye6lMy0LiKFyFXsspiT2BZx0eyyqhhQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-04",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=J_eq4nrKc60",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DJ_eq4nrKc60&q=EgRGbZToGJ_UvdEGIjAEwH7fQYRI0FO8pq0KaysrFGYnnTXHzrWAJ3N5Rw1V5FNpURcr2HTOe1DMROqMLe8yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-05",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=h9D39DgQeVg",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dh9D39DgQeVg&q=EgRGbZToGKDUvdEGIjAzTOXox71un4on7ln2K1XCYDUGxIkLa3CLkbjuLEbgNLAIRV-zOs_MBSl9CazEFugyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-5-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=jtQTriNVdZc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DjtQTriNVdZc&q=EgRGbZToGKLUvdEGIjAM4lMtCRjhpvm8l8lI9e78ANq-414px7lGXFOH_LIQqdt67zg9E4XJ1QZvPp_0Y08yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-14-21",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=kNorlbKezRE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DkNorlbKezRE&q=EgRGbZToGKLUvdEGIjDSDiweTf9YIX5HA1U0ut3f8joLIlNc0fmo96sg5dARnc46J_lqS5nSB8KvRHjOzokyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-14-01",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=sNdF0HMhuKY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DsNdF0HMhuKY&q=EgRGbZToGKLUvdEGIjDSvNLAdl5KcXIrQSUfvTB7JP9rG6e2v41B_d9qPuQpsHcg7lN1aT9pdBvInPzYtSQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-22-06",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=CDhUvkzLsmQ",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DCDhUvkzLsmQ&q=EgRGbZToGKPUvdEGIjBQMILPyVqIufPq5CDLmYI13-0qyHWGu8ysaJwoo3_VStGs9uIJ4S39hgKuxLdVZscyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-22-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=p4-4rMyd2cc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dp4-4rMyd2cc&q=EgRGbZToGKPUvdEGIjA9hHmmhqS1CLpDMuBQy354Io9IRivCg1F0ALKy9lZ7yd0EGlpyC_q6zqvTLNZ7zMYyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-22-13",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=n_VARyyTa_k",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dn_VARyyTa_k&q=EgRGbZToGKPUvdEGIjDXgj-EHzQ7UpcFMrpDh_Qx9hJfDHLAtJK9GM1LN__Fk3nzYYrwpzB-j0ZcC9-SVcAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-18-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=Knv6qSiP46g",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DKnv6qSiP46g&q=EgRGbZToGKPUvdEGIjAsOWTqOu2ouJZiN_e_up8-8AFrw9pF05FsuAo-kllwPZCzss6mpgPl8k6NIULvmVwyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-22-14",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=AvJKVKglIRs",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DAvJKVKglIRs&q=EgRGbZToGKPUvdEGIjCM_ziXd1sChW3aGeJR-yLWbqftNseOPB3YnkqOwCZurprPLInaYl3oZmdrdyJBwWsyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-12-06",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=jtQTriNVdZc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DjtQTriNVdZc&q=EgRGbZToGKPUvdEGIjCKwG_BB7Z9Cvi-OyR4W9rtyzT8b2aY3-joIyuTdmJUMUHV1M93ZAaE3j_6Bbl7ueYyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-03",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=Ro6BPl78Ex8",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DRo6BPl78Ex8&q=EgRGbZToGKTUvdEGIjClX5Vw3xz0VYiHjrSDL4KevyfZXJ11egkQEWVasjJIP6AxgCLk5lKk97q9_qSJ7HIyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-02",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=_r3ArjXUMrI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D_r3ArjXUMrI&q=EgRGbZToGKTUvdEGIjDr-qggExh7WCFzpi2uLvt2E-J5sVAukfPgAHugD-gpa0Qwj5fQUyb2_yZ2Ko8d5MkyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-08",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=jzFcFf_6Wpw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DjzFcFf_6Wpw&q=EgRGbZToGKTUvdEGIjBOM91Pf6yWaRFJ523ly7PTsnIsCOwrgqHH7NrIquKex9-8ybrz0PkaU52P0kZrI98yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-06",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=CuTBAXDmBfc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DCuTBAXDmBfc&q=EgRGbZToGKTUvdEGIjDjtTAUfM6XQRm1Z52uTkb_wegcccoletwfUZzriEeBajanXlPftPVFGF1rWVT8QLkyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-07",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=V6gY5-CKQ8o",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DV6gY5-CKQ8o&q=EgRGbZToGKTUvdEGIjBJQH141zAkLZhnKGIKrV4_90VWku_ZsCzxXfmMztJEuo2ehnyGfhW3AKiHMCP9SWcyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-09",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=XD76iFRIJ78",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DXD76iFRIJ78&q=EgRGbZToGKTUvdEGIjC7Xzp5cKkAo3hWjeYY3wOPEXQbX8n0f9P3O3U930Jb0y-tdNVL44HoOOFVtGyUHKIyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-13",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=KQjGtWp_N1g",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DKQjGtWp_N1g&q=EgRGbZToGKTUvdEGIjAxFHFEMQjRtTMSui4fJ3uG75fzR6g3Xt5RafrcwHLV7aPnHywOuPP8UrHZj_5cMl4yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-16",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=loujfRp6sWg",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DloujfRp6sWg&q=EgRGbZToGKTUvdEGIjB4AQizTXqDU9DXKqwbg7Rf68kNBpWZbvuE4d-gPduXJi9PZdAzzwBMMO1s-ZZrVIYyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-10",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=jakpmJnmKfc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DjakpmJnmKfc&q=EgRGbZToGKTUvdEGIjBn9ctSqF3xuqhEUbtKtttLuwPhZl0e7US1SvbSaZYxU3NxbdNO_VIcC0-_pki43NQyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-12",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=fX81Ejkkgas",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DfX81Ejkkgas&q=EgRGbZToGKTUvdEGIjBt0I1exh7_tQG_-vRuElaP-tZrLJ9fFhj2LrsSGjAOF4CDZY9N18WWAnrOPL6jwhYyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-15",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=vbjBRoizGgY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DvbjBRoizGgY&q=EgRGbZToGKTUvdEGIjCXjaGeSdvzzn_3afy_R8oHbtKMtRWYAjoyQqk44a-uKJdkyVkSU_xDCqi0usdK6jkyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-17",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=nc596eI4BqI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dnc596eI4BqI&q=EgRGbZToGKTUvdEGIjBXWOOKo0n28JYOA28Ys9DO6M3i8UVrBlgYtIsMaZ593yOp3EK9D77ePYJDKVONYhUyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-21",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=lfWBDQ6MqRs",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DlfWBDQ6MqRs&q=EgRGbZToGKTUvdEGIjAz7igFKF8oVm1HtajM28rRjPQK4A9e8j3c5Tcl7DfDqk0IF1f1HsEeoZxhLDrYzDsyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-22",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=PBcnm6a7I_k",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DPBcnm6a7I_k&q=EgRGbZToGKTUvdEGIjBU_Nb_NY5XpgbKysZW71Cg0OXwFzuPhvYPbUWbbNzx6eGofwpSyBxthov2IH8gumEyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-20",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=ciRP3WN6pkM",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DciRP3WN6pkM&q=EgRGbZToGKTUvdEGIjCdaBMoT9ox5H-B_BuL3qNQxs-lGq3dSebSooFcVXOPalu9jrqf438Ip0JZkrjhauAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-18",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=lvhzHblMPS8",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DlvhzHblMPS8&q=EgRGbZToGKTUvdEGIjC41ZacEADmuX8C_7C-HFL_XtrP5k1segQ56g6tbbnaAmJCIvWTfuB4wsu_IxQlT90yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-25",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=qK7muRm0f1o",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DqK7muRm0f1o&q=EgRGbZToGKXUvdEGIjB-G77ACr3M08h3pjcJ3bW19oaf1WZPa41lMESiQg9Ui9i4uTPbfsa5EgqRKib6TS8yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-24",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=8Y5mDJdTXUw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D8Y5mDJdTXUw&q=EgRGbZToGKXUvdEGIjB9rdx07YPxMH6ntfmfUrWITW_tFCSHvzVcuZUPi9iBCWxZqVwSloJ0hSIeTxQArLwyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-23",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=4qT8xP95xjY",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D4qT8xP95xjY&q=EgRGbZToGKXUvdEGIjCdVMp3i_OMGTeRvkNbpnfTWAt8igb0X7GqrB3M5p9zOMyk_cJ40WS6TBGgTd-6hd0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-26",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=1nBhFNONTzM",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3D1nBhFNONTzM&q=EgRGbZToGKXUvdEGIjB98zb0wQxzsgo92zyjscn8eeoXQJePrfqLPWfcM5qz8q9qB2sS_2rjypkGoChJRZ8yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-30",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=P2-JqooVjfs",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DP2-JqooVjfs&q=EgRGbZToGKXUvdEGIjD2GAvNf-k23vwjyy832R_bcnPxxZlEH4PhtNdZtzU-kOLHDRzNwONDGarLI_Ypq0kyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-32",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=rssgoxLFNRc",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrssgoxLFNRc&q=EgRGbZToGKXUvdEGIjD2NOfNI99Bs-HZb6fohmiP0feeCSbR1ovZlMirYsF3CJk7XA9ANXoe-aMSZGVv2z8yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-29",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=tBO-wOzcSLE",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DtBO-wOzcSLE&q=EgRGbZToGKXUvdEGIjAulVr75F66hDMqmCjcPI8CO8VdIWFEALsAgT85w0uqtoWsVX5fasj8VgFEa5r9f3cyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-36",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=RWom2RPpAdM",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DRWom2RPpAdM&q=EgRGbZToGKXUvdEGIjBJFSiVov2Ur5RMFyBsCH-cZcwSYVcx7uyRgrAJrEp78vCZYuzX-IIxt3shYPhQRSgyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-31",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=UqbiBJWUe7M",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DUqbiBJWUe7M&q=EgRGbZToGKXUvdEGIjAkWvrW8D8R9zQTFhsRhuqTSgc9glT6NoALvJ1cmy8p-XAhLlDPg0ZaF7nR3_uSYmcyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-34",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=H9WyfJ3SSr0",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DH9WyfJ3SSr0&q=EgRGbZToGKXUvdEGIjBKkJTovRN6JFvBAxrOyunaSYiTkcxpTTCB7f71IU4S5PxB6hqcrutxnIM97xzQv-MyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-37",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=Hhul5iKH-W8",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DHhul5iKH-W8&q=EgRGbZToGKXUvdEGIjBiRS60WxBfwgmqNSHbfnsMgpQ8eaclPpcoeS88nEJaSn-0-gY3SgtJiK0RWrsOy0kyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-33",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=lraIakqFaAI",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DlraIakqFaAI&q=EgRGbZToGKXUvdEGIjAjklLf8N4ZrV-0tqgNvo_fIdCued9VTYEdTFIa31TPARnVLoCk7ZQOhhC1RUK4BmAyAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    },
+    {
+      "id": "nin-30-35",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=K8VW-Ru0MHw",
+      "status": 429,
+      "finalUrl": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DK8VW-Ru0MHw&q=EgRGbZToGKXUvdEGIjAnhc6qH8nShYyQ6Lzo1aRhAnvYAHeN011hHSRUS0QeTwj-LCQSr67-fc9Nh-Ofnb0yAnJSWgFD",
+      "note": "YouTube redirect missing video ID"
+    }
+  ],
+  "errors": [],
+  "okCount": 362
+}
