@@ -22,6 +22,7 @@ export default async function handler(request: Request) {
     // Query ranked songs from database, ordered by rank
     const result = await sql`
       SELECT s.id, s.name, s.album, s.release_year, s.halo_number,
+             s.cover_art_url, s.apple_music_url, s.youtube_url,
              r.rank, r.episode_number, r.timestamp
       FROM ranked_songs r
       JOIN songs s ON r.song_id = s.id
