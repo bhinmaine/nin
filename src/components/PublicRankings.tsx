@@ -122,7 +122,7 @@ export function PublicRankings() {
                       </a>
                     )}
                   </div>
-                  <div className="hidden md:block mt-1">{new Date(song.timestamp).toLocaleDateString()}</div>
+
                 </div>
               </div>
             </div>
