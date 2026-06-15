@@ -75,14 +75,14 @@ KV_REST_API_TOKEN=***
 ### Test 1: Health Check
 
 ```
-Navigate to: https://nineinchnails.vercel.app/api/health
+Navigate to: https://ninxcx.com/api/health
 Expected: JSON with { status: "ok", timestamp: "...", service: "nin-rankings-api" }
 ```
 
 ### Test 2: Admin Songs Endpoint
 
 ```
-Navigate to: https://nineinchnails.vercel.app/api/admin/songs
+Navigate to: https://ninxcx.com/api/admin/songs
 Expected: JSON { unranked: [], ranked: [] }
 If KV not set up yet, that's OK — empty arrays are correct
 ```
@@ -90,7 +90,7 @@ If KV not set up yet, that's OK — empty arrays are correct
 ### Test 3: Public Rankings Endpoint
 
 ```
-Navigate to: https://nineinchnails.vercel.app/api/rankings
+Navigate to: https://ninxcx.com/api/rankings
 Expected: JSON [] (empty array)
 If KV not set up yet, that's OK — empty array is correct
 ```
@@ -98,7 +98,7 @@ If KV not set up yet, that's OK — empty array is correct
 ### Test 4: Frontend Loading
 
 ```
-Navigate to: https://nineinchnails.vercel.app/
+Navigate to: https://ninxcx.com/
 Expected: Should see NIN Song Rankings page
           "No rankings yet. Check back during the stream!" message
           NO "Error loading rankings" message
@@ -107,7 +107,7 @@ Expected: Should see NIN Song Rankings page
 ### Test 5: Admin Page
 
 ```
-Navigate to: https://nineinchnails.vercel.app/admin
+Navigate to: https://ninxcx.com/admin
 Expected: Should see two empty buckets (Unranked | Ranked)
           "Shuffle Unranked" button visible
           Episode number input field

@@ -2,7 +2,7 @@
 
 A real-time ranking application for Nine Inch Nails albums during a Twitch stream.
 
-Live at: **https://nineinchnails.vercel.app/**
+Live at: **https://ninxcx.com/**
 
 ## Features
 
@@ -167,7 +167,7 @@ nin/
 ## Admin Workflow
 
 ### Before Stream
-1. Go to https://nineinchnails.vercel.app/admin
+1. Go to https://ninxcx.com/admin
 2. Enter admin password
 3. Click "Shuffle Unranked"
 4. Open public page in separate window/OBS source
@@ -272,7 +272,7 @@ See `SONG_DATABASE_GUIDE.md` for how to gather from Wikipedia.
 - Verify database schema: check Neon SQL editor
 
 ### Public page not updating
-- Verify `/api/rankings` returns data: `curl https://nineinchnails.vercel.app/api/rankings`
+- Verify `/api/rankings` returns data: `curl https://ninxcx.com/api/rankings`
 - Check browser console for errors
 
 See `TROUBLESHOOTING.md` for more diagnostics.

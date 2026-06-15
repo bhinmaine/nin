@@ -79,10 +79,10 @@ npx ts-node scripts/seed-songs.ts
 
 Test the API endpoints:
 ```bash
-curl https://nineinchnails.vercel.app/api/rankings
+curl https://ninxcx.com/api/rankings
 # Should return: [...]  (array of songs)
 
-curl https://nineinchnails.vercel.app/api/admin/songs
+curl https://ninxcx.com/api/admin/songs
 # Should return: { "unranked": [...], "ranked": [] }
 ```
 
