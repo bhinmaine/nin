@@ -102,6 +102,22 @@ export function PublicRankings() {
             </div>
           ))}
         </div>
+
+        {/* Footer */}
+        <footer className="mt-12 pt-6 border-t border-zinc-800 text-center">
+          <p className="text-zinc-600 text-sm">
+            Song data & history courtesy of{' '}
+            <a
+              href="https://www.nin.wiki"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors underline underline-offset-2"
+            >
+              nin.wiki
+            </a>
+            {' '}— the community NIN encyclopedia
+          </p>
+        </footer>
       </div>
     </div>
   );
