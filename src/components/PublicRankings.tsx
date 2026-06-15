@@ -61,21 +61,30 @@ export function PublicRankings() {
           {ranked.map((song) => (
             <div
               key={song.id}
-              className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:border-gray-500 transition"
+              className="bg-gray-900 border border-gray-700 rounded-lg p-4 md:p-6 hover:border-gray-500 transition"
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="text-4xl font-bold text-red-600 mb-2">
+              <div className="flex items-center gap-4">
+                {song.coverArtUrl ? (
+                  <img
+                    src={song.coverArtUrl}
+                    alt={song.album}
+                    className="w-16 h-16 md:w-20 md:h-20 rounded object-cover flex-shrink-0"
+                  />
+                ) : (
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded bg-gray-800 flex-shrink-0" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="text-2xl md:text-4xl font-bold text-red-600 mb-1">
                     #{song.rank}
                   </div>
-                  <h2 className="text-2xl font-semibold mb-1">{song.name}</h2>
-                  <p className="text-gray-400">
+                  <h2 className="text-lg md:text-2xl font-semibold truncate">{song.name}</h2>
+                  <p className="text-gray-400 text-sm md:text-base truncate">
                     {song.album} ({song.releaseYear})
                   </p>
                 </div>
-                <div className="text-right text-sm text-gray-500">
-                  <div>Episode {song.episodeNumber}</div>
-                  <div>{new Date(song.timestamp).toLocaleString()}</div>
+                <div className="text-right text-xs md:text-sm text-gray-500 flex-shrink-0">
+                  <div>Ep. {song.episodeNumber}</div>
+                  <div className="hidden md:block">{new Date(song.timestamp).toLocaleString()}</div>
                 </div>
               </div>
             </div>

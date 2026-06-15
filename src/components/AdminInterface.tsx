@@ -165,15 +165,22 @@ export function AdminInterface() {
                 <div
                   key={song.id}
                   onClick={() => setSelectedUnrankedId(song.id)}
-                  className={`p-3 rounded cursor-pointer transition ${
+                  className={`flex items-center gap-3 p-3 rounded cursor-pointer transition ${
                     selectedUnrankedId === song.id
                       ? 'bg-blue-700'
                       : 'bg-gray-800 hover:bg-gray-700'
                   }`}
                 >
-                  <div className="font-semibold text-sm md:text-base">{song.name}</div>
-                  <div className="text-xs md:text-sm text-gray-400">
-                    {song.album} • {song.releaseYear}
+                  {song.coverArtUrl ? (
+                    <img src={song.coverArtUrl} alt={song.album} className="w-10 h-10 rounded object-cover flex-shrink-0" />
+                  ) : (
+                    <div className="w-10 h-10 rounded bg-gray-700 flex-shrink-0" />
+                  )}
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm md:text-base truncate">{song.name}</div>
+                    <div className="text-xs md:text-sm text-gray-400 truncate">
+                      {song.album} • {song.releaseYear}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -189,12 +196,17 @@ export function AdminInterface() {
                   key={song.id}
                   className="flex items-center gap-3 p-3 bg-gray-800 rounded hover:bg-gray-700 transition group"
                 >
-                  <div className="flex-shrink-0 w-8 font-bold text-red-500">
+                  <div className="flex-shrink-0 w-8 font-bold text-red-500 text-center">
                     #{song.rank}
                   </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-sm md:text-base">{song.name}</div>
-                    <div className="text-xs text-gray-400">
+                  {song.coverArtUrl ? (
+                    <img src={song.coverArtUrl} alt={song.album} className="w-10 h-10 rounded object-cover flex-shrink-0" />
+                  ) : (
+                    <div className="w-10 h-10 rounded bg-gray-700 flex-shrink-0" />
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-sm md:text-base truncate">{song.name}</div>
+                    <div className="text-xs text-gray-400 truncate">
                       {song.album} • {song.releaseYear}
                     </div>
                   </div>

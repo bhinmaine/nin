@@ -34,6 +34,7 @@ export default async function handler(request: Request) {
       album: row.album,
       releaseYear: row.release_year,
       haloNumber: row.halo_number,
+      coverArtUrl: row.cover_art_url || null,
       rank: row.rank,
       episodeNumber: row.episode_number,
       timestamp: row.timestamp,

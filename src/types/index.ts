@@ -4,6 +4,7 @@ export interface Song {
   album: string;
   releaseYear: number;
   haloNumber: number;
+  coverArtUrl?: string | null;
 }
 
 export interface RankedSong extends Song {

@@ -4,6 +4,20 @@
 
 import { sql } from '@vercel/postgres';
 
+// Cover art URLs from Cover Art Archive, keyed by halo number
+const COVER_ART: Record<number, string> = {
+  2:  'http://coverartarchive.org/release/60a04a88-3956-49f5-9d0f-b2603be9f612/8270653258-250.jpg',  // Pretty Hate Machine
+  5:  'http://coverartarchive.org/release/9c0b5a23-ca6e-4b4e-be2f-98280cf56c88/10149658232.jpg',     // Broken
+  8:  'http://coverartarchive.org/release/2d410836-5add-3661-b0b0-168ba1696611/2546761764-250.jpg',  // The Downward Spiral
+  14: 'http://coverartarchive.org/release/d790bcd2-f30b-37d6-aaef-37563a661212/2226772480.jpg',      // The Fragile
+  20: 'http://coverartarchive.org/release/44cbff72-9db6-4ad0-b4c8-b14986afc93a/10150118074.jpg',    // With Teeth
+  22: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg', // Year Zero
+  26: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg', // The Slip
+  28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg', // Hesitation Marks
+  31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg', // Add Violence
+  32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
+};
+
 // COMPLETE NIN DISCOGRAPHY - All Halo-Designated Releases
 const NIN_SONGS = [
   // HALO 1: Down in It (1989) - First single
@@ -421,10 +435,11 @@ async function seedDatabase() {
     console.log(`🌱 Seeding ${NIN_SONGS.length} NIN songs from complete Apple Music catalog...`);
 
     for (const song of NIN_SONGS) {
+      const coverArt = COVER_ART[song.haloNumber] || null;
       await sql`
-        INSERT INTO songs (id, name, album, release_year, halo_number)
-        VALUES (${song.id}, ${song.name}, ${song.album}, ${song.releaseYear}, ${song.haloNumber})
-        ON CONFLICT(id) DO NOTHING
+        INSERT INTO songs (id, name, album, release_year, halo_number, cover_art_url)
+        VALUES (${song.id}, ${song.name}, ${song.album}, ${song.releaseYear}, ${song.haloNumber}, ${coverArt})
+        ON CONFLICT(id) DO UPDATE SET cover_art_url = EXCLUDED.cover_art_url
       `;
     }
 
