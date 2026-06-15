@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useRankingStore } from '../store/rankingStore';
 import { ChevronRight, Shuffle, Lock } from 'lucide-react';
@@ -9,8 +9,16 @@ export function AdminInterface() {
   const [selectedUnrankedId, setSelectedUnrankedId] = useState<string | null>(null);
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   const store = useRankingStore();
+
+  // Check localStorage on mount
+  useEffect(() => {
+    const savedAuth = localStorage.getItem('nin-admin-auth') === 'true';
+    setIsAuthenticated(savedAuth);
+    setIsHydrated(true);
+  }, []);
 
   // Check if password is correct (via API)
   const handleLogin = async (e: React.FormEvent) => {
@@ -25,6 +33,7 @@ export function AdminInterface() {
       
       if (res.ok) {
         setIsAuthenticated(true);
+        localStorage.setItem('nin-admin-auth', 'true');
         setPassword('');
       } else {
         alert('Incorrect password');
@@ -35,10 +44,15 @@ export function AdminInterface() {
     }
   };
 
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem('nin-admin-auth');
+  };
+
   // Load initial data
   useQuery({
     queryKey: ['admin-songs'],
-    enabled: isAuthenticated,
+    enabled: isAuthenticated && isHydrated,
     queryFn: async () => {
       const res = await fetch('/api/admin/songs');
       if (!res.ok) throw new Error('Failed to fetch songs');
@@ -48,6 +62,33 @@ export function AdminInterface() {
       return data;
     },
   });
+
+  const handleRankSong = (song: Song, position: number) => {
+    store.rankSong(song, position, episodeNumber);
+    setSelectedUnrankedId(null);
+    saveSongs();
+  };
+
+  const handleUnrankSong = (songId: string) => {
+    store.unrankSong(songId);
+    saveSongs();
+  };
+
+  const saveSongs = async () => {
+    await fetch('/api/admin/songs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        unranked: store.unranked,
+        ranked: store.ranked,
+      }),
+    });
+  };
+
+  // Show nothing until hydrated (prevents flash of login screen)
+  if (!isHydrated) {
+    return null;
+  }
 
   // Show login screen if not authenticated
   if (!isAuthenticated) {
@@ -83,35 +124,13 @@ export function AdminInterface() {
     );
   }
 
-  const handleRankSong = (song: Song, position: number) => {
-    store.rankSong(song, position, episodeNumber);
-    setSelectedUnrankedId(null);
-    saveSongs();
-  };
-
-  const handleUnrankSong = (songId: string) => {
-    store.unrankSong(songId);
-    saveSongs();
-  };
-
-  const saveSongs = async () => {
-    await fetch('/api/admin/songs', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        unranked: store.unranked,
-        ranked: store.ranked,
-      }),
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-4xl font-bold">Admin: NIN Rankings</h1>
           <button
-            onClick={() => setIsAuthenticated(false)}
+            onClick={handleLogout}
             className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm transition"
           >
             Logout
