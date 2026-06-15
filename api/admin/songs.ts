@@ -24,7 +24,7 @@ export default async function handler(request: Request) {
       const unrankedResult = await sql`
         SELECT * FROM songs
         WHERE id NOT IN (SELECT song_id FROM ranked_songs)
-        ORDER BY RANDOM()
+        ORDER BY id ASC
       `;
 
       // Fetch ranked songs

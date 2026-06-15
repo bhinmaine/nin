@@ -1,6 +1,32 @@
 import { create } from 'zustand';
 import type { Song, RankedSong } from '../types';
 
+const STORAGE_KEY = 'nin-unranked-order';
+
+function saveUnrankedOrder(songs: Song[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(songs.map(s => s.id)));
+  } catch {}
+}
+
+function loadUnrankedOrder(): string[] | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function applyStoredOrder(songs: Song[]): Song[] {
+  const order = loadUnrankedOrder();
+  if (!order) return songs;
+  const map = new Map(songs.map(s => [s.id, s]));
+  const ordered = order.flatMap(id => map.has(id) ? [map.get(id)!] : []);
+  // Append any songs not in the stored order (newly unranked, etc.)
+  const inOrder = new Set(order);
+  const remainder = songs.filter(s => !inOrder.has(s.id));
+  return [...ordered, ...remainder];
+}
+
 interface RankingStore {
   unranked: Song[];
   ranked: RankedSong[];
@@ -32,7 +58,11 @@ export const useRankingStore = create<RankingStore>((set) => ({
   loading: false,
   error: null,
   
-  setUnranked: (songs) => set({ unranked: songs }),
+  setUnranked: (songs) => {
+    const ordered = applyStoredOrder(songs);
+    saveUnrankedOrder(ordered);
+    set({ unranked: ordered });
+  },
   setRanked: (songs) => set({ ranked: songs }),
   setLoading: (loading) => set({ loading }),
   setError: (error) => set({ error }),
@@ -60,13 +90,14 @@ export const useRankingStore = create<RankingStore>((set) => ({
     if (!song) return state;
     
     const newRanked = state.ranked.filter(s => s.id !== songId);
-    // Re-index ranks
     newRanked.forEach((s, i) => { s.rank = i + 1; });
     
     const { rank, episodeNumber, timestamp, ...songData } = song;
+    const newUnranked = [...state.unranked, songData as Song];
+    saveUnrankedOrder(newUnranked);
     return {
       ranked: newRanked,
-      unranked: [...state.unranked, songData as Song],
+      unranked: newUnranked,
     };
   }),
   
@@ -84,7 +115,9 @@ export const useRankingStore = create<RankingStore>((set) => ({
     return { ranked: newRanked };
   }),
   
-  shuffleUnranked: () => set((state) => ({
-    unranked: [...state.unranked].sort(() => Math.random() - 0.5),
-  })),
+  shuffleUnranked: () => set((state) => {
+    const shuffled = [...state.unranked].sort(() => Math.random() - 0.5);
+    saveUnrankedOrder(shuffled);
+    return { unranked: shuffled };
+  }),
 }));
