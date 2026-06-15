@@ -6,16 +6,41 @@ import { sql } from '@vercel/postgres';
 
 // Cover art URLs from Cover Art Archive, keyed by halo number
 const COVER_ART: Record<number, string> = {
-  2:  'http://coverartarchive.org/release/60a04a88-3956-49f5-9d0f-b2603be9f612/8270653258-250.jpg',  // Pretty Hate Machine
-  5:  'http://coverartarchive.org/release/9c0b5a23-ca6e-4b4e-be2f-98280cf56c88/10149658232.jpg',     // Broken
-  8:  'http://coverartarchive.org/release/2d410836-5add-3661-b0b0-168ba1696611/2546761764-250.jpg',  // The Downward Spiral
-  14: 'http://coverartarchive.org/release/d790bcd2-f30b-37d6-aaef-37563a661212/2226772480.jpg',      // The Fragile
-  20: 'http://coverartarchive.org/release/44cbff72-9db6-4ad0-b4c8-b14986afc93a/10150118074.jpg',    // With Teeth
+  1:  'http://coverartarchive.org/release/8b05324a-5205-42c6-8016-8eab77e5bb76/17882593492-250.jpg',   // Down in It
+  2:  'http://coverartarchive.org/release/60a04a88-3956-49f5-9d0f-b2603be9f612/8270653258-250.jpg',   // Pretty Hate Machine
+  3:  'https://coverartarchive.org/release/c773fd65-6861-4972-b9ea-ef523d240697/33968987611-250.jpg', // Head Like a Hole
+  4:  'http://coverartarchive.org/release/c930a403-df03-3ee0-93af-baee2b227608/15657362136.jpg',       // Sin
+  5:  'http://coverartarchive.org/release/9c0b5a23-ca6e-4b4e-be2f-98280cf56c88/10149658232.jpg',      // Broken
+  6:  'http://coverartarchive.org/release/d4e80ac3-2af4-3fa9-8eae-9a5b1aa8dc59/2546712240.jpg',       // Fixed
+  7:  'http://coverartarchive.org/release/51e56540-ef7f-497f-bff5-9abfa9cae128/17882885269-250.jpg',  // March of the Pigs
+  8:  'http://coverartarchive.org/release/2d410836-5add-3661-b0b0-168ba1696611/2546761764-250.jpg',   // The Downward Spiral
+  9:  'http://coverartarchive.org/release/6f4e2d84-d4af-3930-adb8-ea906db4e0e0/10149859243.jpg',      // Closer to God
+  10: 'http://coverartarchive.org/release/099d50c3-3a61-3bc1-88d5-1c8bc327eacd/17883237578-250.jpg', // Further Down the Spiral
+  11: 'https://coverartarchive.org/release/dde63df5-4f21-49f0-a79e-3abb7ee1ce2e/43839425759-250.jpg',// The Perfect Drug Versions
+  12: 'http://coverartarchive.org/release/ceef7b5c-ae41-4065-b2da-cdcd997f4c5a/15573774421.jpg',      // Closure
+  13: 'http://coverartarchive.org/release/da0ac25e-6e75-3e63-b8b4-e2ff206b60db/10150650258.jpg',      // The Day the World Went Away
+  14: 'http://coverartarchive.org/release/d790bcd2-f30b-37d6-aaef-37563a661212/2226772480.jpg',       // The Fragile
+  15: 'http://coverartarchive.org/release/b3013c93-0600-4571-a52b-4b015f4c1a85/17883665349-250.jpg', // We're in This Together
+  16: 'http://coverartarchive.org/release/a5be5d2b-9864-3a06-91d6-85b1826bb497/9363751085.jpg',       // Things Falling Apart
+  17: 'http://coverartarchive.org/release/b5db5d98-a0de-4656-b8a8-e8988179cc1a/34090268716-250.jpg', // And All That Could Have Been
+  18: 'http://coverartarchive.org/release/24c05c85-1405-4e71-b68f-485b0e40ced3/33515376658-250.jpg', // Still
+  19: 'https://coverartarchive.org/release/2b8f2c53-5530-4fd8-bcc9-9b185ab02824/38688177255-250.jpg',// Into the Void
+  20: 'http://coverartarchive.org/release/44cbff72-9db6-4ad0-b4c8-b14986afc93a/10150118074.jpg',     // With Teeth
+  21: 'http://coverartarchive.org/release/2254ffd1-a821-496d-a324-64b02b84e3c9/33021796950-250.jpg', // Every Day Is Exactly the Same
   22: 'http://coverartarchive.org/release/d8de198d-2162-4264-9cfe-926d92c4c7ad/34228141965-250.jpg', // Year Zero
-  26: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg', // The Slip
-  28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg', // Hesitation Marks
-  31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg', // Add Violence
+  23: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg',// Only
+  24: 'http://coverartarchive.org/release/762d5900-44b2-421d-a3ee-15c1a299f379/15665471427.jpg',      // The Hand That Feeds
+  25: 'https://coverartarchive.org/release/8258f7da-63f6-4db4-884d-6e3032b938c4/39860944157-250.jpg',// Only (same as 23)
+  26: 'https://coverartarchive.org/release/12b57d46-a192-499e-a91f-7da66790a1c1/904812861-250.jpg',  // The Slip
+  27: 'http://coverartarchive.org/release/5580eab4-df0f-430a-abe6-d71ccac8d774/26813189807-250.jpg', // Survivalism
+  28: 'https://coverartarchive.org/release/c83ebf08-97f4-4971-8fe2-624fc52dd4ca/41845859925-250.jpg',// Hesitation Marks
+  29: 'http://coverartarchive.org/release/232bf12d-15e5-3696-a5d8-a892e58a6a12/10150803828.jpg',      // Capital G
+  30: 'http://coverartarchive.org/release/f36eb891-6276-452a-8fdf-cde443a6f543/10264802906-250.jpg', // Ghosts I-IV
+  31: 'https://coverartarchive.org/release/594b4f3a-3cf7-4525-9ea3-88a03f10199d/43371436092-250.jpg',// Add Violence
   32: 'http://coverartarchive.org/release/491d093d-2970-4e3b-b01d-aa19d3089436/19843983782-250.jpg', // Bad Witch
+  33: 'https://coverartarchive.org/release/193ecb2e-a1e8-49d3-ba0e-6e95f489bdf0/25770597240-250.jpg',// Ghosts V: Together
+  34: 'https://coverartarchive.org/release/7cd6e3d1-5372-4de4-8e8f-a1966b081eda/25812118263-250.jpg',// Ghosts VI: Locusts
+  38: 'http://coverartarchive.org/release/88743951-b8e5-44cd-b7c2-68e740f567ea/29022074599-250.jpg', // Ghosts V-VI
 };
 
 // COMPLETE NIN DISCOGRAPHY - All Halo-Designated Releases
