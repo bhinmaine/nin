@@ -19,12 +19,12 @@ function Subtitle() {
     <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
       From the opinions of Ben Hamilton
       <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
-         className="text-red-400 hover:text-red-300 transition" title="YouTube">
-        {YT_ICON}
+         className="text-red-500 hover:text-red-400 transition font-medium" title="YouTube">
+        YouTube
       </a>
       <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer"
-         className="text-purple-400 hover:text-purple-300 transition" title="Twitch">
-        {TWITCH_ICON}
+         className="text-purple-500 hover:text-purple-400 transition font-medium" title="Twitch">
+        Twitch
       </a>
     </p>
   );
