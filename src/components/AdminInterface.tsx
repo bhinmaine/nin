@@ -41,6 +41,7 @@ export function AdminInterface() {
   const [episodeNumber, setEpisodeNumber] = useState(1);
   const [selectedUnrankedId, setSelectedUnrankedId] = useState<string | null>(null);
   const [password, setPassword] = useState('');
+  const [authedPassword, setAuthedPassword] = useState(() => localStorage.getItem('nin-admin-pw') ?? '');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
   const [talkingPointsSong, setTalkingPointsSong] = useState<Song | null>(null);
@@ -74,7 +75,9 @@ export function AdminInterface() {
       
       if (res.ok) {
         setIsAuthenticated(true);
+        setAuthedPassword(password);
         localStorage.setItem('nin-admin-auth', 'true');
+        localStorage.setItem('nin-admin-pw', password);
         setPassword('');
       } else {
         alert('Incorrect password');
@@ -87,7 +90,9 @@ export function AdminInterface() {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setAuthedPassword('');
     localStorage.removeItem('nin-admin-auth');
+    localStorage.removeItem('nin-admin-pw');
   };
 
   // Load initial data
@@ -273,7 +278,7 @@ export function AdminInterface() {
         {/* Episode Manager Panel */}
         {showEpisodeManager && (
           <div className="mb-6 bg-zinc-900 border border-zinc-700 rounded-lg p-4 md:p-6">
-            <EpisodeManager adminPassword={password} />
+            <EpisodeManager adminPassword={authedPassword} />
           </div>
         )}
 
@@ -483,7 +488,7 @@ export function AdminInterface() {
       <TalkingPointsModal
         song={talkingPointsSong}
         onClose={() => setTalkingPointsSong(null)}
-        adminPassword={password}
+        adminPassword={authedPassword}
       />
     )}
     </>
