@@ -4,7 +4,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import type { RankedSong } from '../types';
+import type { RankedSong, Song } from '../types';
 
 export function Overlay() {
   // Transparent background for OBS browser source
@@ -28,7 +28,18 @@ export function Overlay() {
     retry: true,
   });
 
-  const latest = ranked?.[0] ?? null;
+  const { data: nowRanking } = useQuery<{ song: Song | null }>({
+    queryKey: ['now-ranking'],
+    queryFn: async () => {
+      const res = await fetch('/api/now-ranking');
+      if (!res.ok) throw new Error('Failed');
+      return res.json();
+    },
+    refetchInterval: 3000,
+    retry: true,
+  });
+
+  const current = nowRanking?.song ?? null;
   const list = ranked ?? [];
 
   return (
@@ -36,27 +47,23 @@ export function Overlay() {
       className="w-full min-h-screen p-4 flex flex-col gap-3"
       style={{ background: 'transparent', fontFamily: 'sans-serif' }}
     >
-      {/* Now Ranking — most recently added (highest rank number) */}
-      {latest && (() => {
-        const newest = [...list].sort((a, b) => b.rank - a.rank)[0];
-        return (
-          <div className="bg-black/80 border border-red-600 rounded-lg px-4 py-3 backdrop-blur">
-            <div className="text-red-500 text-xs font-bold tracking-widest uppercase mb-1">Now Ranking</div>
-            <div className="flex items-center gap-3">
-              {newest.coverArtUrl && (
-                <img src={newest.coverArtUrl} alt="" className="w-10 h-10 rounded flex-shrink-0 object-cover" />
-              )}
-              <div className="min-w-0">
-                <div className="text-white font-bold text-base leading-tight truncate">{newest.name}</div>
-                <div className="text-gray-400 text-xs truncate">
-                  <span className="text-red-400 font-mono">#{newest.rank}</span>
-                  {' · '}halo {newest.haloNumber} · {newest.album}
-                </div>
+      {/* Now Ranking — top of unranked pile */}
+      {current && (
+        <div className="bg-black/80 border border-red-600 rounded-lg px-4 py-3 backdrop-blur">
+          <div className="text-red-500 text-xs font-bold tracking-widest uppercase mb-1">Now Ranking</div>
+          <div className="flex items-center gap-3">
+            {current.coverArtUrl && (
+              <img src={current.coverArtUrl} alt="" className="w-10 h-10 rounded flex-shrink-0 object-cover" />
+            )}
+            <div className="min-w-0">
+              <div className="text-white font-bold text-base leading-tight truncate">{current.name}</div>
+              <div className="text-gray-400 text-xs truncate">
+                halo {current.haloNumber} · {current.album}
               </div>
             </div>
           </div>
-        );
-      })()}
+        </div>
+      )}
 
       {/* Full ranked list */}
       {list.length > 0 && (
