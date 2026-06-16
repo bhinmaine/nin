@@ -23,8 +23,8 @@ export function NINLogo({ className = '' }: { className?: string }) {
       {/* I — middle */}
       <rect x="82" y="28" width="14" height="64" fill="white" />
 
-      {/* N — right (mirrored) */}
-      <polygon points="176,92 176,28 160,28 144,64 144,28 132,28 132,92 148,92 164,56 164,92" fill="white" />
+      {/* N — right */}
+      <polygon points="132,92 132,28 148,28 164,64 164,28 176,28 176,92 160,92 144,56 144,92" fill="white" />
     </svg>
   );
 }
