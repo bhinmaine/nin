@@ -44,7 +44,14 @@ export function PublicRankings() {
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
-          <p className="text-gray-400 mb-8">From the opinions of Ben Hamilton</p>
+          <p className="text-gray-400 mb-8">
+            From the opinions of{' '}
+            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">Ben Hamilton</a>
+            {' '}·{' '}
+            <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition">Twitch</a>
+            {' '}·{' '}
+            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">YouTube</a>
+          </p>
           <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
         </div>
       </div>
@@ -55,7 +62,14 @@ export function PublicRankings() {
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
-        <p className="text-gray-400 mb-8">From the opinions of Ben Hamilton</p>
+        <p className="text-gray-400 mb-8">
+            From the opinions of{' '}
+            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">Ben Hamilton</a>
+            {' '}·{' '}
+            <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition">Twitch</a>
+            {' '}·{' '}
+            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">YouTube</a>
+          </p>
 
         <div className="space-y-4">
           {ranked.map((song) => (
