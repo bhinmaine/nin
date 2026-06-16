@@ -5,6 +5,12 @@
 
 import { sql } from '@vercel/postgres';
 
+const ADMIN_PASSWORD =
+  process.env.ADMIN_PASSWORD ||
+  process.env.ADMINPW ||
+  process.env.adminpw ||
+  process.env.ADMIN_PW;
+
 export const config = { runtime: 'edge' };
 
 const CORS = {
@@ -24,7 +30,7 @@ export default async function handler(request: Request) {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
 
   const authHeader = request.headers.get('x-admin-auth');
-  if (authHeader !== process.env.ADMIN_PASSWORD) return json({ error: 'Unauthorized' }, 401);
+  if (authHeader !== ADMIN_PASSWORD) return json({ error: 'Unauthorized' }, 401);
 
   try {
     if (request.method === 'GET') {
