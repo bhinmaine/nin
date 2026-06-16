@@ -87,7 +87,7 @@ function NowRankingBanner() {
       )}
       {next && (
         <div className="border-t border-red-900/30 pt-4">
-          <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Up Next</p>
+          <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">{isLive ? 'Up Next' : 'And Then'}</p>
           <div className="flex items-center gap-3">
             {next.coverArtUrl ? (
               <img src={next.coverArtUrl} alt={next.album} className="w-10 h-10 rounded object-cover flex-shrink-0 opacity-70" />
