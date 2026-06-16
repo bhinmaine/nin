@@ -39,6 +39,12 @@ function DropZone({
 
 export function AdminInterface() {
   const [episodeNumber, setEpisodeNumber] = useState(1);
+
+  // Once ranked songs load, default episode number to max + 1
+  const maxEpisode = store.ranked.length > 0 ? Math.max(...store.ranked.map(s => s.episodeNumber)) : 0;
+  useEffect(() => {
+    if (maxEpisode > 0) setEpisodeNumber(maxEpisode + 1);
+  }, [maxEpisode]);
   const [selectedUnrankedId, setSelectedUnrankedId] = useState<string | null>(null);
   const [password, setPassword] = useState('');
   const [authedPassword, setAuthedPassword] = useState(() => localStorage.getItem('nin-admin-pw') ?? '');
