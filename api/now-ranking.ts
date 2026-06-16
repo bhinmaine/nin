@@ -28,8 +28,7 @@ export default async function handler(request: Request) {
 
     if (!songIds || songIds.length === 0) return json({ song: null });
 
-    // Find first non-hidden song from the ordered list
-    const placeholders = songIds.map((_, i) => `$${i + 1}`).join(',');
+    // Find first two non-hidden songs from the ordered list
     const result = await sql.query(
       `SELECT id, name, album, release_year, halo_number, cover_art_url, hidden
        FROM songs
@@ -38,19 +37,24 @@ export default async function handler(request: Request) {
     );
 
     const map = new Map(result.rows.map((r: any) => [r.id, r]));
-    const topId = songIds.find(id => map.has(id));
-    if (!topId) return json({ song: null });
 
-    const row = map.get(topId);
+    // Find first two non-hidden songs in order
+    const [topId, nextId] = songIds.filter(id => map.has(id));
+
+    if (!topId) return json({ song: null, nextSong: null });
+
+    const toSong = (row: any) => ({
+      id: row.id,
+      name: row.name,
+      album: row.album,
+      releaseYear: row.release_year,
+      haloNumber: row.halo_number,
+      coverArtUrl: row.cover_art_url ?? null,
+    });
+
     return json({
-      song: {
-        id: row.id,
-        name: row.name,
-        album: row.album,
-        releaseYear: row.release_year,
-        haloNumber: row.halo_number,
-        coverArtUrl: row.cover_art_url ?? null,
-      }
+      song: toSong(map.get(topId)),
+      nextSong: nextId ? toSong(map.get(nextId)) : null,
     });
   } catch (error) {
     const msg = error instanceof Error ? error.message : 'Unknown error';

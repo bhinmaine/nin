@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import type { RankedSong } from '../types';
+import type { RankedSong, Song } from '../types';
 import { NINLogo } from './NINLogo';
 
 function Subtitle() {
@@ -16,6 +16,65 @@ function Subtitle() {
           Twitch
         </a>
       </div>
+    </div>
+  );
+}
+
+function NowRankingBanner() {
+  const { data } = useQuery<{ song: Song | null; nextSong: Song | null }>({
+    queryKey: ['now-ranking'],
+    queryFn: async () => {
+      const res = await fetch('/api/now-ranking');
+      if (!res.ok) throw new Error('Failed');
+      return res.json();
+    },
+    refetchInterval: 15000,
+    retry: 2,
+  });
+
+  const current = data?.song;
+  const next = data?.nextSong;
+
+  if (!current && !next) return null;
+
+  return (
+    <div className="mb-10 rounded-xl border border-red-900/50 bg-red-950/20 p-5">
+      {current && (
+        <div className="mb-4">
+          <p className="text-xs uppercase tracking-widest text-red-500 font-semibold mb-2">Now Ranking</p>
+          <div className="flex items-center gap-4">
+            {current.coverArtUrl ? (
+              <img src={current.coverArtUrl} alt={current.album} className="w-14 h-14 rounded object-cover flex-shrink-0" />
+            ) : (
+              <div className="w-14 h-14 rounded bg-gray-800 flex-shrink-0" />
+            )}
+            <div>
+              <h2 className="text-xl font-bold">{current.name}</h2>
+              <p className="text-gray-400 text-sm">
+                <span className="text-red-500 font-mono">halo {current.haloNumber}</span> · {current.album} ({current.releaseYear})
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {next && (
+        <div className="border-t border-red-900/30 pt-4">
+          <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Up Next</p>
+          <div className="flex items-center gap-3">
+            {next.coverArtUrl ? (
+              <img src={next.coverArtUrl} alt={next.album} className="w-10 h-10 rounded object-cover flex-shrink-0 opacity-70" />
+            ) : (
+              <div className="w-10 h-10 rounded bg-gray-800 flex-shrink-0 opacity-70" />
+            )}
+            <div>
+              <p className="text-base font-medium text-gray-200">{next.name}</p>
+              <p className="text-gray-500 text-xs">
+                <span className="font-mono">halo {next.haloNumber}</span> · {next.album}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -76,6 +135,8 @@ export function PublicRankings() {
           <p className="text-gray-500 text-xs tracking-[0.3em] uppercase mb-3">Song Rankings</p>
           <Subtitle />
         </div>
+
+        <NowRankingBanner />
 
         <div className="space-y-4">
           {ranked.map((song) => (
