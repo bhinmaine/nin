@@ -15,7 +15,7 @@ const TWITCH_ICON = (
 
 function Subtitle() {
   return (
-    <p className="text-gray-400 mb-8 flex items-center gap-2">
+    <p className="text-gray-400 mb-8 flex items-center gap-2 text-lg">
       From the opinions of Ben Hamilton
       <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
          className="text-red-400 hover:text-red-300 transition" title="YouTube">
