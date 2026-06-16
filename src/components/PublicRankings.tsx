@@ -69,7 +69,7 @@ function NowRankingBanner() {
       )}
       {current && (
         <div className="mb-4">
-          <p className="text-xs uppercase tracking-widest text-red-500 font-semibold mb-2">Now Ranking</p>
+          <p className="text-xs uppercase tracking-widest text-red-500 font-semibold mb-2">{isLive ? 'Currently Ranking' : 'On the Next Stream'}</p>
           <div className="flex items-center gap-4">
             {current.coverArtUrl ? (
               <img src={current.coverArtUrl} alt={current.album} className="w-14 h-14 rounded object-cover flex-shrink-0" />
