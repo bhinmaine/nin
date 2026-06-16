@@ -26,10 +26,14 @@ export function EpisodeManager({ adminPassword }: Props) {
       if (res.ok) {
         const data: Episode[] = await res.json();
         setEpisodes(data);
-        // Init drafts from loaded data
         const d: Record<number, { youtubeUrl: string; twitchUrl: string }> = {};
         data.forEach(e => { d[e.episodeNumber] = { youtubeUrl: e.youtubeUrl, twitchUrl: e.twitchUrl }; });
         setDrafts(d);
+        // Default new episode number to max + 1
+        if (data.length > 0) {
+          const maxEp = Math.max(...data.map(e => e.episodeNumber));
+          setNewEp(prev => ({ ...prev, episodeNumber: String(maxEp + 1) }));
+        }
       }
     } finally {
       setLoading(false);
@@ -84,7 +88,7 @@ export function EpisodeManager({ adminPassword }: Props) {
         }),
       });
       if (res.ok) {
-        setNewEp({ episodeNumber: '', youtubeUrl: '', twitchUrl: '' });
+        setNewEp({ episodeNumber: String(epNum + 1), youtubeUrl: '', twitchUrl: '' });
         await load();
       }
     } finally {
