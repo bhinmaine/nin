@@ -9,8 +9,8 @@ import type { RankedSong, Song } from '../types';
 export function Overlay() {
   // Transparent background for OBS browser source
   useEffect(() => {
-    document.body.style.background = 'transparent';
-    document.documentElement.style.background = 'transparent';
+    document.body.style.background = '#000000';
+    document.documentElement.style.background = '#000000';
     return () => {
       document.body.style.background = '';
       document.documentElement.style.background = '';
@@ -45,11 +45,11 @@ export function Overlay() {
   return (
     <div
       className="w-full min-h-screen p-4 flex flex-col gap-3"
-      style={{ background: 'transparent', fontFamily: 'sans-serif' }}
+      style={{ background: '#000000', fontFamily: 'sans-serif' }}
     >
       {/* Now Ranking — top of unranked pile */}
       {current && (
-        <div className="bg-black/80 border border-red-600 rounded-lg px-4 py-3 backdrop-blur">
+        <div className="bg-zinc-900 border border-red-600 rounded-lg px-4 py-3">
           <div className="text-red-500 text-xs font-bold tracking-widest uppercase mb-1">Now Ranking</div>
           <div className="flex items-center gap-3">
             {current.coverArtUrl && (
@@ -67,7 +67,7 @@ export function Overlay() {
 
       {/* Full ranked list */}
       {list.length > 0 && (
-        <div className="bg-black/75 border border-zinc-700 rounded-lg overflow-hidden backdrop-blur">
+        <div className="bg-zinc-900 border border-zinc-700 rounded-lg overflow-hidden">
           <div className="text-zinc-400 text-xs font-bold tracking-widest uppercase px-3 py-2 border-b border-zinc-700">
             Rankings
           </div>
@@ -89,7 +89,7 @@ export function Overlay() {
       )}
 
       {list.length === 0 && (
-        <div className="bg-black/75 border border-zinc-700 rounded-lg px-4 py-3 backdrop-blur">
+        <div className="bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3">
           <div className="text-zinc-500 text-sm">No rankings yet.</div>
         </div>
       )}
