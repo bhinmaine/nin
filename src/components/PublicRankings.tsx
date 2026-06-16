@@ -21,7 +21,7 @@ function Subtitle() {
 }
 
 function NowRankingBanner() {
-  const { data } = useQuery<{ song: Song | null; nextSong: Song | null }>({
+  const { data: nowData } = useQuery<{ song: Song | null; nextSong: Song | null }>({
     queryKey: ['now-ranking'],
     queryFn: async () => {
       const res = await fetch('/api/now-ranking');
@@ -32,13 +32,41 @@ function NowRankingBanner() {
     retry: 2,
   });
 
-  const current = data?.song;
-  const next = data?.nextSong;
+  const { data: twitchData } = useQuery<{ live: boolean; title: string | null; url: string | null }>({
+    queryKey: ['twitch-status'],
+    queryFn: async () => {
+      const res = await fetch('/api/twitch-status');
+      if (!res.ok) throw new Error('Failed');
+      return res.json();
+    },
+    refetchInterval: 30000,
+    retry: 2,
+  });
 
-  if (!current && !next) return null;
+  const current = nowData?.song;
+  const next = nowData?.nextSong;
+  const isLive = twitchData?.live ?? false;
+
+  if (!current && !next && !isLive) return null;
 
   return (
     <div className="mb-10 rounded-xl border border-red-900/50 bg-red-950/20 p-5">
+      {isLive && (
+        <div className="mb-4">
+          <a
+            href={twitchData?.url ?? 'https://www.twitch.tv/possiblyben'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 transition text-white text-sm font-semibold px-3 py-1.5 rounded-full"
+          >
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+            LIVE on Twitch
+          </a>
+          {twitchData?.title && (
+            <p className="text-gray-400 text-xs mt-1 truncate">{twitchData.title}</p>
+          )}
+        </div>
+      )}
       {current && (
         <div className="mb-4">
           <p className="text-xs uppercase tracking-widest text-red-500 font-semibold mb-2">Now Ranking</p>
