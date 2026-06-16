@@ -1,6 +1,34 @@
 import { useQuery } from '@tanstack/react-query';
 import type { RankedSong } from '../types';
 
+const YT_ICON = (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+);
+
+const TWITCH_ICON = (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
+  </svg>
+);
+
+function Subtitle() {
+  return (
+    <p className="text-gray-400 mb-8 flex items-center gap-2">
+      From the opinions of Ben Hamilton
+      <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
+         className="text-red-400 hover:text-red-300 transition" title="YouTube">
+        {YT_ICON}
+      </a>
+      <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer"
+         className="text-purple-400 hover:text-purple-300 transition" title="Twitch">
+        {TWITCH_ICON}
+      </a>
+    </p>
+  );
+}
+
 export function PublicRankings() {
   const { data: ranked, isLoading, error } = useQuery<RankedSong[]>({
     queryKey: ['ranked-songs'],
@@ -9,12 +37,9 @@ export function PublicRankings() {
       if (!res.ok) throw new Error('Failed to fetch rankings');
       return res.json();
     },
-    refetchInterval: 5000, // Poll every 5s for live updates
+    refetchInterval: 5000,
     retry: 3,
   });
-
-  // Debug: Log state
-  console.log('PublicRankings state:', { isLoading, error, rankedCount: ranked?.length });
 
   if (error) {
     return (
@@ -44,14 +69,7 @@ export function PublicRankings() {
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
-          <p className="text-gray-400 mb-8">
-            From the opinions of{' '}
-            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">Ben Hamilton</a>
-            {' '}·{' '}
-            <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition">Twitch</a>
-            {' '}·{' '}
-            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">YouTube</a>
-          </p>
+          <Subtitle />
           <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
         </div>
       </div>
@@ -62,14 +80,7 @@ export function PublicRankings() {
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
-        <p className="text-gray-400 mb-8">
-            From the opinions of{' '}
-            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">Ben Hamilton</a>
-            {' '}·{' '}
-            <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition">Twitch</a>
-            {' '}·{' '}
-            <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">YouTube</a>
-          </p>
+        <Subtitle />
 
         <div className="space-y-4">
           {ranked.map((song) => (
@@ -136,7 +147,6 @@ export function PublicRankings() {
                       </a>
                     )}
                   </div>
-
                 </div>
               </div>
             </div>
