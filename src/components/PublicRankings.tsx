@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import type { RankedSong } from '../types';
+import { NINLogo } from './NINLogo';
 
 const YT_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -45,7 +46,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">NIN Song Rankings</h1>
+          <NINLogo className="w-48 mx-auto mb-4" />
           <p className="text-red-500">Error loading rankings: {error instanceof Error ? error.message : 'Unknown error'}</p>
           <p className="text-gray-400 mt-4">Please try refreshing the page</p>
         </div>
@@ -57,7 +58,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">NIN Song Rankings</h1>
+          <NINLogo className="w-48 mx-auto mb-4" />
           <p className="text-gray-400">Loading rankings...</p>
         </div>
       </div>
@@ -68,7 +69,7 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
+          <NINLogo className="w-64 mb-4" />
           <Subtitle />
           <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
         </div>
@@ -79,7 +80,8 @@ export function PublicRankings() {
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
+        <NINLogo className="w-64 mb-2" />
+        <h1 className="text-2xl font-bold mb-4 tracking-widest uppercase text-white">Song Rankings</h1>
         <Subtitle />
 
         <div className="space-y-4">
