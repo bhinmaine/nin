@@ -338,7 +338,7 @@ export function AdminInterface() {
               {dragOverUnranked && <span className="ml-2 text-sm text-blue-400 font-normal">Drop to unrank</span>}
             </h2>
             <div className="space-y-2 max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
-              {store.unranked.map((song) => (
+              {[...store.unranked].sort((a, b) => (a.hidden === b.hidden ? 0 : a.hidden ? 1 : -1)).map((song) => (
                 <div
                   key={song.id}
                   draggable
