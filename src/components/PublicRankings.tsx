@@ -4,17 +4,19 @@ import { NINLogo } from './NINLogo';
 
 function Subtitle() {
   return (
-    <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
-      From the opinions of Ben Hamilton
-      <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
-         className="text-red-500 hover:text-red-400 transition font-medium" title="YouTube">
-        YouTube
-      </a>
-      <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer"
-         className="text-purple-500 hover:text-purple-400 transition font-medium" title="Twitch">
-        Twitch
-      </a>
-    </p>
+    <div className="flex flex-col items-center gap-1">
+      <p className="text-gray-500 text-sm">From the opinions of Ben Hamilton</p>
+      <div className="flex items-center gap-4">
+        <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
+           className="text-red-500 hover:text-red-400 transition text-sm font-medium">
+          YouTube
+        </a>
+        <a href="https://www.twitch.tv/possiblyben" target="_blank" rel="noopener noreferrer"
+           className="text-purple-500 hover:text-purple-400 transition text-sm font-medium">
+          Twitch
+        </a>
+      </div>
+    </div>
   );
 }
 
