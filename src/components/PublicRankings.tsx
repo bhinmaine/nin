@@ -44,7 +44,7 @@ export function PublicRankings() {
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-2">NIN Song Rankings</h1>
-          <p className="text-gray-400 mb-8">Live from the Twitch stream</p>
+          <p className="text-gray-400 mb-8">From the opinions of Ben Hamilton</p>
           <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
         </div>
       </div>
