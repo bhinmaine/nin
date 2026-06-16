@@ -16,7 +16,7 @@ const TWITCH_ICON = (
 
 function Subtitle() {
   return (
-    <p className="text-gray-400 mb-8 flex items-center gap-2 text-lg">
+    <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
       From the opinions of Ben Hamilton
       <a href="https://www.youtube.com/@possiblyben" target="_blank" rel="noopener noreferrer"
          className="text-red-400 hover:text-red-300 transition" title="YouTube">
@@ -69,9 +69,10 @@ export function PublicRankings() {
     return (
       <div className="min-h-screen bg-black text-white p-8 flex items-center justify-center">
         <div className="text-center">
-          <NINLogo className="w-64 mb-4" />
+          <NINLogo className="w-56 mx-auto mb-2 text-white" />
+          <p className="text-gray-500 text-xs tracking-[0.3em] uppercase mb-3">Song Rankings</p>
           <Subtitle />
-          <p className="text-gray-500">No rankings yet. Check back during the stream!</p>
+          <p className="text-gray-500 mt-4">No rankings yet. Check back during the stream!</p>
         </div>
       </div>
     );
@@ -80,9 +81,11 @@ export function PublicRankings() {
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
-        <NINLogo className="w-64 mb-2" />
-        <h1 className="text-2xl font-bold mb-4 tracking-widest uppercase text-white">Song Rankings</h1>
-        <Subtitle />
+        <div className="flex flex-col items-center text-center mb-10">
+          <NINLogo className="w-56 mb-2 text-white" />
+          <p className="text-gray-500 text-xs tracking-[0.3em] uppercase mb-3">Song Rankings</p>
+          <Subtitle />
+        </div>
 
         <div className="space-y-4">
           {ranked.map((song) => (
