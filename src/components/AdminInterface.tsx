@@ -46,6 +46,8 @@ export function AdminInterface() {
   const [isHydrated, setIsHydrated] = useState(false);
   const [talkingPointsSong, setTalkingPointsSong] = useState<Song | null>(null);
   const [showEpisodeManager, setShowEpisodeManager] = useState(false);
+  const [editingEpisodeSongId, setEditingEpisodeSongId] = useState<string | null>(null);
+  const [editingEpisodeValue, setEditingEpisodeValue] = useState<string>('');
 
   // Drag state
   const dragSource = useRef<DragSource | null>(null);
@@ -461,12 +463,59 @@ export function AdminInterface() {
                         </button>
                       </div>
                     </div>
-                    <button
-                      onClick={() => handleUnrankSong(song.id)}
-                      className="opacity-0 group-hover:opacity-100 px-2 py-1 text-xs bg-red-700 hover:bg-red-800 rounded transition"
-                    >
-                      Remove
-                    </button>
+                    <div className="flex items-center gap-1 flex-shrink-0">
+                      {editingEpisodeSongId === song.id ? (
+                        <input
+                          type="number"
+                          min="1"
+                          value={editingEpisodeValue}
+                          autoFocus
+                          onClick={e => e.stopPropagation()}
+                          onChange={e => setEditingEpisodeValue(e.target.value)}
+                          onKeyDown={async e => {
+                            if (e.key === 'Enter') {
+                              const newEp = parseInt(editingEpisodeValue);
+                              if (!isNaN(newEp) && newEp > 0) {
+                                const updated = store.ranked.map(s =>
+                                  s.id === song.id ? { ...s, episodeNumber: newEp } : s
+                                );
+                                store.setRanked(updated);
+                                await saveSongs(store.unranked, updated);
+                              }
+                              setEditingEpisodeSongId(null);
+                            } else if (e.key === 'Escape') {
+                              setEditingEpisodeSongId(null);
+                            }
+                          }}
+                          onBlur={async () => {
+                            const newEp = parseInt(editingEpisodeValue);
+                            if (!isNaN(newEp) && newEp > 0) {
+                              const updated = store.ranked.map(s =>
+                                s.id === song.id ? { ...s, episodeNumber: newEp } : s
+                              );
+                              store.setRanked(updated);
+                              await saveSongs(store.unranked, updated);
+                            }
+                            setEditingEpisodeSongId(null);
+                          }}
+                          className="w-14 px-1.5 py-0.5 text-xs bg-gray-700 border border-blue-500 rounded text-white text-center"
+                        />
+                      ) : (
+                        <button
+                          onClick={e => { e.stopPropagation(); setEditingEpisodeSongId(song.id); setEditingEpisodeValue(String(song.episodeNumber)); }}
+                          className="opacity-0 group-hover:opacity-100 px-2 py-1 text-xs bg-gray-700 hover:bg-gray-600 rounded transition font-mono"
+                          title="Edit episode number"
+                        >
+                          ep.{song.episodeNumber}
+                        </button>
+                      )}
+                      <button
+                        onClick={() => handleUnrankSong(song.id)}
+                        className="opacity-0 group-hover:opacity-100 px-2 py-1 text-xs bg-red-700 hover:bg-red-800 rounded transition"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                   <DropZone
                     active={dragOverRankedIdx === idx + 1}
