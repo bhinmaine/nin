@@ -57,11 +57,20 @@ export function AdminInterface() {
 
   const store = useRankingStore();
 
-  // Default episode number to max existing + 1 once ranked songs load
-  const maxEpisode = store.ranked.length > 0 ? Math.max(...store.ranked.map(s => s.episodeNumber)) : 0;
+  // Default episode number to max linked episode + 1 once episodes load
   useEffect(() => {
-    if (maxEpisode > 0) setEpisodeNumber(maxEpisode + 1);
-  }, [maxEpisode]);
+    if (!isAuthenticated || !isHydrated) return;
+    fetch('/api/admin/episodes', { headers: { 'x-admin-auth': authedPassword } })
+      .then(r => r.ok ? r.json() : [])
+      .then((episodes: { episodeNumber: number }[]) => {
+        if (episodes.length > 0) {
+          const maxLinked = Math.max(...episodes.map(e => e.episodeNumber));
+          setEpisodeNumber(maxLinked + 1);
+        }
+        // If no episodes exist yet, stay at 1
+      })
+      .catch(() => {});
+  }, [isAuthenticated, isHydrated, authedPassword]);
 
   // Check localStorage on mount
   useEffect(() => {
