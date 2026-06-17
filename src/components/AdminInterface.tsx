@@ -52,7 +52,7 @@ export function AdminInterface() {
   // Drag state
   const dragSource = useRef<DragSource | null>(null);
   const [dragOverRankedIdx, setDragOverRankedIdx] = useState<number | null>(null);
-  const [dragOverUnranked, setDragOverUnranked] = useState(false);
+  const [dragOverUnrankedIdx, setDragOverUnrankedIdx] = useState<number | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
 
   const store = useRankingStore();
@@ -176,7 +176,7 @@ export function AdminInterface() {
     dragSource.current = null;
     setDraggingId(null);
     setDragOverRankedIdx(null);
-    setDragOverUnranked(false);
+    setDragOverUnrankedIdx(null);
   };
 
   // Drop onto ranked list — index is the insert-before position
@@ -199,26 +199,49 @@ export function AdminInterface() {
     }
   };
 
-  // Drop onto unranked bucket — unranks a ranked song
-  const onDropOnUnranked = (e: React.DragEvent) => {
+  // Drop onto unranked bucket — unranks a ranked song, or reorders within unranked
+  const onDropOnUnranked = (e: React.DragEvent, insertBefore?: number) => {
     e.preventDefault();
-    setDragOverUnranked(false);
+    setDragOverUnrankedIdx(null);
     const src = dragSource.current;
-    if (src?.kind === 'ranked') handleUnrankSong(src.songId);
+    if (!src) return;
+
+    if (src.kind === 'ranked') {
+      handleUnrankSong(src.songId);
+    } else if (src.kind === 'unranked' && insertBefore !== undefined) {
+      const fromIdx = store.unranked.findIndex(s => s.id === src.songId);
+      if (fromIdx === -1) return;
+      let target = insertBefore;
+      if (fromIdx < insertBefore) target = insertBefore - 1;
+      if (target === fromIdx) return;
+      const newUnranked = [...store.unranked];
+      const [moved] = newUnranked.splice(fromIdx, 1);
+      newUnranked.splice(target, 0, moved);
+      store.setUnranked(newUnranked);
+      saveSongs(newUnranked, store.ranked);
+    }
   };
 
   const onDragOverRanked = (e: React.DragEvent, idx: number) => {
     e.preventDefault();
     e.dataTransfer.dropEffect = 'move';
     setDragOverRankedIdx(idx);
-    setDragOverUnranked(false);
+    setDragOverUnrankedIdx(null);
   };
 
-  const onDragOverUnranked = (e: React.DragEvent) => {
-    if (dragSource.current?.kind !== 'ranked') return;
+  const onDragOverUnranked = (e: React.DragEvent, idx: number) => {
+    if (dragSource.current?.kind === 'ranked') {
+      // Ranked song hovering over unranked — just allow drop anywhere
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      setDragOverUnrankedIdx(idx);
+      setDragOverRankedIdx(null);
+      return;
+    }
+    if (dragSource.current?.kind !== 'unranked') return;
     e.preventDefault();
     e.dataTransfer.dropEffect = 'move';
-    setDragOverUnranked(true);
+    setDragOverUnrankedIdx(idx);
     setDragOverRankedIdx(null);
   };
   // ───────────────────────────────────────────────────────────────
@@ -344,64 +367,82 @@ export function AdminInterface() {
           {/* UNRANKED BUCKET */}
           <div
             className={`bg-gray-900 rounded-lg p-4 md:p-6 border transition ${
-              dragOverUnranked ? 'border-blue-400 bg-gray-800' : 'border-gray-700'
+              dragOverUnrankedIdx !== null && dragSource.current?.kind === 'ranked' ? 'border-blue-400 bg-gray-800' : 'border-gray-700'
             }`}
-            onDragOver={onDragOverUnranked}
-            onDragLeave={() => setDragOverUnranked(false)}
-            onDrop={onDropOnUnranked}
+            onDragOver={dragSource.current?.kind === 'ranked' ? (e) => onDragOverUnranked(e, 0) : undefined}
+            onDragLeave={() => setDragOverUnrankedIdx(null)}
+            onDrop={dragSource.current?.kind === 'ranked' ? (e) => onDropOnUnranked(e, 0) : undefined}
           >
             <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
               Unranked ({store.unranked.length})
-              {dragOverUnranked && <span className="ml-2 text-sm text-blue-400 font-normal">Drop to unrank</span>}
+              {dragOverUnrankedIdx !== null && dragSource.current?.kind === 'ranked' && <span className="ml-2 text-sm text-blue-400 font-normal">Drop to unrank</span>}
             </h2>
-            <div className="space-y-2 max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
-              {[...store.unranked].sort((a, b) => (a.hidden === b.hidden ? 0 : a.hidden ? 1 : -1)).map((song) => (
-                <div
-                  key={song.id}
-                  draggable
-                  onDragStart={(e) => onDragStartUnranked(e, song.id)}
-                  onDragEnd={onDragEnd}
-                  onClick={() => setSelectedUnrankedId(song.id)}
-                  className={`flex items-center gap-3 p-3 rounded cursor-grab active:cursor-grabbing transition ${
-                    draggingId === song.id
-                      ? 'opacity-40'
-                      : selectedUnrankedId === song.id
-                      ? 'bg-blue-700'
-                      : song.hidden
-                      ? 'bg-gray-800/50 opacity-40 hover:opacity-70'
-                      : 'bg-gray-800 hover:bg-gray-700'
-                  }`}
-                >
-                  <GripVertical size={14} className="text-gray-600 flex-shrink-0" />
-                  {song.coverArtUrl ? (
-                    <img src={song.coverArtUrl} alt={song.album} className="w-10 h-10 rounded object-cover flex-shrink-0" />
-                  ) : (
-                    <div className="w-10 h-10 rounded bg-gray-700 flex-shrink-0" />
-                  )}
-                  <div className="min-w-0">
-                    <div className="font-semibold text-sm md:text-base truncate">
-                      {song.name}
-                      {song.hidden && <span className="ml-2 text-xs text-gray-500 font-normal">(hidden)</span>}
-                    </div>
-                    <div className="text-xs md:text-sm text-gray-400 truncate flex items-center gap-1.5">
-                      <span className="text-red-500 font-mono flex-shrink-0">halo {song.haloNumber}</span>
-                      <span>·</span>
-                      <span className="truncate">{song.album} · {song.releaseYear}</span>
-                      {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
-                      {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
-                      <button
-                        onClick={e => { e.stopPropagation(); setTalkingPointsSong(song); }}
-                        title="Talking points"
-                        className={`flex-shrink-0 transition-colors ${
-                          song.talkingPoints && Object.values(song.talkingPoints).some(v => v?.trim())
-                            ? 'text-amber-400 hover:text-amber-300'
-                            : 'text-zinc-600 hover:text-zinc-400'
-                        }`}
-                      >
-                        <StickyNote size={13} />
-                      </button>
+            <div className="space-y-0 max-h-[50vh] md:max-h-[calc(100vh-300px)] overflow-y-auto">
+              {/* Drop zone before first item */}
+              {store.unranked.length > 0 && dragSource.current?.kind === 'unranked' && (
+                <DropZone
+                  active={dragOverUnrankedIdx === 0}
+                  onDragOver={(e) => onDragOverUnranked(e, 0)}
+                  onDragLeave={() => setDragOverUnrankedIdx(null)}
+                  onDrop={(e) => onDropOnUnranked(e, 0)}
+                />
+              )}
+              {[...store.unranked].sort((a, b) => (a.hidden === b.hidden ? 0 : a.hidden ? 1 : -1)).map((song, idx) => (
+                <div key={song.id}>
+                  <div
+                    draggable
+                    onDragStart={(e) => onDragStartUnranked(e, song.id)}
+                    onDragEnd={onDragEnd}
+                    onClick={() => setSelectedUnrankedId(song.id)}
+                    className={`flex items-center gap-3 p-3 rounded cursor-grab active:cursor-grabbing transition mb-0.5 ${
+                      draggingId === song.id
+                        ? 'opacity-40'
+                        : selectedUnrankedId === song.id
+                        ? 'bg-blue-700'
+                        : song.hidden
+                        ? 'bg-gray-800/50 opacity-40 hover:opacity-70'
+                        : 'bg-gray-800 hover:bg-gray-700'
+                    }`}
+                  >
+                    <GripVertical size={14} className="text-gray-600 flex-shrink-0" />
+                    {song.coverArtUrl ? (
+                      <img src={song.coverArtUrl} alt={song.album} className="w-10 h-10 rounded object-cover flex-shrink-0" />
+                    ) : (
+                      <div className="w-10 h-10 rounded bg-gray-700 flex-shrink-0" />
+                    )}
+                    <div className="min-w-0">
+                      <div className="font-semibold text-sm md:text-base truncate">
+                        {song.name}
+                        {song.hidden && <span className="ml-2 text-xs text-gray-500 font-normal">(hidden)</span>}
+                      </div>
+                      <div className="text-xs md:text-sm text-gray-400 truncate flex items-center gap-1.5">
+                        <span className="text-red-500 font-mono flex-shrink-0">halo {song.haloNumber}</span>
+                        <span>·</span>
+                        <span className="truncate">{song.album} · {song.releaseYear}</span>
+                        {song.appleMusicUrl && <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-pink-400 hover:text-pink-300 flex-shrink-0" title="Apple Music">♫</a>}
+                        {song.youtubeUrl && <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-red-400 hover:text-red-300 flex-shrink-0" title="YouTube">▶</a>}
+                        <button
+                          onClick={e => { e.stopPropagation(); setTalkingPointsSong(song); }}
+                          title="Talking points"
+                          className={`flex-shrink-0 transition-colors ${
+                            song.talkingPoints && Object.values(song.talkingPoints).some(v => v?.trim())
+                              ? 'text-amber-400 hover:text-amber-300'
+                              : 'text-zinc-600 hover:text-zinc-400'
+                          }`}
+                        >
+                          <StickyNote size={13} />
+                        </button>
+                      </div>
                     </div>
                   </div>
+                  {dragSource.current?.kind === 'unranked' && (
+                    <DropZone
+                      active={dragOverUnrankedIdx === idx + 1}
+                      onDragOver={(e) => onDragOverUnranked(e, idx + 1)}
+                      onDragLeave={() => setDragOverUnrankedIdx(null)}
+                      onDrop={(e) => onDropOnUnranked(e, idx + 1)}
+                    />
+                  )}
                 </div>
               ))}
             </div>
