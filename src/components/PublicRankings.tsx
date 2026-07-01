@@ -190,18 +190,7 @@ export function PublicRankings() {
                   <p className="text-gray-400 text-sm md:text-base truncate">
                     <span className="text-red-500 font-mono">halo {song.haloNumber}</span> · {song.album} ({song.releaseYear})
                   </p>
-                  <div className="flex items-center gap-3 mt-2">
-                    {song.appleMusicUrl && (
-                      <a href={song.appleMusicUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-xs text-pink-400 hover:text-pink-300 transition">
-                        <span>♫</span> <span>Apple Music</span>
-                      </a>
-                    )}
-                    {song.youtubeUrl && (
-                      <a href={song.youtubeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-xs text-red-400 hover:text-red-300 transition">
-                        <span>▶</span> <span>YouTube</span>
-                      </a>
-                    )}
-                  </div>
+
                 </div>
                 <div className="text-right text-xs md:text-sm text-gray-500 flex-shrink-0">
                   <div className="font-mono mb-1">Ep. {song.episodeNumber}</div>
