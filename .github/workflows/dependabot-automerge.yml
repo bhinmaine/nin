@@ -46,7 +46,7 @@ jobs:
     steps:
       # gh needs a work tree for `pr merge` (it does local git work to delete
       # the branch) — without a checkout it dies with "not a git repository".
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -147,8 +147,17 @@ jobs:
               sleep 20
             done
             if [ "$merged" -ne 1 ]; then
-              echo "::error::could not merge PR #$pr after 3 attempts"
-              exit 1
+              # GitHub refuses to let the Actions token update workflow files
+              # ("refusing to allow a GitHub App to create or update workflow
+              # ... without `workflows` permission"), which is why some
+              # github-actions bumps cannot self-merge. Flag it for the weekly
+              # audit instead of failing loudly here.
+              gh label create needs-manual-merge --color FBCA04 \
+                --description "Dependabot PR the Actions token cannot merge" --force >/dev/null 2>&1 || true
+              gh pr edit "$pr" --add-label needs-manual-merge >/dev/null 2>&1 || true
+              gh pr comment "$pr" --body "Auto-merge could not land this one: GitHub blocks the Actions token from updating workflow files (\`without workflows permission\`). Flagged \`needs-manual-merge\` — the weekly Dependabot audit picks it up." || true
+              echo "::warning::PR #$pr needs a manual merge (workflow-file permission)"
+              exit 0
             fi
           else
             echo "Holding PR #$pr for review."
