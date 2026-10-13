@@ -24,6 +24,21 @@ updates:
       minor-and-patch:
         applies-to: version-updates
         update-types: ["minor", "patch"]
+    # Majors we are deliberately NOT taking yet — each is a migration project,
+    # not an update. Without this, Dependabot opens a fresh PR every week that
+    # fails CI *and* burns a failing Vercel preview build: pure noise. Security
+    # updates are unaffected by this block.
+    ignore:
+      - dependency-name: tailwindcss
+        update-types: ["version-update:semver-major"]
+      - dependency-name: react
+        update-types: ["version-update:semver-major"]
+      - dependency-name: react-dom
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react-dom"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: "/"
