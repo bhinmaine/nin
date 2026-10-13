@@ -1,0 +1,82 @@
+name: dependabot-automerge
+
+# Merges Dependabot PRs that pass CI, with no human in the loop.
+#
+# Triggered by workflow_run (NOT pull_request) on purpose: Dependabot-triggered
+# pull_request workflow runs get a read-only GITHUB_TOKEN, so a pull_request
+# version of this workflow cannot merge anything. workflow_run always runs in
+# the base-repo context with the permissions declared below, and gives us the
+# CI verdict for free — a green "ci" run on a dependabot/ branch is the gate.
+#
+# Policy: patch/minor/security updates merge automatically. A single-dependency
+# MAJOR bump is held open (commented, not merged) and surfaces through the
+# homeland dependabot-audit alert so it gets reviewed — auto-merging a major on
+# a live site is how you get paged at 3am.
+
+on:
+  workflow_run:
+    workflows: ["ci"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  automerge:
+    if: >
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      startsWith(github.event.workflow_run.head_branch, 'dependabot/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Evaluate and merge the Dependabot PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -euo pipefail
+
+          pr=$(gh api "repos/$REPO/pulls?head=$REPO:$BRANCH&state=open" --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No open PR for $BRANCH — nothing to do."
+            exit 0
+          fi
+
+          title=$(gh api "repos/$REPO/pulls/$pr" --jq .title)
+          author=$(gh api "repos/$REPO/pulls/$pr" --jq .user.login)
+          echo "PR #$pr by $author: $title"
+
+          if [ "$author" != "dependabot[bot]" ]; then
+            echo "Not a Dependabot PR — refusing to auto-merge."
+            exit 0
+          fi
+
+          # Security updates always land: a fix that is behind a major bump is
+          # still a fix, and CI has to pass anyway.
+          if printf '%s' "$title" | grep -qi 'security'; then
+            echo "Security update — merging."
+            gh pr merge "$pr" --squash --delete-branch
+            exit 0
+          fi
+
+          # "Bump x from 1.2.3 to 2.0.0" -> hold major bumps.
+          if python3 - "$title" <<'PY'
+          import re, sys
+          # "Bump x from 1.2.3 to 2.0.0" -> hold when the major increases.
+          # Compare as ints: string comparison gets 9.x -> 10.x backwards.
+          m = re.search(r'from v?(\d+)\.\S+ to v?(\d+)\.', sys.argv[1])
+          sys.exit(1 if (m and int(m.group(2)) > int(m.group(1))) else 0)
+          PY
+          then
+            echo "Patch/minor (or grouped) update — merging."
+            gh pr merge "$pr" --squash --delete-branch
+          else
+            echo "Major bump — holding for review."
+            gh pr comment "$pr" --body "Held automatically: major version bump. CI is green ($RUN_URL) but majors are reviewed before landing. \`@sophie\` this is queued in the Dependabot audit alert." || true
+          fi
