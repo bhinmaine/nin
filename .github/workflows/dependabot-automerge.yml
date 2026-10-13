@@ -38,6 +38,12 @@ jobs:
       startsWith(github.event.workflow_run.head_branch, 'dependabot/')
     runs-on: ubuntu-latest
     steps:
+      # gh needs a work tree for `pr merge` (it does local git work to delete
+      # the branch) — without a checkout it dies with "not a git repository".
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
       - name: Evaluate and merge the Dependabot PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
