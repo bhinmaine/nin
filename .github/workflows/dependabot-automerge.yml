@@ -8,10 +8,15 @@ name: dependabot-automerge
 # the base-repo context with the permissions declared below, and gives us the
 # CI verdict for free — a green "ci" run on a dependabot/ branch is the gate.
 #
-# Policy: patch/minor/security updates merge automatically. A single-dependency
-# MAJOR bump is held open (commented, not merged) and surfaces through the
-# homeland dependabot-audit alert so it gets reviewed — auto-merging a major on
-# a live site is how you get paged at 3am.
+# Policy (see homeland docs/adr/0002):
+#   github-actions  -> always merge (the PR's own CI run exercises the new version)
+#   pip             -> always merge (the monitor test suite is the gate)
+#   npm major, runtime dependency -> HOLD for review; a runtime major is a
+#                      project, not a bump. Held PRs surface in the weekly audit.
+#   everything else -> merge
+#
+# The PR lookup retries: Dependabot pushes the branch and the CI run starts
+# before the pull request record exists, so an immediate lookup misses it.
 
 on:
   workflow_run:
@@ -39,17 +44,26 @@ jobs:
           REPO: ${{ github.repository }}
           BRANCH: ${{ github.event.workflow_run.head_branch }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
+          PR_FROM_EVENT: ${{ github.event.workflow_run.pull_requests[0].number }}
         run: |
           set -euo pipefail
 
-          pr=$(gh api "repos/$REPO/pulls?head=$REPO:$BRANCH&state=open" --jq '.[0].number // empty')
+          pr="${PR_FROM_EVENT:-}"
+          for _ in $(seq 1 10); do
+            [ -n "$pr" ] && break
+            pr=$(gh api "repos/$REPO/pulls?head=$REPO:$BRANCH&state=open" --jq '.[0].number // empty' 2>/dev/null || true)
+            [ -n "$pr" ] && break
+            echo "PR for $BRANCH not visible yet — retrying in 30s"
+            sleep 30
+          done
+
           if [ -z "$pr" ]; then
-            echo "No open PR for $BRANCH — nothing to do."
+            echo "No open PR for $BRANCH after retries — nothing to do."
             exit 0
           fi
 
-          title=$(gh api "repos/$REPO/pulls/$pr" --jq .title)
           author=$(gh api "repos/$REPO/pulls/$pr" --jq .user.login)
+          title=$(gh api "repos/$REPO/pulls/$pr" --jq .title)
           echo "PR #$pr by $author: $title"
 
           if [ "$author" != "dependabot[bot]" ]; then
@@ -57,26 +71,54 @@ jobs:
             exit 0
           fi
 
-          # Security updates always land: a fix that is behind a major bump is
-          # still a fix, and CI has to pass anyway.
+          eco="${BRANCH#dependabot/}"
+          eco="${eco%%/*}"
+
+          # Security updates always land: a fix behind a major bump is still a
+          # fix, and CI has to pass anyway.
+          is_security=0
           if printf '%s' "$title" | grep -qi 'security'; then
-            echo "Security update — merging."
-            gh pr merge "$pr" --squash --delete-branch
-            exit 0
+            is_security=1
           fi
 
-          # "Bump x from 1.2.3 to 2.0.0" -> hold major bumps.
-          if python3 - "$title" <<'PY'
+          is_major=$(python3 - "$title" <<'PY'
           import re, sys
-          # "Bump x from 1.2.3 to 2.0.0" -> hold when the major increases.
-          # Compare as ints: string comparison gets 9.x -> 10.x backwards.
+          # "Bump x from 1.2.3 to 2.0.0" -> major? Compare as ints: string
+          # comparison gets 9.x -> 10.x backwards.
           m = re.search(r'from v?(\d+)\.\S+ to v?(\d+)\.', sys.argv[1])
-          sys.exit(1 if (m and int(m.group(2)) > int(m.group(1))) else 0)
+          print("yes" if (m and int(m.group(2)) > int(m.group(1))) else "no")
           PY
-          then
-            echo "Patch/minor (or grouped) update — merging."
+          )
+
+          # Only one thing is ever held: a MAJOR bump of a runtime npm
+          # dependency. Everything else merges — github-actions and pip are
+          # fully covered by CI, and a dev-dependency major is test/build
+          # tooling that CI exercises directly.
+          hold=0
+          if [ "$is_security" -eq 0 ] && [ "$eco" = "npm_and_yarn" ] && [ "$is_major" = "yes" ]; then
+            pkg=$(printf '%s' "$BRANCH" | sed -E 's|^dependabot/npm_and_yarn/||; s|-[0-9][^-]*$||')
+            gh api "repos/$REPO/contents/package.json" --jq .content 2>/dev/null | base64 -d > /tmp/pkg.json || true
+            dev=$(python3 - "$pkg" /tmp/pkg.json <<'PY'
+          import json, sys
+          pkg, path = sys.argv[1], sys.argv[2]
+          try:
+              data = json.load(open(path))
+          except Exception:
+              print("unknown"); sys.exit(0)   # unknown -> hold, conservatively
+          dev = data.get("devDependencies") or {}
+          print("yes" if {pkg, "@" + pkg} & set(dev) else "no")
+          PY
+          )
+            if [ "$dev" != "yes" ]; then
+              hold=1
+              echo "Runtime dependency major ('$pkg') — hold."
+            fi
+          fi
+
+          if [ "$hold" -eq 0 ]; then
+            echo "Merging PR #$pr."
             gh pr merge "$pr" --squash --delete-branch
           else
-            echo "Major bump — holding for review."
-            gh pr comment "$pr" --body "Held automatically: major version bump. CI is green ($RUN_URL) but majors are reviewed before landing. \`@sophie\` this is queued in the Dependabot audit alert." || true
+            echo "Holding PR #$pr for review."
+            gh pr comment "$pr" --body "Held automatically: major version bump of a runtime dependency (\`$title\`). CI is green ($RUN_URL), but runtime majors are reviewed before landing — this shows up in the weekly Dependabot audit." || true
           fi
