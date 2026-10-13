@@ -37,6 +37,12 @@ jobs:
       github.event.workflow_run.conclusion == 'success' &&
       startsWith(github.event.workflow_run.head_branch, 'dependabot/')
     runs-on: ubuntu-latest
+    # Dependabot often opens several PRs at once and they all go green together;
+    # concurrent merges race on the base branch ("Base branch was modified").
+    # Serialize them per repo instead of racing.
+    concurrency:
+      group: dependabot-automerge
+      cancel-in-progress: false
     steps:
       # gh needs a work tree for `pr merge` (it does local git work to delete
       # the branch) — without a checkout it dies with "not a git repository".
@@ -123,7 +129,27 @@ jobs:
 
           if [ "$hold" -eq 0 ]; then
             echo "Merging PR #$pr."
-            gh pr merge "$pr" --squash --delete-branch
+            merged=0
+            for attempt in 1 2 3; do
+              if gh pr merge "$pr" --squash --delete-branch; then
+                merged=1
+                break
+              fi
+              # The base branch moving under us is normal when several Dependabot
+              # PRs land together; retry, and treat an already-closed PR as done.
+              state=$(gh api "repos/$REPO/pulls/$pr" --jq .state || echo open)
+              if [ "$state" = "closed" ]; then
+                echo "PR #$pr is already closed — treating as merged."
+                merged=1
+                break
+              fi
+              echo "merge attempt $attempt failed — retrying in 20s"
+              sleep 20
+            done
+            if [ "$merged" -ne 1 ]; then
+              echo "::error::could not merge PR #$pr after 3 attempts"
+              exit 1
+            fi
           else
             echo "Holding PR #$pr for review."
             gh pr comment "$pr" --body "Held automatically: major version bump of a runtime dependency (\`$title\`). CI is green ($RUN_URL), but runtime majors are reviewed before landing — this shows up in the weekly Dependabot audit." || true
