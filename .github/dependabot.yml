@@ -29,6 +29,8 @@ updates:
     # fails CI *and* burns a failing Vercel preview build: pure noise. Security
     # updates are unaffected by this block.
     ignore:
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
       - dependency-name: tailwindcss
         update-types: ["version-update:semver-major"]
       - dependency-name: react
