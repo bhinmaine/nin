@@ -1,6 +1,6 @@
 // src/components/EpisodeManager.tsx
 import { useState, useEffect, useCallback } from 'react';
-import { Youtube, Tv2, Save, Trash2, Plus, Loader2 } from 'lucide-react';
+import { SquarePlay, Tv2, Save, Trash2, Plus, Loader2 } from 'lucide-react';
 import type { Episode } from '../types';
 
 interface Props {
@@ -131,7 +131,7 @@ export function EpisodeManager({ adminPassword }: Props) {
             />
           </div>
           <div className="flex flex-col gap-1 flex-1 min-w-48">
-            <label className="text-xs text-zinc-400 flex items-center gap-1"><Youtube size={11} className="text-red-400" /> YouTube URL</label>
+            <label className="text-xs text-zinc-400 flex items-center gap-1"><SquarePlay size={11} className="text-red-400" /> YouTube URL</label>
             <input
               type="url"
               value={newEp.youtubeUrl}
@@ -176,7 +176,7 @@ export function EpisodeManager({ adminPassword }: Props) {
                     <span className="text-red-500 font-bold font-mono w-16">Ep. {ep.episodeNumber}</span>
                   </div>
                   <div className="flex flex-col gap-1 flex-1 min-w-48">
-                    <label className="text-xs text-zinc-400 flex items-center gap-1"><Youtube size={11} className="text-red-400" /> YouTube</label>
+                    <label className="text-xs text-zinc-400 flex items-center gap-1"><SquarePlay size={11} className="text-red-400" /> YouTube</label>
                     <input
                       type="url"
                       value={draft.youtubeUrl}
