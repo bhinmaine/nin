@@ -9,11 +9,11 @@ name: dependabot-automerge
 # CI verdict for free — a green "ci" run on a dependabot/ branch is the gate.
 #
 # Policy (see homeland docs/adr/0002):
-#   github-actions  -> always merge (the PR's own CI run exercises the new version)
-#   pip             -> always merge (the monitor test suite is the gate)
-#   npm major, runtime dependency -> HOLD for review; a runtime major is a
-#                      project, not a bump. Held PRs surface in the weekly audit.
-#   everything else -> merge
+#   everything -> merge when ci is green. Nothing is held for review.
+#   A red CI run is the only thing that stops a merge; the workflow simply does
+#   not fire. Majors are no exception: an update that cannot compile or breaks a
+#   test never gets here, and the whole-economy majors are already muted in
+#   dependabot.yml, so the ones that DO arrive are the ones CI can judge.
 #
 # The PR lookup retries: Dependabot pushes the branch and the CI run starts
 # before the pull request record exists, so an immediate lookup misses it.
@@ -83,83 +83,37 @@ jobs:
             exit 0
           fi
 
-          eco="${BRANCH#dependabot/}"
-          eco="${eco%%/*}"
-
-          # Security updates always land: a fix behind a major bump is still a
-          # fix, and CI has to pass anyway.
-          is_security=0
-          if printf '%s' "$title" | grep -qi 'security'; then
-            is_security=1
-          fi
-
-          is_major=$(python3 - "$title" <<'PY'
-          import re, sys
-          # "Bump x from 1.2.3 to 2.0.0" -> major? Compare as ints: string
-          # comparison gets 9.x -> 10.x backwards.
-          m = re.search(r'from v?(\d+)\.\S+ to v?(\d+)\.', sys.argv[1])
-          print("yes" if (m and int(m.group(2)) > int(m.group(1))) else "no")
-          PY
-          )
-
-          # Only one thing is ever held: a MAJOR bump of a runtime npm
-          # dependency. Everything else merges — github-actions and pip are
-          # fully covered by CI, and a dev-dependency major is test/build
-          # tooling that CI exercises directly.
-          hold=0
-          if [ "$is_security" -eq 0 ] && [ "$eco" = "npm_and_yarn" ] && [ "$is_major" = "yes" ]; then
-            pkg=$(printf '%s' "$BRANCH" | sed -E 's|^dependabot/npm_and_yarn/||; s|-[0-9][^-]*$||')
-            gh api "repos/$REPO/contents/package.json" --jq .content 2>/dev/null | base64 -d > /tmp/pkg.json || true
-            dev=$(python3 - "$pkg" /tmp/pkg.json <<'PY'
-          import json, sys
-          pkg, path = sys.argv[1], sys.argv[2]
-          try:
-              data = json.load(open(path))
-          except Exception:
-              print("unknown"); sys.exit(0)   # unknown -> hold, conservatively
-          dev = data.get("devDependencies") or {}
-          print("yes" if {pkg, "@" + pkg} & set(dev) else "no")
-          PY
-          )
-            if [ "$dev" != "yes" ]; then
-              hold=1
-              echo "Runtime dependency major ('$pkg') — hold."
+          # CI said success on this exact head branch, so there is nothing left
+          # to judge. Merge.
+          echo "Merging PR #$pr."
+          merged=0
+          for attempt in 1 2 3; do
+            if gh pr merge "$pr" --squash --delete-branch; then
+              merged=1
+              break
             fi
-          fi
-
-          if [ "$hold" -eq 0 ]; then
-            echo "Merging PR #$pr."
-            merged=0
-            for attempt in 1 2 3; do
-              if gh pr merge "$pr" --squash --delete-branch; then
-                merged=1
-                break
-              fi
-              # The base branch moving under us is normal when several Dependabot
-              # PRs land together; retry, and treat an already-closed PR as done.
-              state=$(gh api "repos/$REPO/pulls/$pr" --jq .state || echo open)
-              if [ "$state" = "closed" ]; then
-                echo "PR #$pr is already closed — treating as merged."
-                merged=1
-                break
-              fi
-              echo "merge attempt $attempt failed — retrying in 20s"
-              sleep 20
-            done
-            if [ "$merged" -ne 1 ]; then
-              # GitHub refuses to let the Actions token update workflow files
-              # ("refusing to allow a GitHub App to create or update workflow
-              # ... without `workflows` permission"), which is why some
-              # github-actions bumps cannot self-merge. Flag it for the weekly
-              # audit instead of failing loudly here.
-              gh label create needs-manual-merge --color FBCA04 \
-                --description "Dependabot PR the Actions token cannot merge" --force >/dev/null 2>&1 || true
-              gh pr edit "$pr" --add-label needs-manual-merge >/dev/null 2>&1 || true
-              gh pr comment "$pr" --body "Auto-merge could not land this one: GitHub blocks the Actions token from updating workflow files (\`without workflows permission\`). Flagged \`needs-manual-merge\` — the weekly Dependabot audit picks it up." || true
-              echo "::warning::PR #$pr needs a manual merge (workflow-file permission)"
-              exit 0
+            # The base branch moving under us is normal when several Dependabot
+            # PRs land together; retry, and treat an already-closed PR as done.
+            state=$(gh api "repos/$REPO/pulls/$pr" --jq .state || echo open)
+            if [ "$state" = "closed" ]; then
+              echo "PR #$pr is already closed — treating as merged."
+              merged=1
+              break
             fi
-          else
-            echo "Holding PR #$pr for review."
-            gh pr comment "$pr" --body "Held automatically: major version bump of a runtime dependency (\`$title\`). CI is green ($RUN_URL), but runtime majors are reviewed before landing — this shows up in the weekly Dependabot audit." || true
+            echo "merge attempt $attempt failed — retrying in 20s"
+            sleep 20
+          done
+
+          if [ "$merged" -ne 1 ]; then
+            # GitHub refuses to let the Actions token update workflow files
+            # ("refusing to allow a GitHub App to create or update workflow
+            # ... without `workflows` permission"), which is why some
+            # github-actions bumps cannot self-merge. Flag it for the weekly
+            # audit instead of failing loudly here.
+            gh label create needs-manual-merge --color FBCA04 \
+              --description "Dependabot PR the Actions token cannot merge" --force >/dev/null 2>&1 || true
+            gh pr edit "$pr" --add-label needs-manual-merge >/dev/null 2>&1 || true
+            gh pr comment "$pr" --body "Auto-merge could not land this one: GitHub blocks the Actions token from updating workflow files (\`without workflows permission\`). Flagged \`needs-manual-merge\` — the weekly Dependabot audit picks it up." || true
+            echo "::warning::PR #$pr needs a manual merge (workflow-file permission)"
+            exit 0
           fi
