@@ -117,7 +117,9 @@ export function AdminInterface() {
     queryKey: ['admin-songs'],
     enabled: isAuthenticated && isHydrated,
     queryFn: async () => {
-      const res = await fetch('/api/admin/songs');
+      const res = await fetch('/api/admin/songs', {
+        headers: { 'x-admin-auth': authedPassword },
+      });
       if (!res.ok) throw new Error('Failed to fetch songs');
       const data = await res.json();
       store.setUnranked(data.unranked);
@@ -249,7 +251,7 @@ export function AdminInterface() {
   const saveSongs = async (unranked = store.unranked, ranked = store.ranked) => {
     await fetch('/api/admin/songs', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-admin-auth': authedPassword },
       body: JSON.stringify({ unranked, ranked }),
     });
   };

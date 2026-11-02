@@ -3,40 +3,19 @@
 // POST /api/admin/talking-points  { id, talkingPoints }
 
 import { sql } from '@vercel/postgres';
-
-const ADMIN_PASSWORD =
-  process.env.ADMIN_PASSWORD ||
-  process.env.ADMINPW ||
-  process.env.adminpw ||
-  process.env.ADMIN_PW;
+import { json, preflight, unauthorized, isAuthorized } from '../_lib/admin-auth';
 
 export const config = {
   runtime: 'edge',
 };
 
-const CORS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
-
-function json(data: unknown, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: { 'Content-Type': 'application/json', ...CORS },
-  });
-}
-
 export default async function handler(request: Request) {
   if (request.method === 'OPTIONS') {
-    return new Response(null, { status: 204, headers: CORS });
+    return preflight();
   }
 
-  // Auth check via cookie/header (reuse same pattern as admin/songs)
-  // Vercel edge: check for auth header passed from client
-  const authHeader = request.headers.get('x-admin-auth');
-  if (authHeader !== ADMIN_PASSWORD) {
-    return json({ error: 'Unauthorized' }, 401);
+  if (!isAuthorized(request)) {
+    return unauthorized();
   }
 
   try {

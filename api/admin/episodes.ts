@@ -4,33 +4,14 @@
 // DELETE /api/admin/episodes?n=3  — delete episode
 
 import { sql } from '@vercel/postgres';
-
-const ADMIN_PASSWORD =
-  process.env.ADMIN_PASSWORD ||
-  process.env.ADMINPW ||
-  process.env.adminpw ||
-  process.env.ADMIN_PW;
+import { CORS_HEADERS as CORS, json, preflight, unauthorized, isAuthorized } from '../_lib/admin-auth';
 
 export const config = { runtime: 'edge' };
 
-const CORS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, x-admin-auth',
-};
-
-function json(data: unknown, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: { 'Content-Type': 'application/json', ...CORS },
-  });
-}
-
 export default async function handler(request: Request) {
-  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
+  if (request.method === 'OPTIONS') return preflight();
 
-  const authHeader = request.headers.get('x-admin-auth');
-  if (authHeader !== ADMIN_PASSWORD) return json({ error: 'Unauthorized' }, 401);
+  if (!isAuthorized(request)) return unauthorized();
 
   try {
     if (request.method === 'GET') {

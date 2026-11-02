@@ -1,6 +1,7 @@
 // api/admin/songs.ts - GET and POST endpoints for admin interface
 
 import { sql } from '@vercel/postgres';
+import { preflight, unauthorized, isAuthorized } from '../_lib/admin-auth';
 
 export const config = {
   runtime: 'edge',
@@ -8,14 +9,12 @@ export const config = {
 
 export default async function handler(request: Request) {
   if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 204,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    });
+    return preflight();
+  }
+
+  // Every method here reads or rewrites the whole song/ranking set.
+  if (!isAuthorized(request)) {
+    return unauthorized();
   }
 
   try {

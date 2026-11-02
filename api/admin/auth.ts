@@ -1,5 +1,7 @@
 // api/admin/auth.ts - Authenticate admin access
 
+import { getAdminPassword } from '../_lib/admin-auth';
+
 export const config = {
   runtime: 'edge',
 };
@@ -33,11 +35,7 @@ export default async function handler(request: Request) {
     const { password } = await request.json();
 
     // Try multiple possible environment variable names for the admin password
-    const adminPassword = 
-      process.env.ADMIN_PASSWORD ||
-      process.env.ADMINPW ||
-      process.env.adminpw ||
-      process.env.ADMIN_PW;
+    const adminPassword = getAdminPassword();
 
     console.log('[AUTH] Checking password. Env vars available:', {
       hasADMIN_PASSWORD: !!process.env.ADMIN_PASSWORD,
